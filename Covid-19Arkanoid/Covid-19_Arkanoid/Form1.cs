@@ -16,5 +16,11 @@ namespace Covid_19_Arkanoid
         {
             InitializeComponent();
         }
+
+        private void btnPlay_Click(object sender, EventArgs e)
+        {
+            Username user = new Username();
+            user.Show();
+        }
     }
 }

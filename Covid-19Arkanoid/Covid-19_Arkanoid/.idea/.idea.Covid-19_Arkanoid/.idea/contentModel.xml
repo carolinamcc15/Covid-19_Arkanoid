@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\ulma_\.Rider2019.3\system\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\ulma_\.Rider2019.3\system\resharper-host\local\Transient\ReSharperHost\v193\SolutionCaches\_Covid-19_Arkanoid.-145662434.00" t="ExcludeRecursive" />
-    <e p="C:\Users\ulma_\Desktop\ARKANOID\project\Covid-19_Arkanoid\Covid-19Arkanoid\Covid-19_Arkanoid" t="IncludeRecursive">
+    <e p="C:\Users\user\.Rider2019.3\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\user\.Rider2019.3\system\resharper-host\local\Transient\ReSharperHost\v193\SolutionCaches\_Covid-19_Arkanoid.240709125.00" t="ExcludeRecursive" />
+    <e p="C:\Users\user\Desktop\Covid-19_Arkanoid\Covid-19_Arkanoid\Covid-19Arkanoid\Covid-19_Arkanoid" t="IncludeRecursive">
       <e p="App.config" t="Include" />
       <e p="bin" t="ExcludeRecursive" />
       <e p="Covid-19_Arkanoid.csproj" t="IncludeRecursive" />
       <e p="Covid-19_Arkanoid.sln" t="IncludeFlat" />
       <e p="Form1.cs" t="Include" />
       <e p="Form1.Designer.cs" t="Include" />
+      <e p="Form1.resx" t="Include" />
       <e p="obj" t="ExcludeRecursive" />
       <e p="packages" t="ExcludeRecursive" />
       <e p="Program.cs" t="Include" />
@@ -20,6 +21,30 @@
         <e p="Settings.Designer.cs" t="Include" />
         <e p="Settings.settings" t="Include" />
       </e>
+      <e p="Resources" t="Include">
+        <e p="Bear1.png" t="Include" />
+        <e p="Bloque_aqua.png" t="Include" />
+        <e p="Bloque_azul.png" t="Include" />
+        <e p="Bloque_azul_negro.png" t="Include" />
+        <e p="Bloque_menta.png" t="Include" />
+        <e p="Bloque_morado.png" t="Include" />
+        <e p="Bloque_naranja.png" t="Include" />
+        <e p="Bloque_rosado.png" t="Include" />
+        <e p="Bloque_verde.png" t="Include" />
+        <e p="CroppedGame.png" t="Include" />
+        <e p="Group_2.png" t="Include" />
+        <e p="Icon.png" t="Include" />
+        <e p="Kirby_Celeste.png" t="Include" />
+        <e p="Life1.png" t="Include" />
+        <e p="Owl.png" t="Include" />
+        <e p="Paleta1.png" t="Include" />
+        <e p="Pink_Kirby.png" t="Include" />
+        <e p="Soccer1.png" t="Include" />
+        <e p="User.png" t="Include" />
+      </e>
+      <e p="Username.cs" t="Include" />
+      <e p="Username.Designer.cs" t="Include" />
+      <e p="Username.resx" t="Include" />
     </e>
   </component>
 </project>

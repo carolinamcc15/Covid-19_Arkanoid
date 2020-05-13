@@ -1,0 +1,10 @@
+C:\Users\user\Desktop\Covid-19_Arkanoid\Covid-19_Arkanoid\Covid-19Arkanoid\Covid-19_Arkanoid\bin\Debug\Covid_19_Arkanoid.exe.config
+C:\Users\user\Desktop\Covid-19_Arkanoid\Covid-19_Arkanoid\Covid-19Arkanoid\Covid-19_Arkanoid\bin\Debug\Covid_19_Arkanoid.exe
+C:\Users\user\Desktop\Covid-19_Arkanoid\Covid-19_Arkanoid\Covid-19Arkanoid\Covid-19_Arkanoid\bin\Debug\Covid_19_Arkanoid.pdb
+C:\Users\user\Desktop\Covid-19_Arkanoid\Covid-19_Arkanoid\Covid-19Arkanoid\Covid-19_Arkanoid\obj\Debug\Covid-19_Arkanoid.csprojAssemblyReference.cache
+C:\Users\user\Desktop\Covid-19_Arkanoid\Covid-19_Arkanoid\Covid-19Arkanoid\Covid-19_Arkanoid\obj\Debug\Covid_19_Arkanoid.Properties.Resources.resources
+C:\Users\user\Desktop\Covid-19_Arkanoid\Covid-19_Arkanoid\Covid-19Arkanoid\Covid-19_Arkanoid\obj\Debug\Covid-19_Arkanoid.csproj.GenerateResource.cache
+C:\Users\user\Desktop\Covid-19_Arkanoid\Covid-19_Arkanoid\Covid-19Arkanoid\Covid-19_Arkanoid\obj\Debug\Covid_19_Arkanoid.exe
+C:\Users\user\Desktop\Covid-19_Arkanoid\Covid-19_Arkanoid\Covid-19Arkanoid\Covid-19_Arkanoid\obj\Debug\Covid_19_Arkanoid.pdb
+C:\Users\user\Desktop\Covid-19_Arkanoid\Covid-19_Arkanoid\Covid-19Arkanoid\Covid-19_Arkanoid\obj\Debug\Covid_19_Arkanoid.Form1.resources
+C:\Users\user\Desktop\Covid-19_Arkanoid\Covid-19_Arkanoid\Covid-19Arkanoid\Covid-19_Arkanoid\obj\Debug\Covid_19_Arkanoid.Username.resources
