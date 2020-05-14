@@ -33,6 +33,9 @@
         <WarningLevel>4</WarningLevel>
     </PropertyGroup>
     <ItemGroup>
+        <Reference Include="Covid_19_Arkanoid, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+          <HintPath>bin\Debug\Covid_19_Arkanoid.exe</HintPath>
+        </Reference>
         <Reference Include="System" />
         <Reference Include="System.Core" />
         <Reference Include="System.Xml.Linq" />
@@ -52,8 +55,20 @@
         <Compile Include="Form1.Designer.cs">
             <DependentUpon>Form1.cs</DependentUpon>
         </Compile>
+        <Compile Include="NameUser.cs">
+          <SubType>UserControl</SubType>
+        </Compile>
+        <Compile Include="NameUser.Designer.cs">
+          <DependentUpon>NameUser.cs</DependentUpon>
+        </Compile>
         <Compile Include="Program.cs" />
         <Compile Include="Properties\AssemblyInfo.cs" />
+        <Compile Include="Skin.cs">
+          <SubType>UserControl</SubType>
+        </Compile>
+        <Compile Include="Skin.Designer.cs">
+          <DependentUpon>Skin.cs</DependentUpon>
+        </Compile>
         <Compile Include="Username.cs">
           <SubType>Form</SubType>
         </Compile>
@@ -62,6 +77,9 @@
         </Compile>
         <EmbeddedResource Include="Form1.resx">
           <DependentUpon>Form1.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="NameUser.resx">
+          <DependentUpon>NameUser.cs</DependentUpon>
         </EmbeddedResource>
         <EmbeddedResource Include="Properties\Resources.resx">
             <Generator>ResXFileCodeGenerator</Generator>
@@ -72,6 +90,9 @@
             <AutoGen>True</AutoGen>
             <DependentUpon>Resources.resx</DependentUpon>
         </Compile>
+        <EmbeddedResource Include="Skin.resx">
+          <DependentUpon>Skin.cs</DependentUpon>
+        </EmbeddedResource>
         <EmbeddedResource Include="Username.resx">
           <DependentUpon>Username.cs</DependentUpon>
         </EmbeddedResource>
@@ -106,6 +127,7 @@
       <Content Include="Resources\Owl.png" />
       <Content Include="Resources\Paleta1.png" />
       <Content Include="Resources\Pink_Kirby.png" />
+      <Content Include="Resources\Skin1.png" />
       <Content Include="Resources\Soccer1.png" />
       <Content Include="Resources\User.png" />
     </ItemGroup>

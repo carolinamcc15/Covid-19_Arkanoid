@@ -233,6 +233,16 @@ namespace Covid_19_Arkanoid.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Skin {
+            get {
+                object obj = ResourceManager.GetObject("Skin", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Soccer {
             get {
                 object obj = ResourceManager.GetObject("Soccer", resourceCulture);
