@@ -32,8 +32,8 @@ namespace Covid_19_Arkanoid
         private void InitializeComponent()
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -41,6 +41,7 @@ namespace Covid_19_Arkanoid
             // 
             this.tableLayoutPanel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.tableLayoutPanel1.BackgroundImage = global::Covid_19_Arkanoid.Properties.Resources.User;
+            this.tableLayoutPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.tableLayoutPanel1.ColumnCount = 5;
             this.tableLayoutPanel1.ColumnStyles.Add(
                 new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.70223F));
@@ -52,8 +53,9 @@ namespace Covid_19_Arkanoid
                 new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 19.99923F));
             this.tableLayoutPanel1.ColumnStyles.Add(
                 new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.7003F));
-            this.tableLayoutPanel1.Controls.Add(this.richTextBox1, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.button1, 2, 3);
+            this.tableLayoutPanel1.Controls.Add(this.textBox1, 1, 1);
+            this.tableLayoutPanel1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -64,55 +66,59 @@ namespace Covid_19_Arkanoid
             this.tableLayoutPanel1.RowStyles.Add(
                 new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.306931F));
             this.tableLayoutPanel1.RowStyles.Add(
-                new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 18.81188F));
+                new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.94737F));
             this.tableLayoutPanel1.RowStyles.Add(
-                new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.514852F));
+                new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.31579F));
             this.tableLayoutPanel1.RowStyles.Add(
-                new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25.47309F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(849, 505);
+                new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 32.63158F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(711, 475);
             this.tableLayoutPanel1.TabIndex = 0;
-            // 
-            // richTextBox1
-            // 
-            this.tableLayoutPanel1.SetColumnSpan(this.richTextBox1, 3);
-            this.richTextBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.richTextBox1.Location = new System.Drawing.Point(178, 192);
-            this.richTextBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(490, 43);
-            this.richTextBox1.TabIndex = 1;
-            this.richTextBox1.Text = "";
             // 
             // button1
             // 
             this.button1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.button1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.button1.Location = new System.Drawing.Point(371, 334);
+            this.button1.Font = new System.Drawing.Font("Volleyball", 9F, System.Drawing.FontStyle.Regular,
+                System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.button1.Location = new System.Drawing.Point(312, 273);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(128, 39);
+            this.button1.Size = new System.Drawing.Size(106, 44);
             this.button1.TabIndex = 2;
             this.button1.Text = "Done";
             this.button1.UseVisualStyleBackColor = true;
             // 
+            // textBox1
+            // 
+            this.tableLayoutPanel1.SetColumnSpan(this.textBox1, 3);
+            this.textBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.textBox1.Font = new System.Drawing.Font("Volleyball", 14F, System.Drawing.FontStyle.Regular,
+                System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.textBox1.Location = new System.Drawing.Point(150, 179);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(410, 35);
+            this.textBox1.TabIndex = 3;
+            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // NameUser
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.Controls.Add(this.tableLayoutPanel1);
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.Name = "NameUser";
-            this.Size = new System.Drawing.Size(849, 505);
+            this.Size = new System.Drawing.Size(711, 475);
             this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
         }
 
         #endregion
 
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

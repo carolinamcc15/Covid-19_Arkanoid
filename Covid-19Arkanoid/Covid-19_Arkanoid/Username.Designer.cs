@@ -55,7 +55,7 @@ namespace Covid_19_Arkanoid
             this.tableLayoutPanel1.ColumnStyles.Add(
                 new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.ColumnStyles.Add(
-                new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 427F));
+                new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 347F));
             this.tableLayoutPanel1.Controls.Add(this.ButName, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.ButSkin, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.nameUser1, 0, 0);
@@ -67,18 +67,18 @@ namespace Covid_19_Arkanoid
                 new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 92.57732F));
             this.tableLayoutPanel1.RowStyles.Add(
                 new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.42268F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(849, 513);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(689, 419);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // ButName
             // 
             this.ButName.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ButName.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ButName.Font = new System.Drawing.Font("Britannic Bold", 9F, System.Drawing.FontStyle.Regular,
+            this.ButName.Font = new System.Drawing.Font("Volleyball", 9F, System.Drawing.FontStyle.Regular,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.ButName.Location = new System.Drawing.Point(3, 477);
+            this.ButName.Location = new System.Drawing.Point(3, 390);
             this.ButName.Name = "ButName";
-            this.ButName.Size = new System.Drawing.Size(416, 33);
+            this.ButName.Size = new System.Drawing.Size(336, 26);
             this.ButName.TabIndex = 1;
             this.ButName.Text = "Username";
             this.ButName.UseVisualStyleBackColor = true;
@@ -88,9 +88,11 @@ namespace Covid_19_Arkanoid
             // 
             this.ButSkin.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ButSkin.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ButSkin.Location = new System.Drawing.Point(425, 477);
+            this.ButSkin.Font = new System.Drawing.Font("Volleyball", 9F, System.Drawing.FontStyle.Regular,
+                System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.ButSkin.Location = new System.Drawing.Point(345, 390);
             this.ButSkin.Name = "ButSkin";
-            this.ButSkin.Size = new System.Drawing.Size(421, 33);
+            this.ButSkin.Size = new System.Drawing.Size(341, 26);
             this.ButSkin.TabIndex = 2;
             this.ButSkin.Text = "Skin";
             this.ButSkin.UseVisualStyleBackColor = true;
@@ -101,17 +103,18 @@ namespace Covid_19_Arkanoid
             this.nameUser1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.tableLayoutPanel1.SetColumnSpan(this.nameUser1, 2);
             this.nameUser1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.nameUser1.Location = new System.Drawing.Point(3, 3);
+            this.nameUser1.Location = new System.Drawing.Point(3, 4);
+            this.nameUser1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.nameUser1.Name = "nameUser1";
-            this.nameUser1.Size = new System.Drawing.Size(843, 468);
+            this.nameUser1.Size = new System.Drawing.Size(683, 379);
             this.nameUser1.TabIndex = 3;
             // 
             // Username
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(849, 513);
+            this.ClientSize = new System.Drawing.Size(689, 419);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Cursor = System.Windows.Forms.Cursors.Hand;
             this.DoubleBuffered = true;

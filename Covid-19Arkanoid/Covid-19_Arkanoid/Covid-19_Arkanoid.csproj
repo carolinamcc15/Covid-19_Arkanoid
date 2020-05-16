@@ -55,6 +55,12 @@
         <Compile Include="Form1.Designer.cs">
             <DependentUpon>Form1.cs</DependentUpon>
         </Compile>
+        <Compile Include="Game.cs">
+          <SubType>UserControl</SubType>
+        </Compile>
+        <Compile Include="Game.Designer.cs">
+          <DependentUpon>Game.cs</DependentUpon>
+        </Compile>
         <Compile Include="NameUser.cs">
           <SubType>UserControl</SubType>
         </Compile>
@@ -69,6 +75,12 @@
         <Compile Include="Skin.Designer.cs">
           <DependentUpon>Skin.cs</DependentUpon>
         </Compile>
+        <Compile Include="Top10.cs">
+          <SubType>Form</SubType>
+        </Compile>
+        <Compile Include="Top10.Designer.cs">
+          <DependentUpon>Top10.cs</DependentUpon>
+        </Compile>
         <Compile Include="Username.cs">
           <SubType>Form</SubType>
         </Compile>
@@ -77,6 +89,9 @@
         </Compile>
         <EmbeddedResource Include="Form1.resx">
           <DependentUpon>Form1.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="Game.resx">
+          <DependentUpon>Game.cs</DependentUpon>
         </EmbeddedResource>
         <EmbeddedResource Include="NameUser.resx">
           <DependentUpon>NameUser.cs</DependentUpon>
@@ -92,6 +107,9 @@
         </Compile>
         <EmbeddedResource Include="Skin.resx">
           <DependentUpon>Skin.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="Top10.resx">
+          <DependentUpon>Top10.cs</DependentUpon>
         </EmbeddedResource>
         <EmbeddedResource Include="Username.resx">
           <DependentUpon>Username.cs</DependentUpon>
@@ -120,6 +138,7 @@
       <Content Include="Resources\Bloque_rosado.png" />
       <Content Include="Resources\Bloque_verde.png" />
       <Content Include="Resources\CroppedGame.png" />
+      <Content Include="Resources\CroppedGame1.png" />
       <Content Include="Resources\Group_2.png" />
       <Content Include="Resources\Icon.png" />
       <Content Include="Resources\Kirby_Celeste.png" />
@@ -129,6 +148,7 @@
       <Content Include="Resources\Pink_Kirby.png" />
       <Content Include="Resources\Skin1.png" />
       <Content Include="Resources\Soccer1.png" />
+      <Content Include="Resources\Top10.png" />
       <Content Include="Resources\User.png" />
     </ItemGroup>
     <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

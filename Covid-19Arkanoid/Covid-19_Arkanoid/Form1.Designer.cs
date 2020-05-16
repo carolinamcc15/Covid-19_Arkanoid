@@ -72,6 +72,7 @@
             this.btnScores.TabIndex = 1;
             this.btnScores.Text = "SCORES";
             this.btnScores.UseVisualStyleBackColor = false;
+            this.btnScores.Click += new System.EventHandler(this.btnScores_Click);
             // 
             // tableLayoutPanel1
             // 
@@ -130,6 +131,7 @@
             this.btnExit.TabIndex = 2;
             this.btnExit.Text = "EXIT";
             this.btnExit.UseVisualStyleBackColor = false;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // Form1
             // 

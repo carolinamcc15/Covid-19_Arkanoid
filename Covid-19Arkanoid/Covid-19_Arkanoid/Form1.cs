@@ -22,5 +22,16 @@ namespace Covid_19_Arkanoid
             Username user = new Username();
             user.Show();
         }
+
+        private void btnScores_Click(object sender, EventArgs e)
+        {
+            Top10 scores = new Top10();
+            scores.Show();
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }
