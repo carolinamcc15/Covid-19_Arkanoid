@@ -45,6 +45,7 @@
             this.btnPlay.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnPlay.BackColor = System.Drawing.Color.White;
             this.btnPlay.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnPlay.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnPlay.Font = new System.Drawing.Font("Volleyball", 9F, System.Drawing.FontStyle.Regular,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.btnPlay.Location = new System.Drawing.Point(279, 194);
@@ -63,6 +64,7 @@
             this.btnScores.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnScores.BackColor = System.Drawing.Color.White;
             this.btnScores.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnScores.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnScores.Font = new System.Drawing.Font("Volleyball", 9F, System.Drawing.FontStyle.Regular,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.btnScores.Location = new System.Drawing.Point(279, 261);
@@ -94,7 +96,7 @@
             this.tlpMain.Controls.Add(this.btnScores, 2, 3);
             this.tlpMain.Controls.Add(this.btnPlay, 2, 2);
             this.tlpMain.Controls.Add(this.btnExit, 2, 5);
-            this.tlpMain.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.tlpMain.Cursor = System.Windows.Forms.Cursors.Default;
             this.tlpMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tlpMain.Location = new System.Drawing.Point(0, 0);
             this.tlpMain.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -121,6 +123,7 @@
             this.btnExit.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnExit.BackColor = System.Drawing.Color.White;
             this.btnExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnExit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnExit.Font = new System.Drawing.Font("Volleyball", 9F, System.Drawing.FontStyle.Regular,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.btnExit.Location = new System.Drawing.Point(288, 368);

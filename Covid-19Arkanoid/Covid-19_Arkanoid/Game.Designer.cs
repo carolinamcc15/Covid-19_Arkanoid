@@ -36,7 +36,8 @@ namespace Covid_19_Arkanoid
             // 
             // tlpGame
             // 
-            this.tlpGame.BackColor = System.Drawing.Color.Transparent;
+            this.tlpGame.BackColor = System.Drawing.Color.Black;
+            this.tlpGame.BackgroundImage = global::Covid_19_Arkanoid.Properties.Resources.CroppedGame;
             this.tlpGame.ColumnCount = 2;
             this.tlpGame.ColumnStyles.Add(
                 new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));

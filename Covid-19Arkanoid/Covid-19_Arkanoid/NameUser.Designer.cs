@@ -44,18 +44,18 @@ namespace Covid_19_Arkanoid
             this.tlpChoose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.tlpChoose.ColumnCount = 5;
             this.tlpChoose.ColumnStyles.Add(
-                new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.70223F));
+                new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 19.12799F));
             this.tlpChoose.ColumnStyles.Add(
-                new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 22.80884F));
+                new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 24.05063F));
             this.tlpChoose.ColumnStyles.Add(
                 new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15.78939F));
             this.tlpChoose.ColumnStyles.Add(
-                new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 19.99923F));
+                new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 21.65963F));
             this.tlpChoose.ColumnStyles.Add(
-                new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.7003F));
+                new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 19.12799F));
             this.tlpChoose.Controls.Add(this.btnDone, 2, 3);
             this.tlpChoose.Controls.Add(this.txtUsername, 1, 1);
-            this.tlpChoose.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.tlpChoose.Cursor = System.Windows.Forms.Cursors.Default;
             this.tlpChoose.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tlpChoose.Location = new System.Drawing.Point(0, 0);
             this.tlpChoose.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -77,16 +77,18 @@ namespace Covid_19_Arkanoid
             // btnDone
             // 
             this.btnDone.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnDone.BackColor = System.Drawing.Color.White;
+            this.btnDone.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDone.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnDone.Font = new System.Drawing.Font("Volleyball", 9F, System.Drawing.FontStyle.Regular,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.btnDone.Location = new System.Drawing.Point(312, 273);
+            this.btnDone.Location = new System.Drawing.Point(310, 273);
             this.btnDone.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnDone.Name = "btnDone";
             this.btnDone.Size = new System.Drawing.Size(106, 44);
             this.btnDone.TabIndex = 2;
             this.btnDone.Text = "Done";
-            this.btnDone.UseVisualStyleBackColor = true;
+            this.btnDone.UseVisualStyleBackColor = false;
             // 
             // txtUsername
             // 
@@ -94,10 +96,11 @@ namespace Covid_19_Arkanoid
             this.txtUsername.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtUsername.Font = new System.Drawing.Font("Volleyball", 14F, System.Drawing.FontStyle.Regular,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.txtUsername.Location = new System.Drawing.Point(150, 179);
+            this.txtUsername.Location = new System.Drawing.Point(139, 179);
             this.txtUsername.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtUsername.MaxLength = 20;
             this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(410, 35);
+            this.txtUsername.Size = new System.Drawing.Size(431, 35);
             this.txtUsername.TabIndex = 3;
             this.txtUsername.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -118,7 +121,7 @@ namespace Covid_19_Arkanoid
         #endregion
 
         private System.Windows.Forms.TextBox txtUsername;
-        private System.Windows.Forms.Button btnDone;
         private System.Windows.Forms.TableLayoutPanel tlpChoose;
+        private System.Windows.Forms.Button btnDone;
     }
 }

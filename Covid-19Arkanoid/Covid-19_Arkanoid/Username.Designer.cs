@@ -102,6 +102,7 @@ namespace Covid_19_Arkanoid
             // 
             this.nameUser1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.tableLayoutPanel1.SetColumnSpan(this.nameUser1, 2);
+            this.nameUser1.Cursor = System.Windows.Forms.Cursors.Default;
             this.nameUser1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.nameUser1.Location = new System.Drawing.Point(3, 4);
             this.nameUser1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);

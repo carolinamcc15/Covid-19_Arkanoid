@@ -63,7 +63,7 @@ namespace Covid_19_Arkanoid
             this.tlpTop10.ColumnStyles.Add(
                 new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 198F));
             this.tlpTop10.ColumnStyles.Add(
-                new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 69F));
+                new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 70F));
             this.tlpTop10.Controls.Add(this.label12, 1, 13);
             this.tlpTop10.Controls.Add(this.label11, 1, 12);
             this.tlpTop10.Controls.Add(this.label10, 1, 11);
@@ -121,7 +121,7 @@ namespace Covid_19_Arkanoid
             this.label12.ForeColor = System.Drawing.Color.White;
             this.label12.Location = new System.Drawing.Point(77, 748);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(42, 59);
+            this.label12.Size = new System.Drawing.Size(41, 59);
             this.label12.TabIndex = 10;
             this.label12.Text = "10";
             this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -134,7 +134,7 @@ namespace Covid_19_Arkanoid
             this.label11.ForeColor = System.Drawing.Color.White;
             this.label11.Location = new System.Drawing.Point(77, 689);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(42, 59);
+            this.label11.Size = new System.Drawing.Size(41, 59);
             this.label11.TabIndex = 9;
             this.label11.Text = "9";
             this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -147,7 +147,7 @@ namespace Covid_19_Arkanoid
             this.label10.ForeColor = System.Drawing.Color.White;
             this.label10.Location = new System.Drawing.Point(77, 630);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(42, 59);
+            this.label10.Size = new System.Drawing.Size(41, 59);
             this.label10.TabIndex = 8;
             this.label10.Text = "8";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -160,7 +160,7 @@ namespace Covid_19_Arkanoid
             this.label9.ForeColor = System.Drawing.Color.White;
             this.label9.Location = new System.Drawing.Point(77, 571);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(42, 59);
+            this.label9.Size = new System.Drawing.Size(41, 59);
             this.label9.TabIndex = 8;
             this.label9.Text = "7";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -173,7 +173,7 @@ namespace Covid_19_Arkanoid
             this.label8.ForeColor = System.Drawing.Color.White;
             this.label8.Location = new System.Drawing.Point(77, 512);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(42, 59);
+            this.label8.Size = new System.Drawing.Size(41, 59);
             this.label8.TabIndex = 7;
             this.label8.Text = "6";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -186,7 +186,7 @@ namespace Covid_19_Arkanoid
             this.label7.ForeColor = System.Drawing.Color.White;
             this.label7.Location = new System.Drawing.Point(77, 453);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(42, 59);
+            this.label7.Size = new System.Drawing.Size(41, 59);
             this.label7.TabIndex = 6;
             this.label7.Text = "5";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -199,7 +199,7 @@ namespace Covid_19_Arkanoid
             this.label6.ForeColor = System.Drawing.Color.White;
             this.label6.Location = new System.Drawing.Point(77, 394);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(42, 59);
+            this.label6.Size = new System.Drawing.Size(41, 59);
             this.label6.TabIndex = 5;
             this.label6.Text = "4";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -212,7 +212,7 @@ namespace Covid_19_Arkanoid
             this.label5.ForeColor = System.Drawing.Color.White;
             this.label5.Location = new System.Drawing.Point(77, 335);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(42, 59);
+            this.label5.Size = new System.Drawing.Size(41, 59);
             this.label5.TabIndex = 4;
             this.label5.Text = "3";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -225,7 +225,7 @@ namespace Covid_19_Arkanoid
             this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(77, 276);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(42, 59);
+            this.label4.Size = new System.Drawing.Size(41, 59);
             this.label4.TabIndex = 3;
             this.label4.Text = "2";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -238,7 +238,7 @@ namespace Covid_19_Arkanoid
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(77, 217);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(42, 59);
+            this.label3.Size = new System.Drawing.Size(41, 59);
             this.label3.TabIndex = 2;
             this.label3.Text = "1";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -249,7 +249,7 @@ namespace Covid_19_Arkanoid
             this.label1.Font = new System.Drawing.Font("Volleyball", 9F, System.Drawing.FontStyle.Regular,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(125, 169);
+            this.label1.Location = new System.Drawing.Point(124, 169);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(232, 48);
             this.label1.TabIndex = 0;
@@ -262,7 +262,7 @@ namespace Covid_19_Arkanoid
             this.label2.Font = new System.Drawing.Font("Volleyball", 9F, System.Drawing.FontStyle.Regular,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(363, 169);
+            this.label2.Location = new System.Drawing.Point(362, 169);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(192, 48);
             this.label2.TabIndex = 1;
@@ -277,7 +277,7 @@ namespace Covid_19_Arkanoid
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(628, 869);
             this.Controls.Add(this.tlpTop10);
-            this.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon) (resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);

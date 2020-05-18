@@ -35,7 +35,7 @@ namespace Covid_19_Arkanoid
             this.picSkin = new System.Windows.Forms.PictureBox();
             this.btnRight = new System.Windows.Forms.Button();
             this.btnLeft = new System.Windows.Forms.Button();
-            this.btnDone = new System.Windows.Forms.Button();
+            this.btnSave = new System.Windows.Forms.Button();
             this.tlpSkin.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize) (this.picSkin)).BeginInit();
             this.SuspendLayout();
@@ -48,7 +48,7 @@ namespace Covid_19_Arkanoid
             this.tlpSkin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.tlpSkin.ColumnCount = 7;
             this.tlpSkin.ColumnStyles.Add(
-                new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 201F));
+                new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tlpSkin.ColumnStyles.Add(
                 new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 62F));
             this.tlpSkin.ColumnStyles.Add(
@@ -64,8 +64,8 @@ namespace Covid_19_Arkanoid
             this.tlpSkin.Controls.Add(this.picSkin, 3, 1);
             this.tlpSkin.Controls.Add(this.btnRight, 5, 1);
             this.tlpSkin.Controls.Add(this.btnLeft, 1, 1);
-            this.tlpSkin.Controls.Add(this.btnDone, 3, 3);
-            this.tlpSkin.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.tlpSkin.Controls.Add(this.btnSave, 3, 3);
+            this.tlpSkin.Cursor = System.Windows.Forms.Cursors.Default;
             this.tlpSkin.Location = new System.Drawing.Point(0, 0);
             this.tlpSkin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tlpSkin.Name = "tlpSkin";
@@ -83,7 +83,7 @@ namespace Covid_19_Arkanoid
             // 
             this.picSkin.Dock = System.Windows.Forms.DockStyle.Fill;
             this.picSkin.Image = global::Covid_19_Arkanoid.Properties.Resources.Pink_Kirby;
-            this.picSkin.Location = new System.Drawing.Point(276, 143);
+            this.picSkin.Location = new System.Drawing.Point(277, 143);
             this.picSkin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.picSkin.Name = "picSkin";
             this.picSkin.Size = new System.Drawing.Size(162, 135);
@@ -95,9 +95,10 @@ namespace Covid_19_Arkanoid
             // 
             this.btnRight.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnRight.BackColor = System.Drawing.Color.White;
+            this.btnRight.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnRight.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.btnRight.Location = new System.Drawing.Point(455, 185);
+            this.btnRight.Location = new System.Drawing.Point(456, 185);
             this.btnRight.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnRight.Name = "btnRight";
             this.btnRight.Size = new System.Drawing.Size(48, 51);
@@ -110,9 +111,10 @@ namespace Covid_19_Arkanoid
             // 
             this.btnLeft.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnLeft.BackColor = System.Drawing.Color.White;
+            this.btnLeft.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnLeft.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.btnLeft.Location = new System.Drawing.Point(208, 185);
+            this.btnLeft.Location = new System.Drawing.Point(209, 185);
             this.btnLeft.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnLeft.Name = "btnLeft";
             this.btnLeft.Size = new System.Drawing.Size(48, 51);
@@ -121,19 +123,20 @@ namespace Covid_19_Arkanoid
             this.btnLeft.UseVisualStyleBackColor = false;
             this.btnLeft.Click += new System.EventHandler(this.btnLeft_Click);
             // 
-            // btnDone
+            // btnSave
             // 
-            this.btnDone.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnDone.BackColor = System.Drawing.Color.White;
-            this.btnDone.Font = new System.Drawing.Font("Volleyball", 9F, System.Drawing.FontStyle.Regular,
+            this.btnSave.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnSave.BackColor = System.Drawing.Color.White;
+            this.btnSave.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSave.Font = new System.Drawing.Font("Volleyball", 9F, System.Drawing.FontStyle.Regular,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.btnDone.Location = new System.Drawing.Point(288, 310);
-            this.btnDone.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnDone.Name = "btnDone";
-            this.btnDone.Size = new System.Drawing.Size(137, 56);
-            this.btnDone.TabIndex = 3;
-            this.btnDone.Text = "DONE";
-            this.btnDone.UseVisualStyleBackColor = false;
+            this.btnSave.Location = new System.Drawing.Point(289, 310);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(137, 56);
+            this.btnSave.TabIndex = 3;
+            this.btnSave.Text = "DONE";
+            this.btnSave.UseVisualStyleBackColor = false;
             // 
             // Skin
             // 
@@ -154,9 +157,9 @@ namespace Covid_19_Arkanoid
         #endregion
 
         private System.Windows.Forms.Button btnLeft;
-        private System.Windows.Forms.Button btnDone;
         private System.Windows.Forms.Button btnRight;
         private System.Windows.Forms.PictureBox picSkin;
         private System.Windows.Forms.TableLayoutPanel tlpSkin;
+        private System.Windows.Forms.Button btnSave;
     }
 }

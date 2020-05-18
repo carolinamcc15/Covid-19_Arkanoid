@@ -15,46 +15,24 @@ namespace Covid_19_Arkanoid
         {
             InitializeComponent();
             
-            skin[0] = global::Covid_19_Arkanoid.Properties.Resources.Pink_Kirby;
-            skin[1] = global::Covid_19_Arkanoid.Properties.Resources.Bear;
-            skin[2] = global::Covid_19_Arkanoid.Properties.Resources.Soccer;
-            skin[3] = global::Covid_19_Arkanoid.Properties.Resources.Owl;
-            skin[4] = global::Covid_19_Arkanoid.Properties.Resources.Kirby_Celeste;
+            skin[0] = Properties.Resources.Pink_Kirby;
+            skin[1] = Properties.Resources.Bear;
+            skin[2] = Properties.Resources.Soccer;
+            skin[3] = Properties.Resources.Owl;
+            skin[4] = Properties.Resources.Kirby_Celeste;
         }
-
-        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
-            throw new System.NotImplementedException();
-        }
-
+        
         private void button1_Click(object sender, EventArgs e)
         {
-            if (aux == 4)
-            {
-                picSkin.Image = skin[0];
-                aux = 0;
-            }
-            else
-            {
-                picSkin.Image = skin[aux+1];
-                aux++;
-            }
-            
+            ++aux;
+            aux %= 5;
+            picSkin.Image = skin[aux];
         }
 
         private void btnLeft_Click(object sender, EventArgs e)
         {
-            if(aux == 0)
-            {
-                picSkin.Image = skin[4];
-                aux = 4;
-            }
-            else
-            {
-                picSkin.Image = skin[aux-1];
-                aux--;
-            }
+            aux = Convert.ToByte((4 + aux) % 5);
+            picSkin.Image = skin[aux];
         }
-        
     }
 }
