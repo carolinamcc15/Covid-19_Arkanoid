@@ -31,59 +31,53 @@ namespace Covid_19_Arkanoid
         /// </summary>
         private void InitializeComponent()
         {
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.tlpSkin = new System.Windows.Forms.TableLayoutPanel();
             this.picSkin = new System.Windows.Forms.PictureBox();
             this.btnRight = new System.Windows.Forms.Button();
             this.btnLeft = new System.Windows.Forms.Button();
             this.btnDone = new System.Windows.Forms.Button();
-            this.tableLayoutPanel1.SuspendLayout();
+            this.tlpSkin.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize) (this.picSkin)).BeginInit();
             this.SuspendLayout();
             // 
-            // tableLayoutPanel1
+            // tlpSkin
             // 
-            this.tableLayoutPanel1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.tableLayoutPanel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.tableLayoutPanel1.BackColor = System.Drawing.Color.Transparent;
-            this.tableLayoutPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.tableLayoutPanel1.ColumnCount = 7;
-            this.tableLayoutPanel1.ColumnStyles.Add(
+            this.tlpSkin.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.tlpSkin.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.tlpSkin.BackColor = System.Drawing.Color.Transparent;
+            this.tlpSkin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.tlpSkin.ColumnCount = 7;
+            this.tlpSkin.ColumnStyles.Add(
                 new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 201F));
-            this.tableLayoutPanel1.ColumnStyles.Add(
+            this.tlpSkin.ColumnStyles.Add(
                 new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 62F));
-            this.tableLayoutPanel1.ColumnStyles.Add(
+            this.tlpSkin.ColumnStyles.Add(
                 new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 10F));
-            this.tableLayoutPanel1.ColumnStyles.Add(
+            this.tlpSkin.ColumnStyles.Add(
                 new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 168F));
-            this.tableLayoutPanel1.ColumnStyles.Add(
+            this.tlpSkin.ColumnStyles.Add(
                 new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 11F));
-            this.tableLayoutPanel1.ColumnStyles.Add(
+            this.tlpSkin.ColumnStyles.Add(
                 new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 54F));
-            this.tableLayoutPanel1.ColumnStyles.Add(
+            this.tlpSkin.ColumnStyles.Add(
                 new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 204F));
-            this.tableLayoutPanel1.Controls.Add(this.picSkin, 3, 1);
-            this.tableLayoutPanel1.Controls.Add(this.btnRight, 5, 1);
-            this.tableLayoutPanel1.Controls.Add(this.btnLeft, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.btnDone, 3, 3);
-            this.tableLayoutPanel1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 6;
-            this.tableLayoutPanel1.RowStyles.Add(
-                new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 141F));
-            this.tableLayoutPanel1.RowStyles.Add(
-                new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 139F));
-            this.tableLayoutPanel1.RowStyles.Add(
-                new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 21F));
-            this.tableLayoutPanel1.RowStyles.Add(
-                new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 74F));
-            this.tableLayoutPanel1.RowStyles.Add(
-                new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 90F));
-            this.tableLayoutPanel1.RowStyles.Add(
-                new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 22F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(711, 475);
-            this.tableLayoutPanel1.TabIndex = 0;
+            this.tlpSkin.Controls.Add(this.picSkin, 3, 1);
+            this.tlpSkin.Controls.Add(this.btnRight, 5, 1);
+            this.tlpSkin.Controls.Add(this.btnLeft, 1, 1);
+            this.tlpSkin.Controls.Add(this.btnDone, 3, 3);
+            this.tlpSkin.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.tlpSkin.Location = new System.Drawing.Point(0, 0);
+            this.tlpSkin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tlpSkin.Name = "tlpSkin";
+            this.tlpSkin.RowCount = 6;
+            this.tlpSkin.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 141F));
+            this.tlpSkin.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 139F));
+            this.tlpSkin.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 21F));
+            this.tlpSkin.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 74F));
+            this.tlpSkin.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 90F));
+            this.tlpSkin.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 22F));
+            this.tlpSkin.Size = new System.Drawing.Size(711, 475);
+            this.tlpSkin.TabIndex = 0;
             // 
             // picSkin
             // 
@@ -147,22 +141,22 @@ namespace Covid_19_Arkanoid
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Covid_19_Arkanoid.Properties.Resources.Skin;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Controls.Add(this.tableLayoutPanel1);
+            this.Controls.Add(this.tlpSkin);
             this.DoubleBuffered = true;
             this.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.Name = "Skin";
             this.Size = new System.Drawing.Size(711, 475);
-            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tlpSkin.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize) (this.picSkin)).EndInit();
             this.ResumeLayout(false);
         }
 
         #endregion
 
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Button btnLeft;
         private System.Windows.Forms.Button btnDone;
         private System.Windows.Forms.Button btnRight;
         private System.Windows.Forms.PictureBox picSkin;
+        private System.Windows.Forms.TableLayoutPanel tlpSkin;
     }
 }

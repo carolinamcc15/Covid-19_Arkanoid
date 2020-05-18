@@ -31,5 +31,6 @@ namespace Covid_19_Arkanoid
             current = sk;
             tableLayoutPanel1.SetColumnSpan(current,2);
         }
+        
     }
 }

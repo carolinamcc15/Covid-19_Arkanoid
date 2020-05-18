@@ -2,22 +2,24 @@
 using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
+using System.Windows.Forms.VisualStyles;
 
 namespace Covid_19_Arkanoid
 {
     public partial class Skin : UserControl
     {
         byte aux = 0;
-        List<Image> skin = new List<Image>();
+        private Image[] skin = new Image[5];
+        
         public Skin()
         {
             InitializeComponent();
-            skin.Add(global::Covid_19_Arkanoid.Properties.Resources.Pink_Kirby);
-            skin.Add(global::Covid_19_Arkanoid.Properties.Resources.Bear);
-            skin.Add(global::Covid_19_Arkanoid.Properties.Resources.Soccer);
-            skin.Add(global::Covid_19_Arkanoid.Properties.Resources.Owl);
-            skin.Add(global::Covid_19_Arkanoid.Properties.Resources.Kirby_Celeste);
             
+            skin[0] = global::Covid_19_Arkanoid.Properties.Resources.Pink_Kirby;
+            skin[1] = global::Covid_19_Arkanoid.Properties.Resources.Bear;
+            skin[2] = global::Covid_19_Arkanoid.Properties.Resources.Soccer;
+            skin[3] = global::Covid_19_Arkanoid.Properties.Resources.Owl;
+            skin[4] = global::Covid_19_Arkanoid.Properties.Resources.Kirby_Celeste;
         }
 
         private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
@@ -53,5 +55,6 @@ namespace Covid_19_Arkanoid
                 aux--;
             }
         }
+        
     }
 }

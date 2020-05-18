@@ -33,9 +33,9 @@
                 new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.btnPlay = new System.Windows.Forms.Button();
             this.btnScores = new System.Windows.Forms.Button();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.tlpMain = new System.Windows.Forms.TableLayoutPanel();
             this.btnExit = new System.Windows.Forms.Button();
-            this.tableLayoutPanel1.SuspendLayout();
+            this.tlpMain.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnPlay
@@ -74,46 +74,45 @@
             this.btnScores.UseVisualStyleBackColor = false;
             this.btnScores.Click += new System.EventHandler(this.btnScores_Click);
             // 
-            // tableLayoutPanel1
+            // tlpMain
             // 
-            this.tableLayoutPanel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.tableLayoutPanel1.BackColor = System.Drawing.Color.White;
-            this.tableLayoutPanel1.BackgroundImage = global::Covid_19_Arkanoid.Properties.Resources.Group_2;
-            this.tableLayoutPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.tableLayoutPanel1.ColumnCount = 5;
-            this.tableLayoutPanel1.ColumnStyles.Add(
+            this.tlpMain.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.tlpMain.BackColor = System.Drawing.Color.White;
+            this.tlpMain.BackgroundImage = global::Covid_19_Arkanoid.Properties.Resources.Group_2;
+            this.tlpMain.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.tlpMain.ColumnCount = 5;
+            this.tlpMain.ColumnStyles.Add(
                 new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.01403F));
-            this.tableLayoutPanel1.ColumnStyles.Add(
+            this.tlpMain.ColumnStyles.Add(
                 new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.02903F));
-            this.tableLayoutPanel1.ColumnStyles.Add(
+            this.tlpMain.ColumnStyles.Add(
                 new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.17417F));
-            this.tableLayoutPanel1.ColumnStyles.Add(
+            this.tlpMain.ColumnStyles.Add(
                 new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 19.62617F));
-            this.tableLayoutPanel1.ColumnStyles.Add(
+            this.tlpMain.ColumnStyles.Add(
                 new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.01403F));
-            this.tableLayoutPanel1.Controls.Add(this.btnScores, 2, 3);
-            this.tableLayoutPanel1.Controls.Add(this.btnPlay, 2, 2);
-            this.tableLayoutPanel1.Controls.Add(this.btnExit, 2, 5);
-            this.tableLayoutPanel1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 6;
-            this.tableLayoutPanel1.RowStyles.Add(
+            this.tlpMain.Controls.Add(this.btnScores, 2, 3);
+            this.tlpMain.Controls.Add(this.btnPlay, 2, 2);
+            this.tlpMain.Controls.Add(this.btnExit, 2, 5);
+            this.tlpMain.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.tlpMain.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tlpMain.Location = new System.Drawing.Point(0, 0);
+            this.tlpMain.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tlpMain.Name = "tlpMain";
+            this.tlpMain.RowCount = 6;
+            this.tlpMain.RowStyles.Add(
                 new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20.05358F));
-            this.tableLayoutPanel1.RowStyles.Add(
+            this.tlpMain.RowStyles.Add(
                 new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 29.13043F));
-            this.tableLayoutPanel1.RowStyles.Add(
+            this.tlpMain.RowStyles.Add(
                 new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 18.91304F));
-            this.tableLayoutPanel1.RowStyles.Add(
+            this.tlpMain.RowStyles.Add(
                 new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 18.04348F));
-            this.tableLayoutPanel1.RowStyles.Add(
+            this.tlpMain.RowStyles.Add(
                 new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 13.94336F));
-            this.tableLayoutPanel1.RowStyles.Add(
-                new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(689, 419);
-            this.tableLayoutPanel1.TabIndex = 0;
+            this.tlpMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
+            this.tlpMain.Size = new System.Drawing.Size(689, 419);
+            this.tlpMain.TabIndex = 0;
             // 
             // btnExit
             // 
@@ -140,7 +139,7 @@
             this.BackgroundImage = global::Covid_19_Arkanoid.Properties.Resources.Group_2;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(689, 419);
-            this.Controls.Add(this.tableLayoutPanel1);
+            this.Controls.Add(this.tlpMain);
             this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Britannic Bold", 9F, System.Drawing.FontStyle.Regular,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
@@ -149,15 +148,15 @@
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ARKANOID";
-            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tlpMain.ResumeLayout(false);
             this.ResumeLayout(false);
         }
 
         #endregion
 
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Button btnScores;
         private System.Windows.Forms.Button btnPlay;
+        private System.Windows.Forms.TableLayoutPanel tlpMain;
     }
 }

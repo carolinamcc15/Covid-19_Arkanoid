@@ -31,28 +31,27 @@ namespace Covid_19_Arkanoid
         /// </summary>
         private void InitializeComponent()
         {
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.tlpGame = new System.Windows.Forms.TableLayoutPanel();
             this.SuspendLayout();
             // 
-            // tableLayoutPanel1
+            // tlpGame
             // 
-            this.tableLayoutPanel1.BackColor = System.Drawing.Color.Transparent;
-            this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(
+            this.tlpGame.BackColor = System.Drawing.Color.Transparent;
+            this.tlpGame.ColumnCount = 2;
+            this.tlpGame.ColumnStyles.Add(
                 new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.ColumnStyles.Add(
+            this.tlpGame.ColumnStyles.Add(
                 new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 2;
-            this.tableLayoutPanel1.RowStyles.Add(
-                new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.RowStyles.Add(
-                new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(711, 475);
-            this.tableLayoutPanel1.TabIndex = 0;
+            this.tlpGame.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.tlpGame.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tlpGame.Location = new System.Drawing.Point(0, 0);
+            this.tlpGame.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tlpGame.Name = "tlpGame";
+            this.tlpGame.RowCount = 2;
+            this.tlpGame.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tlpGame.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tlpGame.Size = new System.Drawing.Size(711, 475);
+            this.tlpGame.TabIndex = 0;
             // 
             // Game
             // 
@@ -60,7 +59,7 @@ namespace Covid_19_Arkanoid
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Covid_19_Arkanoid.Properties.Resources.CroppedGame1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Controls.Add(this.tableLayoutPanel1);
+            this.Controls.Add(this.tlpGame);
             this.DoubleBuffered = true;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Game";
@@ -70,6 +69,6 @@ namespace Covid_19_Arkanoid
 
         #endregion
 
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.TableLayoutPanel tlpGame;
     }
 }

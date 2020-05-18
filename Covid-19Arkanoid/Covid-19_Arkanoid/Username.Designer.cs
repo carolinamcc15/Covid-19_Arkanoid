@@ -36,8 +36,8 @@ namespace Covid_19_Arkanoid
                 new System.ComponentModel.ComponentResourceManager(typeof(Username));
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.ButName = new System.Windows.Forms.Button();
-            this.ButSkin = new System.Windows.Forms.Button();
+            this.btnUsername = new System.Windows.Forms.Button();
+            this.btnSkin = new System.Windows.Forms.Button();
             this.nameUser1 = new Covid_19_Arkanoid.NameUser();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -56,8 +56,8 @@ namespace Covid_19_Arkanoid
                 new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.ColumnStyles.Add(
                 new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 347F));
-            this.tableLayoutPanel1.Controls.Add(this.ButName, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.ButSkin, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.btnUsername, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.btnSkin, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.nameUser1, 0, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
@@ -70,33 +70,33 @@ namespace Covid_19_Arkanoid
             this.tableLayoutPanel1.Size = new System.Drawing.Size(689, 419);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
-            // ButName
+            // btnUsername
             // 
-            this.ButName.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ButName.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ButName.Font = new System.Drawing.Font("Volleyball", 9F, System.Drawing.FontStyle.Regular,
+            this.btnUsername.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnUsername.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnUsername.Font = new System.Drawing.Font("Volleyball", 9F, System.Drawing.FontStyle.Regular,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.ButName.Location = new System.Drawing.Point(3, 390);
-            this.ButName.Name = "ButName";
-            this.ButName.Size = new System.Drawing.Size(336, 26);
-            this.ButName.TabIndex = 1;
-            this.ButName.Text = "Username";
-            this.ButName.UseVisualStyleBackColor = true;
-            this.ButName.Click += new System.EventHandler(this.button1_Click);
+            this.btnUsername.Location = new System.Drawing.Point(3, 390);
+            this.btnUsername.Name = "btnUsername";
+            this.btnUsername.Size = new System.Drawing.Size(336, 26);
+            this.btnUsername.TabIndex = 1;
+            this.btnUsername.Text = "Username";
+            this.btnUsername.UseVisualStyleBackColor = true;
+            this.btnUsername.Click += new System.EventHandler(this.button1_Click);
             // 
-            // ButSkin
+            // btnSkin
             // 
-            this.ButSkin.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ButSkin.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ButSkin.Font = new System.Drawing.Font("Volleyball", 9F, System.Drawing.FontStyle.Regular,
+            this.btnSkin.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnSkin.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnSkin.Font = new System.Drawing.Font("Volleyball", 9F, System.Drawing.FontStyle.Regular,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.ButSkin.Location = new System.Drawing.Point(345, 390);
-            this.ButSkin.Name = "ButSkin";
-            this.ButSkin.Size = new System.Drawing.Size(341, 26);
-            this.ButSkin.TabIndex = 2;
-            this.ButSkin.Text = "Skin";
-            this.ButSkin.UseVisualStyleBackColor = true;
-            this.ButSkin.Click += new System.EventHandler(this.ButSkin_Click);
+            this.btnSkin.Location = new System.Drawing.Point(345, 390);
+            this.btnSkin.Name = "btnSkin";
+            this.btnSkin.Size = new System.Drawing.Size(341, 26);
+            this.btnSkin.TabIndex = 2;
+            this.btnSkin.Text = "Skin";
+            this.btnSkin.UseVisualStyleBackColor = true;
+            this.btnSkin.Click += new System.EventHandler(this.ButSkin_Click);
             // 
             // nameUser1
             // 
@@ -134,8 +134,8 @@ namespace Covid_19_Arkanoid
 
         private System.Windows.Forms.ImageList imageList1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.Button ButName;
-        private System.Windows.Forms.Button ButSkin;
         private Covid_19_Arkanoid.NameUser nameUser1;
+        private System.Windows.Forms.Button btnSkin;
+        private System.Windows.Forms.Button btnUsername;
     }
 }
