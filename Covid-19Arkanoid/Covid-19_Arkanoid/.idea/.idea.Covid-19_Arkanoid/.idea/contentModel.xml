@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\user\.Rider2019.3\system\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\user\.Rider2019.3\system\resharper-host\local\Transient\ReSharperHost\v193\SolutionCaches\_Covid-19_Arkanoid.240709125.00" t="ExcludeRecursive" />
-    <e p="C:\Users\user\Desktop\Covid-19_Arkanoid\Covid-19_Arkanoid\Covid-19Arkanoid\Covid-19_Arkanoid" t="IncludeRecursive">
+    <e p="C:\Users\Nesto\.Rider2019.3\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\Nesto\.Rider2019.3\system\resharper-host\local\Transient\ReSharperHost\v193\SolutionCaches\_Covid-19_Arkanoid.1441747779.00" t="ExcludeRecursive" />
+    <e p="C:\Users\Nesto\RiderProjects\Covid-19_Arkanoid\Covid-19Arkanoid\Covid-19_Arkanoid" t="IncludeRecursive">
       <e p="App.config" t="Include" />
+      <e p="Ball.cs" t="Include" />
       <e p="bin" t="ExcludeRecursive" />
+      <e p="Block.cs" t="Include" />
       <e p="Covid-19_Arkanoid.csproj" t="IncludeRecursive" />
       <e p="Covid-19_Arkanoid.sln" t="IncludeFlat" />
       <e p="Form1.cs" t="Include" />
@@ -19,6 +21,8 @@
       <e p="NameUser.resx" t="Include" />
       <e p="obj" t="ExcludeRecursive" />
       <e p="packages" t="ExcludeRecursive" />
+      <e p="Paddle.cs" t="Include" />
+      <e p="Player.cs" t="Include" />
       <e p="Program.cs" t="Include" />
       <e p="Properties" t="Include">
         <e p="AssemblyInfo.cs" t="Include" />
