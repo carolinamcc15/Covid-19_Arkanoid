@@ -2,9 +2,9 @@
 
 namespace Covid_19_Arkanoid
 {
-    public partial class Top10 : Form
+    public partial class GameOver : UserControl
     {
-        public Top10()
+        public GameOver()
         {
             InitializeComponent();
         }

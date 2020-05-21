@@ -35,58 +35,56 @@ namespace Covid_19_Arkanoid
             this.picSkin = new System.Windows.Forms.PictureBox();
             this.btnRight = new System.Windows.Forms.Button();
             this.btnLeft = new System.Windows.Forms.Button();
-            this.btnSave = new System.Windows.Forms.Button();
+            this.btnDoneS = new System.Windows.Forms.Button();
             this.tlpSkin.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize) (this.picSkin)).BeginInit();
             this.SuspendLayout();
             // 
             // tlpSkin
             // 
-            this.tlpSkin.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.tlpSkin.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.tlpSkin.BackColor = System.Drawing.Color.Transparent;
             this.tlpSkin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.tlpSkin.ColumnCount = 7;
+            this.tlpSkin.ColumnCount = 5;
             this.tlpSkin.ColumnStyles.Add(
-                new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+                new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 17.33102F));
             this.tlpSkin.ColumnStyles.Add(
-                new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 62F));
+                new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 21.2305F));
             this.tlpSkin.ColumnStyles.Add(
-                new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 10F));
+                new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 23.22357F));
             this.tlpSkin.ColumnStyles.Add(
-                new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 168F));
+                new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 19.06413F));
             this.tlpSkin.ColumnStyles.Add(
-                new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 11F));
-            this.tlpSkin.ColumnStyles.Add(
-                new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 54F));
-            this.tlpSkin.ColumnStyles.Add(
-                new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 204F));
-            this.tlpSkin.Controls.Add(this.picSkin, 3, 1);
-            this.tlpSkin.Controls.Add(this.btnRight, 5, 1);
+                new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 19.32409F));
+            this.tlpSkin.Controls.Add(this.picSkin, 2, 1);
+            this.tlpSkin.Controls.Add(this.btnRight, 3, 1);
             this.tlpSkin.Controls.Add(this.btnLeft, 1, 1);
-            this.tlpSkin.Controls.Add(this.btnSave, 3, 3);
+            this.tlpSkin.Controls.Add(this.btnDoneS, 2, 2);
             this.tlpSkin.Cursor = System.Windows.Forms.Cursors.Default;
+            this.tlpSkin.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tlpSkin.Location = new System.Drawing.Point(0, 0);
             this.tlpSkin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tlpSkin.Name = "tlpSkin";
-            this.tlpSkin.RowCount = 6;
-            this.tlpSkin.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 141F));
-            this.tlpSkin.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 139F));
-            this.tlpSkin.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 21F));
-            this.tlpSkin.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 74F));
-            this.tlpSkin.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 90F));
-            this.tlpSkin.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 22F));
-            this.tlpSkin.Size = new System.Drawing.Size(711, 475);
+            this.tlpSkin.RowCount = 4;
+            this.tlpSkin.RowStyles.Add(
+                new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 32.9773F));
+            this.tlpSkin.RowStyles.Add(
+                new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 23.76502F));
+            this.tlpSkin.RowStyles.Add(
+                new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 18.55808F));
+            this.tlpSkin.RowStyles.Add(
+                new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 24.56609F));
+            this.tlpSkin.Size = new System.Drawing.Size(1154, 749);
             this.tlpSkin.TabIndex = 0;
             // 
             // picSkin
             // 
             this.picSkin.Dock = System.Windows.Forms.DockStyle.Fill;
             this.picSkin.Image = global::Covid_19_Arkanoid.Properties.Resources.Pink_Kirby;
-            this.picSkin.Location = new System.Drawing.Point(277, 143);
+            this.picSkin.Location = new System.Drawing.Point(446, 249);
             this.picSkin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.picSkin.Name = "picSkin";
-            this.picSkin.Size = new System.Drawing.Size(162, 135);
+            this.picSkin.Size = new System.Drawing.Size(261, 174);
             this.picSkin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picSkin.TabIndex = 0;
             this.picSkin.TabStop = false;
@@ -96,12 +94,12 @@ namespace Covid_19_Arkanoid
             this.btnRight.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnRight.BackColor = System.Drawing.Color.White;
             this.btnRight.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnRight.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular,
+            this.btnRight.Font = new System.Drawing.Font("Segoe UI", 28F, System.Drawing.FontStyle.Regular,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.btnRight.Location = new System.Drawing.Point(456, 185);
+            this.btnRight.Location = new System.Drawing.Point(769, 286);
             this.btnRight.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnRight.Name = "btnRight";
-            this.btnRight.Size = new System.Drawing.Size(48, 51);
+            this.btnRight.Size = new System.Drawing.Size(100, 100);
             this.btnRight.TabIndex = 1;
             this.btnRight.Text = "▶";
             this.btnRight.UseVisualStyleBackColor = false;
@@ -112,31 +110,31 @@ namespace Covid_19_Arkanoid
             this.btnLeft.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnLeft.BackColor = System.Drawing.Color.White;
             this.btnLeft.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnLeft.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular,
+            this.btnLeft.Font = new System.Drawing.Font("Segoe UI", 28F, System.Drawing.FontStyle.Regular,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.btnLeft.Location = new System.Drawing.Point(209, 185);
+            this.btnLeft.Location = new System.Drawing.Point(271, 286);
             this.btnLeft.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnLeft.Name = "btnLeft";
-            this.btnLeft.Size = new System.Drawing.Size(48, 51);
+            this.btnLeft.Size = new System.Drawing.Size(100, 100);
             this.btnLeft.TabIndex = 2;
             this.btnLeft.Text = "◀";
             this.btnLeft.UseVisualStyleBackColor = false;
             this.btnLeft.Click += new System.EventHandler(this.btnLeft_Click);
             // 
-            // btnSave
+            // btnDoneS
             // 
-            this.btnSave.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnSave.BackColor = System.Drawing.Color.White;
-            this.btnSave.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSave.Font = new System.Drawing.Font("Volleyball", 9F, System.Drawing.FontStyle.Regular,
+            this.btnDoneS.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnDoneS.BackColor = System.Drawing.Color.White;
+            this.btnDoneS.Font = new System.Drawing.Font("Volleyball", 18F, System.Drawing.FontStyle.Regular,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.btnSave.Location = new System.Drawing.Point(289, 310);
-            this.btnSave.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(137, 56);
-            this.btnSave.TabIndex = 3;
-            this.btnSave.Text = "DONE";
-            this.btnSave.UseVisualStyleBackColor = false;
+            this.btnDoneS.Location = new System.Drawing.Point(463, 459);
+            this.btnDoneS.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnDoneS.Name = "btnDoneS";
+            this.btnDoneS.Size = new System.Drawing.Size(227, 71);
+            this.btnDoneS.TabIndex = 5;
+            this.btnDoneS.Text = "DONE";
+            this.btnDoneS.UseVisualStyleBackColor = false;
+            this.btnDoneS.Click += new System.EventHandler(this.btnDoneS_Click);
             // 
             // Skin
             // 
@@ -148,7 +146,7 @@ namespace Covid_19_Arkanoid
             this.DoubleBuffered = true;
             this.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.Name = "Skin";
-            this.Size = new System.Drawing.Size(711, 475);
+            this.Size = new System.Drawing.Size(1154, 749);
             this.tlpSkin.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize) (this.picSkin)).EndInit();
             this.ResumeLayout(false);
@@ -160,6 +158,6 @@ namespace Covid_19_Arkanoid
         private System.Windows.Forms.Button btnRight;
         private System.Windows.Forms.PictureBox picSkin;
         private System.Windows.Forms.TableLayoutPanel tlpSkin;
-        private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.Button btnDoneS;
     }
 }

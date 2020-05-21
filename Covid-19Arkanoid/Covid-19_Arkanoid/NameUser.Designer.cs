@@ -32,29 +32,30 @@ namespace Covid_19_Arkanoid
         private void InitializeComponent()
         {
             this.tlpChoose = new System.Windows.Forms.TableLayoutPanel();
-            this.btnDone = new System.Windows.Forms.Button();
             this.txtUsername = new System.Windows.Forms.TextBox();
+            this.btnDoneU = new System.Windows.Forms.Button();
             this.tlpChoose.SuspendLayout();
             this.SuspendLayout();
             // 
             // tlpChoose
             // 
             this.tlpChoose.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.tlpChoose.BackColor = System.Drawing.Color.Transparent;
             this.tlpChoose.BackgroundImage = global::Covid_19_Arkanoid.Properties.Resources.User;
             this.tlpChoose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.tlpChoose.ColumnCount = 5;
             this.tlpChoose.ColumnStyles.Add(
-                new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 19.12799F));
+                new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.10399F));
             this.tlpChoose.ColumnStyles.Add(
-                new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 24.05063F));
+                new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 21.49047F));
             this.tlpChoose.ColumnStyles.Add(
-                new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15.78939F));
+                new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 18.63085F));
             this.tlpChoose.ColumnStyles.Add(
-                new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 21.65963F));
+                new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 19.93068F));
             this.tlpChoose.ColumnStyles.Add(
-                new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 19.12799F));
-            this.tlpChoose.Controls.Add(this.btnDone, 2, 3);
+                new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.10399F));
             this.tlpChoose.Controls.Add(this.txtUsername, 1, 1);
+            this.tlpChoose.Controls.Add(this.btnDoneU, 2, 2);
             this.tlpChoose.Cursor = System.Windows.Forms.Cursors.Default;
             this.tlpChoose.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tlpChoose.Location = new System.Drawing.Point(0, 0);
@@ -62,47 +63,46 @@ namespace Covid_19_Arkanoid
             this.tlpChoose.Name = "tlpChoose";
             this.tlpChoose.RowCount = 5;
             this.tlpChoose.RowStyles.Add(
-                new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 37.62376F));
+                new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 57.55814F));
             this.tlpChoose.RowStyles.Add(
-                new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.306931F));
+                new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25.5814F));
             this.tlpChoose.RowStyles.Add(
-                new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.94737F));
+                new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.87117F));
             this.tlpChoose.RowStyles.Add(
-                new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.31579F));
+                new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 384F));
             this.tlpChoose.RowStyles.Add(
-                new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 32.63158F));
-            this.tlpChoose.Size = new System.Drawing.Size(711, 475);
+                new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tlpChoose.Size = new System.Drawing.Size(1154, 749);
             this.tlpChoose.TabIndex = 0;
-            // 
-            // btnDone
-            // 
-            this.btnDone.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnDone.BackColor = System.Drawing.Color.White;
-            this.btnDone.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnDone.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnDone.Font = new System.Drawing.Font("Volleyball", 9F, System.Drawing.FontStyle.Regular,
-                System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.btnDone.Location = new System.Drawing.Point(310, 273);
-            this.btnDone.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnDone.Name = "btnDone";
-            this.btnDone.Size = new System.Drawing.Size(106, 44);
-            this.btnDone.TabIndex = 2;
-            this.btnDone.Text = "Done";
-            this.btnDone.UseVisualStyleBackColor = false;
             // 
             // txtUsername
             // 
             this.tlpChoose.SetColumnSpan(this.txtUsername, 3);
             this.txtUsername.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtUsername.Font = new System.Drawing.Font("Volleyball", 14F, System.Drawing.FontStyle.Regular,
+            this.txtUsername.Font = new System.Drawing.Font("Volleyball", 18F, System.Drawing.FontStyle.Regular,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.txtUsername.Location = new System.Drawing.Point(139, 179);
+            this.txtUsername.Location = new System.Drawing.Point(234, 200);
             this.txtUsername.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtUsername.MaxLength = 20;
             this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(431, 35);
+            this.txtUsername.Size = new System.Drawing.Size(684, 43);
             this.txtUsername.TabIndex = 3;
             this.txtUsername.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // btnDoneU
+            // 
+            this.btnDoneU.BackColor = System.Drawing.Color.White;
+            this.btnDoneU.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnDoneU.Font = new System.Drawing.Font("Volleyball", 18F, System.Drawing.FontStyle.Regular,
+                System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.btnDoneU.Location = new System.Drawing.Point(481, 288);
+            this.btnDoneU.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnDoneU.Name = "btnDoneU";
+            this.btnDoneU.Size = new System.Drawing.Size(208, 54);
+            this.btnDoneU.TabIndex = 6;
+            this.btnDoneU.Text = "DONE";
+            this.btnDoneU.UseVisualStyleBackColor = false;
+            this.btnDoneU.Click += new System.EventHandler(this.btnDoneU_Click);
             // 
             // NameUser
             // 
@@ -112,7 +112,7 @@ namespace Covid_19_Arkanoid
             this.Controls.Add(this.tlpChoose);
             this.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.Name = "NameUser";
-            this.Size = new System.Drawing.Size(711, 475);
+            this.Size = new System.Drawing.Size(1154, 749);
             this.tlpChoose.ResumeLayout(false);
             this.tlpChoose.PerformLayout();
             this.ResumeLayout(false);
@@ -122,6 +122,6 @@ namespace Covid_19_Arkanoid
 
         private System.Windows.Forms.TextBox txtUsername;
         private System.Windows.Forms.TableLayoutPanel tlpChoose;
-        private System.Windows.Forms.Button btnDone;
+        private System.Windows.Forms.Button btnDoneU;
     }
 }

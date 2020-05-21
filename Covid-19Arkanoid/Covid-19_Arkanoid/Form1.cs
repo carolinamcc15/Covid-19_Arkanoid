@@ -25,13 +25,20 @@ namespace Covid_19_Arkanoid
 
         private void btnScores_Click(object sender, EventArgs e)
         {
-            Top10 scores = new Top10();
+            TopTen scores = new TopTen();
             scores.Show();
         }
 
         private void btnExit_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Maximized;
+            Height = Screen.PrimaryScreen.Bounds.Height;
+            Width = Screen.PrimaryScreen.Bounds.Width;
         }
     }
 }

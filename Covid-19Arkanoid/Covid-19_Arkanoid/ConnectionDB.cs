@@ -4,7 +4,7 @@ using Npgsql;
 
 namespace Covid_19_Arkanoid
 {
-    public class ConnectionDB
+    public static class ConnectionDB
     {
         private static String host = "ec2-18-233-32-61.compute-1.amazonaws.com",
             database = "ddmitfc6317dag",

@@ -14,7 +14,6 @@ namespace Covid_19_Arkanoid
         public Skin()
         {
             InitializeComponent();
-            
             skin[0] = Properties.Resources.Pink_Kirby;
             skin[1] = Properties.Resources.Bear;
             skin[2] = Properties.Resources.Soccer;
@@ -33,6 +32,14 @@ namespace Covid_19_Arkanoid
         {
             aux = Convert.ToByte((4 + aux) % 5);
             picSkin.Image = skin[aux];
+        }
+
+        private void btnDoneS_Click(object sender, EventArgs e)
+        {
+            Hide();
+            Game g = new Game();
+            g.Dock = DockStyle.Fill;
+            Parent.Controls.Add(g);
         }
     }
 }

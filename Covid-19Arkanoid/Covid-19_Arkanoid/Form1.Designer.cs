@@ -46,12 +46,12 @@
             this.btnPlay.BackColor = System.Drawing.Color.White;
             this.btnPlay.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnPlay.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnPlay.Font = new System.Drawing.Font("Volleyball", 9F, System.Drawing.FontStyle.Regular,
+            this.btnPlay.Font = new System.Drawing.Font("Volleyball", 18F, System.Drawing.FontStyle.Regular,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.btnPlay.Location = new System.Drawing.Point(279, 194);
+            this.btnPlay.Location = new System.Drawing.Point(442, 323);
             this.btnPlay.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnPlay.Name = "btnPlay";
-            this.btnPlay.Size = new System.Drawing.Size(133, 41);
+            this.btnPlay.Size = new System.Drawing.Size(263, 79);
             this.btnPlay.TabIndex = 0;
             this.btnPlay.Text = "PLAY";
             this.btnPlay.UseVisualStyleBackColor = false;
@@ -65,12 +65,12 @@
             this.btnScores.BackColor = System.Drawing.Color.White;
             this.btnScores.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnScores.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnScores.Font = new System.Drawing.Font("Volleyball", 9F, System.Drawing.FontStyle.Regular,
+            this.btnScores.Font = new System.Drawing.Font("Volleyball", 18F, System.Drawing.FontStyle.Regular,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.btnScores.Location = new System.Drawing.Point(279, 261);
+            this.btnScores.Location = new System.Drawing.Point(442, 437);
             this.btnScores.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnScores.Name = "btnScores";
-            this.btnScores.Size = new System.Drawing.Size(133, 41);
+            this.btnScores.Size = new System.Drawing.Size(263, 79);
             this.btnScores.TabIndex = 1;
             this.btnScores.Text = "SCORES";
             this.btnScores.UseVisualStyleBackColor = false;
@@ -86,11 +86,11 @@
             this.tlpMain.ColumnStyles.Add(
                 new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.01403F));
             this.tlpMain.ColumnStyles.Add(
-                new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.02903F));
+                new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.81185F));
             this.tlpMain.ColumnStyles.Add(
-                new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.17417F));
+                new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 26.21951F));
             this.tlpMain.ColumnStyles.Add(
-                new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 19.62617F));
+                new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.72474F));
             this.tlpMain.ColumnStyles.Add(
                 new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.01403F));
             this.tlpMain.Controls.Add(this.btnScores, 2, 3);
@@ -112,8 +112,8 @@
                 new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 18.04348F));
             this.tlpMain.RowStyles.Add(
                 new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 13.94336F));
-            this.tlpMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
-            this.tlpMain.Size = new System.Drawing.Size(689, 419);
+            this.tlpMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 88F));
+            this.tlpMain.Size = new System.Drawing.Size(1148, 709);
             this.tlpMain.TabIndex = 0;
             // 
             // btnExit
@@ -124,12 +124,12 @@
             this.btnExit.BackColor = System.Drawing.Color.White;
             this.btnExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnExit.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnExit.Font = new System.Drawing.Font("Volleyball", 9F, System.Drawing.FontStyle.Regular,
+            this.btnExit.Font = new System.Drawing.Font("Volleyball", 18F, System.Drawing.FontStyle.Regular,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.btnExit.Location = new System.Drawing.Point(288, 368);
+            this.btnExit.Location = new System.Drawing.Point(471, 620);
             this.btnExit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(115, 38);
+            this.btnExit.Size = new System.Drawing.Size(205, 75);
             this.btnExit.TabIndex = 2;
             this.btnExit.Text = "EXIT";
             this.btnExit.UseVisualStyleBackColor = false;
@@ -141,16 +141,19 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Covid_19_Arkanoid.Properties.Resources.Group_2;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(689, 419);
+            this.ClientSize = new System.Drawing.Size(1148, 709);
             this.Controls.Add(this.tlpMain);
             this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Britannic Bold", 9F, System.Drawing.FontStyle.Regular,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.ForeColor = System.Drawing.Color.Black;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon) (resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ARKANOID";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.tlpMain.ResumeLayout(false);
             this.ResumeLayout(false);
         }
