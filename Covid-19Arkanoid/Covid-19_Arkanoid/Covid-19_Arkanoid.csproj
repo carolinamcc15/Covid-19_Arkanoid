@@ -196,6 +196,7 @@
       <Content Include="Resources\Bloque_verde.png" />
       <Content Include="Resources\CroppedGame.png" />
       <Content Include="Resources\CroppedGame1.png" />
+      <Content Include="Resources\GameBackground.png" />
       <Content Include="Resources\GameOver.png" />
       <Content Include="Resources\Game_Over.png" />
       <Content Include="Resources\Group_2.png" />

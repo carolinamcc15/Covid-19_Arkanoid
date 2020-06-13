@@ -56,7 +56,7 @@ namespace Covid_19_Arkanoid
                     pic[i].BackgroundImage = Resources.Life;
                     pic[i].BackgroundImageLayout = ImageLayout.Stretch;
                     pic[i].Size = new Size(70,70);
-                    pic[i].Location = new Point(20 + (i * 70), 20);
+                    pic[i].Location = new Point(20 + (i * 70), 5);
                     Controls.Add(pic[i]);
                 }
                 blocks = new Block[6,8];

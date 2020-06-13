@@ -74,17 +74,17 @@ namespace Covid_19_Arkanoid
                 new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 18.55808F));
             this.tlpSkin.RowStyles.Add(
                 new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 24.56609F));
-            this.tlpSkin.Size = new System.Drawing.Size(923, 599);
+            this.tlpSkin.Size = new System.Drawing.Size(1153, 749);
             this.tlpSkin.TabIndex = 0;
             // 
             // picSkin
             // 
             this.picSkin.Dock = System.Windows.Forms.DockStyle.Fill;
             this.picSkin.Image = global::Covid_19_Arkanoid.Properties.Resources.Pink_Kirby;
-            this.picSkin.Location = new System.Drawing.Point(356, 198);
+            this.picSkin.Location = new System.Drawing.Point(445, 248);
             this.picSkin.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.picSkin.Name = "picSkin";
-            this.picSkin.Size = new System.Drawing.Size(209, 140);
+            this.picSkin.Size = new System.Drawing.Size(263, 176);
             this.picSkin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picSkin.TabIndex = 0;
             this.picSkin.TabStop = false;
@@ -96,10 +96,10 @@ namespace Covid_19_Arkanoid
             this.btnRight.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnRight.Font = new System.Drawing.Font("Segoe UI", 28F, System.Drawing.FontStyle.Regular,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.btnRight.Location = new System.Drawing.Point(614, 228);
+            this.btnRight.Location = new System.Drawing.Point(769, 286);
             this.btnRight.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.btnRight.Name = "btnRight";
-            this.btnRight.Size = new System.Drawing.Size(80, 80);
+            this.btnRight.Size = new System.Drawing.Size(100, 100);
             this.btnRight.TabIndex = 1;
             this.btnRight.Text = "▶";
             this.btnRight.UseVisualStyleBackColor = false;
@@ -112,10 +112,10 @@ namespace Covid_19_Arkanoid
             this.btnLeft.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnLeft.Font = new System.Drawing.Font("Segoe UI", 28F, System.Drawing.FontStyle.Regular,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.btnLeft.Location = new System.Drawing.Point(216, 228);
+            this.btnLeft.Location = new System.Drawing.Point(271, 286);
             this.btnLeft.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.btnLeft.Name = "btnLeft";
-            this.btnLeft.Size = new System.Drawing.Size(80, 80);
+            this.btnLeft.Size = new System.Drawing.Size(100, 100);
             this.btnLeft.TabIndex = 2;
             this.btnLeft.Text = "◀";
             this.btnLeft.UseVisualStyleBackColor = false;
@@ -127,10 +127,10 @@ namespace Covid_19_Arkanoid
             this.btnDoneS.BackColor = System.Drawing.Color.White;
             this.btnDoneS.Font = new System.Drawing.Font("Volleyball", 18F, System.Drawing.FontStyle.Regular,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.btnDoneS.Location = new System.Drawing.Point(369, 366);
+            this.btnDoneS.Location = new System.Drawing.Point(462, 459);
             this.btnDoneS.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.btnDoneS.Name = "btnDoneS";
-            this.btnDoneS.Size = new System.Drawing.Size(182, 56);
+            this.btnDoneS.Size = new System.Drawing.Size(228, 70);
             this.btnDoneS.TabIndex = 5;
             this.btnDoneS.Text = "DONE";
             this.btnDoneS.UseVisualStyleBackColor = false;
@@ -138,15 +138,15 @@ namespace Covid_19_Arkanoid
             // 
             // Skin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Covid_19_Arkanoid.Properties.Resources.Skin;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Controls.Add(this.tlpSkin);
             this.DoubleBuffered = true;
-            this.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
+            this.Margin = new System.Windows.Forms.Padding(2, 5, 2, 5);
             this.Name = "Skin";
-            this.Size = new System.Drawing.Size(923, 599);
+            this.Size = new System.Drawing.Size(1153, 749);
             this.tlpSkin.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize) (this.picSkin)).EndInit();
             this.ResumeLayout(false);
