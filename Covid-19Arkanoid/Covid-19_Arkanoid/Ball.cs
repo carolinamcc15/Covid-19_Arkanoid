@@ -7,22 +7,19 @@ namespace Covid_19_Arkanoid
     public class Ball : PictureBox
     {
         private Image skin;
-        private Point location;
-        private int verticalMovement;
-        private int horizontalMovement;
+        public int VerticalMovement { get; set; }
+        public int HorizontalMovement { get; set; }
 
-        public Ball(Image skin, Point location, int verticalMovement, int horizontalMovement)
+        public Ball(Image skin, int VerticalMovement, int HorizontalMovement)
         {
-            this.skin = skin;
-            this.location = location;
-            this.verticalMovement = verticalMovement;
-            this.horizontalMovement = horizontalMovement;
+            Size = new Size(30,30);
+            BackgroundImage = skin;
+            BackgroundImageLayout = ImageLayout.Stretch;
+            BackColor = Color.Transparent;
+            this.VerticalMovement = VerticalMovement;
+            this.HorizontalMovement = HorizontalMovement;
         }
-
-        public void Bounce()
-        {
-            
-        }
+        
     }
     
 }

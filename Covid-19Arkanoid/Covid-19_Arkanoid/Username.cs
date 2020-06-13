@@ -5,14 +5,9 @@ namespace Covid_19_Arkanoid
 {
     public partial class Username : Form
     {
-        public UserControl current;
-        public Skin sk = new Skin();
-      
         public Username()
         {
             InitializeComponent();
-            current = nameUser1;
-            sk.Dock = DockStyle.Fill;
         }
 
         private void Username_Load(object sender, EventArgs e)

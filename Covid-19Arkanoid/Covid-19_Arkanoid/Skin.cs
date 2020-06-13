@@ -8,12 +8,14 @@ namespace Covid_19_Arkanoid
 {
     public partial class Skin : UserControl
     {
-        byte aux = 0;
-        private Image[] skin = new Image[5];
-        
-        public Skin()
+        private byte aux = 0;
+        private Image[] skin;
+        private String username;
+        public Skin(String username)
         {
+            this.username = username;
             InitializeComponent();
+            skin = new Image[5];
             skin[0] = Properties.Resources.Pink_Kirby;
             skin[1] = Properties.Resources.Bear;
             skin[2] = Properties.Resources.Soccer;
@@ -36,10 +38,10 @@ namespace Covid_19_Arkanoid
 
         private void btnDoneS_Click(object sender, EventArgs e)
         {
-            Hide();
-            Game g = new Game();
-            g.Dock = DockStyle.Fill;
-            Parent.Controls.Add(g);
+            Game game = new Game(picSkin.Image,username);
+            game.Dock = DockStyle.Fill;
+            Parent.Controls.Add(game);
+            Parent.Controls.Remove(this);
         }
     }
 }

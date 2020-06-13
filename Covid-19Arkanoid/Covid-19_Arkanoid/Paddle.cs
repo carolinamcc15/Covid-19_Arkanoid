@@ -1,18 +1,16 @@
 ﻿using System.Drawing;
+using System.Windows.Forms;
 
 namespace Covid_19_Arkanoid
 {
-    public class Paddle
+    public class Paddle : PictureBox
     {
-        private int width;
-        private int height;
-        private Image backImage;
-
         public Paddle(int width, int height, Image backImage)
         {
-            this.width = width;
-            this.height = height;
-            this.backImage = backImage;
+            Size = new Size(width,height);
+            BackgroundImage = backImage;
+            BackColor = Color.Transparent;
+            BackgroundImageLayout = ImageLayout.Stretch;
         }
     }
 }
