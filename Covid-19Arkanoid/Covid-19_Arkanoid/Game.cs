@@ -87,6 +87,7 @@ namespace Covid_19_Arkanoid
         {
             if (remainingBlocks == 0 || player.Lives == 0)
             {
+                timerArkanoid.Stop();
                 FinishGame();
             }
             player.Ball.Top += player.Ball.VerticalMovement;
@@ -98,7 +99,17 @@ namespace Covid_19_Arkanoid
                     player.Score += 10;
                     --remainingBlocks;
                     block.Dispose();
-                    player.Ball.VerticalMovement *= -1;
+                    //Se crean nuevos rectángulos para verificar si pega en los laterales del bloque
+                    if (player.Ball.Bounds.IntersectsWith(
+                            new Rectangle(block.Location,new Size(3,block.Height))) || 
+                        player.Ball.Bounds.IntersectsWith(
+                            new Rectangle(block.Location.X + block.Width, block.Location.Y,
+                                3, block.Height))) 
+                    {
+                        player.Ball.HorizontalMovement *= -1;    
+                    }
+                    else
+                        player.Ball.VerticalMovement *= -1;
                 }
             }
 
@@ -109,12 +120,12 @@ namespace Covid_19_Arkanoid
                 {
                     if (player.Ball.HorizontalMovement>0)
                     {
-                        player.Ball.HorizontalMovement = new Random().Next(-6,-3);
+                        player.Ball.HorizontalMovement = new Random().Next(-6,-4);
                         
                     }
                 }else if (player.Ball.HorizontalMovement<0)
                 {
-                    player.Ball.HorizontalMovement = new Random().Next(3,6);
+                    player.Ball.HorizontalMovement = new Random().Next(4,6);
                 }
                 player.Ball.VerticalMovement *= -1;
             }
