@@ -28,10 +28,6 @@ namespace Covid_19_Arkanoid
                             MessageBoxIcon.Warning);
                         current = pl;
                     }
-                    else
-                    {
-                        MessageBox.Show("No implementado aún.");
-                    }
                 }
                 //PlayerDAO.InsertPlayer(txtUsername.Text);
                 Hide();
