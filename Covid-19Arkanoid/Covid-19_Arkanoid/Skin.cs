@@ -11,9 +11,11 @@ namespace Covid_19_Arkanoid
         private byte aux = 0;
         private Image[] skin;
         private String username;
-        public Skin(String username)
+        private int id;
+        public Skin(String username, int id)
         {
             this.username = username;
+            this.id = id;
             InitializeComponent();
             skin = new Image[5];
             skin[0] = Properties.Resources.Pink_Kirby;
@@ -38,7 +40,7 @@ namespace Covid_19_Arkanoid
 
         private void btnDoneS_Click(object sender, EventArgs e)
         {
-            Game game = new Game(picSkin.Image,username);
+            Game game = new Game(picSkin.Image,username,id);
             game.Dock = DockStyle.Fill;
             Parent.Controls.Add(game);
             Parent.Controls.Remove(this);

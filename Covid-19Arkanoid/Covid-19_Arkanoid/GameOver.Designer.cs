@@ -45,7 +45,7 @@ namespace Covid_19_Arkanoid
             this.tableLayoutPanel1.ColumnStyles.Add(
                 new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 64.65006F));
             this.tableLayoutPanel1.ColumnStyles.Add(
-                new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 312F));
+                new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 314F));
             this.tableLayoutPanel1.Controls.Add(this.lblScore, 1, 1);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
@@ -67,9 +67,9 @@ namespace Covid_19_Arkanoid
             this.lblScore.Font = new System.Drawing.Font("Volleyball", 16F, System.Drawing.FontStyle.Regular,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.lblScore.ForeColor = System.Drawing.Color.White;
-            this.lblScore.Location = new System.Drawing.Point(300, 399);
+            this.lblScore.Location = new System.Drawing.Point(299, 399);
             this.lblScore.Name = "lblScore";
-            this.lblScore.Size = new System.Drawing.Size(538, 80);
+            this.lblScore.Size = new System.Drawing.Size(537, 80);
             this.lblScore.TabIndex = 0;
             this.lblScore.Text = "123456789";
             this.lblScore.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;

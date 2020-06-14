@@ -8,6 +8,7 @@ namespace Covid_19_Arkanoid
         public TopTen()
         {
             InitializeComponent();
+            dgvTop10.DataSource = null;
         }
 
 
@@ -16,6 +17,8 @@ namespace Covid_19_Arkanoid
             WindowState = FormWindowState.Maximized;
             Height = Screen.PrimaryScreen.Bounds.Height;
             Width = Screen.PrimaryScreen.Bounds.Width;
+
+            dgvTop10.DataSource = Top10DAO.GetTop10();
         }
     }
     

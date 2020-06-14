@@ -12,11 +12,12 @@ namespace Covid_19_Arkanoid
         private bool onGame;
         private int remainingBlocks;
         private PictureBox[] pic;
-        public Game(Image skin, String name)
-        {   
-            
+        private int id;
+        public Game(Image skin, String name, int id)
+        {
+            this.id = id;
             InitializeComponent();
-            player = new Player(name, skin);
+            player = new Player(name, skin, id);
             onGame = false;
             remainingBlocks = 0;
         }
@@ -156,6 +157,7 @@ namespace Covid_19_Arkanoid
         private void FinishGame()
         {
             String result = "Score: " + player.Score + "\nBest score: " + player.HistoricalScore + "\nTop: ";
+            PlayerDAO.InsertScore(player.Score, id);
             if (MessageBox.Show(result,"ARKANOID",MessageBoxButtons.OK,MessageBoxIcon.Information) == DialogResult.OK)
             {
                 Parent.Hide();
