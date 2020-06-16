@@ -25,20 +25,20 @@ namespace Covid_19_Arkanoid
             skin[4] = Properties.Resources.Kirby_Celeste;
         }
         
-        private void button1_Click(object sender, EventArgs e)
+        private void ButtonRight_Click(object sender, EventArgs e)
         {
             ++aux;
             aux %= 5;
             picSkin.Image = skin[aux];
         }
 
-        private void btnLeft_Click(object sender, EventArgs e)
+        private void BtnLeft_Click(object sender, EventArgs e)
         {
             aux = Convert.ToByte((4 + aux) % 5);
             picSkin.Image = skin[aux];
         }
 
-        private void btnDoneS_Click(object sender, EventArgs e)
+        private void BtnDoneS_Click(object sender, EventArgs e)
         {
             Game game = new Game(picSkin.Image,username,id);
             game.Dock = DockStyle.Fill;

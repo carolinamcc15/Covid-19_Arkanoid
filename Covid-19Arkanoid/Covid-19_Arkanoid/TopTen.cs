@@ -17,8 +17,9 @@ namespace Covid_19_Arkanoid
             WindowState = FormWindowState.Maximized;
             Height = Screen.PrimaryScreen.Bounds.Height;
             Width = Screen.PrimaryScreen.Bounds.Width;
-
-            dgvTop10.DataSource = Top10DAO.GetTop10();
+            
+            dgvTop10.DataSource = PlayerDAO.GetTop10();
+            
         }
     }
     

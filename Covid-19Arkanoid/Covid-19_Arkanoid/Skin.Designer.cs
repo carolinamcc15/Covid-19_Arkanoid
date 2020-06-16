@@ -103,7 +103,7 @@ namespace Covid_19_Arkanoid
             this.btnRight.TabIndex = 1;
             this.btnRight.Text = "▶";
             this.btnRight.UseVisualStyleBackColor = false;
-            this.btnRight.Click += new System.EventHandler(this.button1_Click);
+            this.btnRight.Click += new System.EventHandler(this.ButtonRight_Click);
             // 
             // btnLeft
             // 
@@ -119,7 +119,7 @@ namespace Covid_19_Arkanoid
             this.btnLeft.TabIndex = 2;
             this.btnLeft.Text = "◀";
             this.btnLeft.UseVisualStyleBackColor = false;
-            this.btnLeft.Click += new System.EventHandler(this.btnLeft_Click);
+            this.btnLeft.Click += new System.EventHandler(this.BtnLeft_Click);
             // 
             // btnDoneS
             // 
@@ -134,7 +134,7 @@ namespace Covid_19_Arkanoid
             this.btnDoneS.TabIndex = 5;
             this.btnDoneS.Text = "DONE";
             this.btnDoneS.UseVisualStyleBackColor = false;
-            this.btnDoneS.Click += new System.EventHandler(this.btnDoneS_Click);
+            this.btnDoneS.Click += new System.EventHandler(this.BtnDoneS_Click);
             // 
             // Skin
             // 

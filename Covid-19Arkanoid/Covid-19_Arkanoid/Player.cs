@@ -6,7 +6,7 @@ namespace Covid_19_Arkanoid
 {
     public class Player
     {
-        public int playerID { get; set; }
+        public int PlayerId { get; set; }
         public String Name{ get; set; }
         public int Score{ get; set; }
         public int HistoricalScore { get; set; }

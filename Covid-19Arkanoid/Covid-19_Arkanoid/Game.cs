@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
 using Covid_19_Arkanoid.Properties;
@@ -156,7 +157,20 @@ namespace Covid_19_Arkanoid
         }
         private void FinishGame()
         {
-            String result = "Score: " + player.Score + "\nBest score: " + player.HistoricalScore + "\nTop: ";
+            PlayerDAO.InsertScore(player.Score, id);
+            player.HistoricalScore = PlayerDAO.BestScore(id);
+            string top = "No";
+            List<Player> top10 = new List<Player>();
+            top10 = PlayerDAO.GetTop10Players();
+            top10.ForEach(s =>
+            {
+                if (string.Equals(s.Name, player.Name, StringComparison.OrdinalIgnoreCase))
+                {
+                    top = "Yes";
+                }
+            });
+
+            String result = "Score: " + player.Score + "\nBest score: " + player.HistoricalScore + "\nTop 10: " + top;
             PlayerDAO.InsertScore(player.Score, id);
             if (MessageBox.Show(result,"ARKANOID",MessageBoxButtons.OK,MessageBoxIcon.Information) == DialogResult.OK)
             {

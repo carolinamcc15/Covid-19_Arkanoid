@@ -55,7 +55,7 @@
             this.btnPlay.TabIndex = 0;
             this.btnPlay.Text = "PLAY";
             this.btnPlay.UseVisualStyleBackColor = false;
-            this.btnPlay.Click += new System.EventHandler(this.btnPlay_Click);
+            this.btnPlay.Click += new System.EventHandler(this.BtnPlay_Click);
             // 
             // btnScores
             // 
@@ -74,7 +74,7 @@
             this.btnScores.TabIndex = 1;
             this.btnScores.Text = "SCORES";
             this.btnScores.UseVisualStyleBackColor = false;
-            this.btnScores.Click += new System.EventHandler(this.btnScores_Click);
+            this.btnScores.Click += new System.EventHandler(this.BtnScores_Click);
             // 
             // tlpMain
             // 
@@ -133,7 +133,7 @@
             this.btnExit.TabIndex = 2;
             this.btnExit.Text = "EXIT";
             this.btnExit.UseVisualStyleBackColor = false;
-            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            this.btnExit.Click += new System.EventHandler(this.BtnExit_Click);
             // 
             // Form1
             // 

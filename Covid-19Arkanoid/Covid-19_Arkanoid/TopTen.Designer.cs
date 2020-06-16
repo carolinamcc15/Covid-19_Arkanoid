@@ -44,14 +44,14 @@ namespace Covid_19_Arkanoid
             this.tlpTop10.BackColor = System.Drawing.Color.Transparent;
             this.tlpTop10.ColumnCount = 3;
             this.tlpTop10.ColumnStyles.Add(
-                new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 9.668989F));
+                new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 23.08362F));
             this.tlpTop10.ColumnStyles.Add(
-                new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 81.18467F));
+                new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 54.44251F));
             this.tlpTop10.ColumnStyles.Add(
-                new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 9.23345F));
+                new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 22.38676F));
             this.tlpTop10.Controls.Add(this.dgvTop10, 1, 1);
             this.tlpTop10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tlpTop10.Font = new System.Drawing.Font("Volleyball", 14F, System.Drawing.FontStyle.Regular,
+            this.tlpTop10.Font = new System.Drawing.Font("Volleyball", 18F, System.Drawing.FontStyle.Regular,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.tlpTop10.Location = new System.Drawing.Point(0, 0);
             this.tlpTop10.Name = "tlpTop10";
@@ -67,39 +67,52 @@ namespace Covid_19_Arkanoid
             // 
             // dgvTop10
             // 
-            this.dgvTop10.AllowUserToAddRows = false;
+           this.dgvTop10.AllowUserToAddRows = false;
             this.dgvTop10.AllowUserToDeleteRows = false;
             this.dgvTop10.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvTop10.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.dgvTop10.BackgroundColor = System.Drawing.Color.FromArgb(((int) (((byte) (52)))),
                 ((int) (((byte) (46)))), ((int) (((byte) (55)))));
+            this.dgvTop10.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvTop10.CausesValidation = false;
             this.dgvTop10.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dgvTop10.ColumnHeadersHeightSizeMode =
                 System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvTop10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvTop10.Location = new System.Drawing.Point(113, 146);
+            this.dgvTop10.Enabled = false;
+            this.dgvTop10.Location = new System.Drawing.Point(268, 146);
             this.dgvTop10.Name = "dgvTop10";
             this.dgvTop10.ReadOnly = true;
+            this.dgvTop10.RowHeadersVisible = false;
             this.dgvTop10.RowHeadersWidth = 150;
             this.dgvTop10.RowHeadersWidthSizeMode =
                 System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.dgvTop10.RowTemplate.Height = 28;
+            this.dgvTop10.RowTemplate.DefaultCellStyle.BackColor =
+                System.Drawing.Color.FromArgb(((int) (((byte) (52)))), ((int) (((byte) (46)))),
+                    ((int) (((byte) (55)))));
+            this.dgvTop10.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.White;
+            this.dgvTop10.RowTemplate.DefaultCellStyle.Padding = new System.Windows.Forms.Padding(10);
+            this.dgvTop10.RowTemplate.DefaultCellStyle.SelectionBackColor =
+                System.Drawing.Color.FromArgb(((int) (((byte) (52)))), ((int) (((byte) (46)))),
+                    ((int) (((byte) (55)))));
+            this.dgvTop10.RowTemplate.Height = 100;
             this.dgvTop10.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.dgvTop10.Size = new System.Drawing.Size(925, 528);
+            this.dgvTop10.Size = new System.Drawing.Size(619, 528);
             this.dgvTop10.TabIndex = 0;
             // 
             // TopTen
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(144F, 144F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackgroundImage = global::Covid_19_Arkanoid.Properties.Resources.Top101;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1148, 709);
+            this.ClientSize = new System.Drawing.Size(765, 473);
             this.Controls.Add(this.tlpTop10);
             this.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon) (resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.MaximizeBox = false;
             this.Name = "TopTen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

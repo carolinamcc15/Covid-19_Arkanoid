@@ -94,11 +94,11 @@
         <Compile Include="Ball.cs" />
         <Compile Include="Block.cs" />
         <Compile Include="ConnectionDB.cs" />
-        <Compile Include="Form1.cs">
+        <Compile Include="FormMain.cs">
             <SubType>Form</SubType>
         </Compile>
-        <Compile Include="Form1.Designer.cs">
-            <DependentUpon>Form1.cs</DependentUpon>
+        <Compile Include="FormMain.Designer.cs">
+            <DependentUpon>FormMain.cs</DependentUpon>
         </Compile>
         <Compile Include="Game.cs">
           <SubType>UserControl</SubType>
@@ -129,7 +129,6 @@
         <Compile Include="Skin.Designer.cs">
           <DependentUpon>Skin.cs</DependentUpon>
         </Compile>
-        <Compile Include="Top10DAO.cs" />
         <Compile Include="TopTen.cs">
           <SubType>Form</SubType>
         </Compile>
@@ -142,8 +141,8 @@
         <Compile Include="Username.Designer.cs">
           <DependentUpon>Username.cs</DependentUpon>
         </Compile>
-        <EmbeddedResource Include="Form1.resx">
-          <DependentUpon>Form1.cs</DependentUpon>
+        <EmbeddedResource Include="FormMain.resx">
+          <DependentUpon>FormMain.cs</DependentUpon>
         </EmbeddedResource>
         <EmbeddedResource Include="Game.resx">
           <DependentUpon>Game.cs</DependentUpon>

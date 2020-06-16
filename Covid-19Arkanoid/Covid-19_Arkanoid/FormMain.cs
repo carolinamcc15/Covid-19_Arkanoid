@@ -17,19 +17,19 @@ namespace Covid_19_Arkanoid
             InitializeComponent();
         }
 
-        private void btnPlay_Click(object sender, EventArgs e)
+        private void BtnPlay_Click(object sender, EventArgs e)
         {
             Username user = new Username();
             user.Show();
         }
 
-        private void btnScores_Click(object sender, EventArgs e)
+        private void BtnScores_Click(object sender, EventArgs e)
         {
             TopTen scores = new TopTen();
             scores.Show();
         }
 
-        private void btnExit_Click(object sender, EventArgs e)
+        private void BtnExit_Click(object sender, EventArgs e)
         {
             Close();
         }
