@@ -80,7 +80,6 @@ namespace Covid_19_Arkanoid
             // picSkin
             // 
             this.picSkin.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.picSkin.Image = global::Covid_19_Arkanoid.Properties.Resources.Pink_Kirby;
             this.picSkin.Location = new System.Drawing.Point(445, 248);
             this.picSkin.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.picSkin.Name = "picSkin";
@@ -140,13 +139,12 @@ namespace Covid_19_Arkanoid
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::Covid_19_Arkanoid.Properties.Resources.Skin;
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Controls.Add(this.tlpSkin);
             this.DoubleBuffered = true;
             this.Margin = new System.Windows.Forms.Padding(2, 5, 2, 5);
             this.Name = "Skin";
             this.Size = new System.Drawing.Size(1153, 749);
+            this.Load += new System.EventHandler(this.Skin_Load);
             this.tlpSkin.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize) (this.picSkin)).EndInit();
             this.ResumeLayout(false);

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace Covid_19_Arkanoid
@@ -64,6 +65,12 @@ namespace Covid_19_Arkanoid
 
             
             
+        }
+
+        private void NameUser_Load(object sender, EventArgs e)
+        {
+            tlpChoose.BackgroundImage = Image.FromFile("../../Resources/User.png");;
+            tlpChoose.BackgroundImageLayout = ImageLayout.Stretch;
         }
     }
 }

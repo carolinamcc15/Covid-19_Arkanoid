@@ -48,7 +48,7 @@ namespace Covid_19_Arkanoid
             // 
             // Username
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1132, 693);
             this.Controls.Add(this.nameUser1);

@@ -78,7 +78,6 @@ namespace Covid_19_Arkanoid
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::Covid_19_Arkanoid.Properties.Resources.Game_Over;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Controls.Add(this.tableLayoutPanel1);
             this.DoubleBuffered = true;

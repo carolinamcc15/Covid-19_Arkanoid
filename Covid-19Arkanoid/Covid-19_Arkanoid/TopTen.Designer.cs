@@ -54,6 +54,7 @@ namespace Covid_19_Arkanoid
             this.tlpTop10.Font = new System.Drawing.Font("Volleyball", 18F, System.Drawing.FontStyle.Regular,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.tlpTop10.Location = new System.Drawing.Point(0, 0);
+            this.tlpTop10.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tlpTop10.Name = "tlpTop10";
             this.tlpTop10.RowCount = 3;
             this.tlpTop10.RowStyles.Add(
@@ -62,12 +63,12 @@ namespace Covid_19_Arkanoid
                 new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 75.31734F));
             this.tlpTop10.RowStyles.Add(
                 new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 4.372355F));
-            this.tlpTop10.Size = new System.Drawing.Size(1148, 709);
+            this.tlpTop10.Size = new System.Drawing.Size(1148, 710);
             this.tlpTop10.TabIndex = 0;
             // 
             // dgvTop10
             // 
-           this.dgvTop10.AllowUserToAddRows = false;
+            this.dgvTop10.AllowUserToAddRows = false;
             this.dgvTop10.AllowUserToDeleteRows = false;
             this.dgvTop10.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvTop10.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
@@ -80,7 +81,8 @@ namespace Covid_19_Arkanoid
                 System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvTop10.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvTop10.Enabled = false;
-            this.dgvTop10.Location = new System.Drawing.Point(268, 146);
+            this.dgvTop10.Location = new System.Drawing.Point(269, 147);
+            this.dgvTop10.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvTop10.Name = "dgvTop10";
             this.dgvTop10.ReadOnly = true;
             this.dgvTop10.RowHeadersVisible = false;
@@ -97,22 +99,22 @@ namespace Covid_19_Arkanoid
                     ((int) (((byte) (55)))));
             this.dgvTop10.RowTemplate.Height = 100;
             this.dgvTop10.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.dgvTop10.Size = new System.Drawing.Size(619, 528);
+            this.dgvTop10.Size = new System.Drawing.Size(617, 527);
             this.dgvTop10.TabIndex = 0;
             // 
             // TopTen
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(144F, 144F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackgroundImage = global::Covid_19_Arkanoid.Properties.Resources.Top101;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(765, 473);
+            this.ClientSize = new System.Drawing.Size(1148, 710);
             this.Controls.Add(this.tlpTop10);
             this.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon) (resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MaximizeBox = false;
             this.Name = "TopTen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

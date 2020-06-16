@@ -39,6 +39,9 @@ namespace Covid_19_Arkanoid
             WindowState = FormWindowState.Maximized;
             Height = Screen.PrimaryScreen.Bounds.Height;
             Width = Screen.PrimaryScreen.Bounds.Width;
+            
+            tlpMain.BackgroundImage = Image.FromFile("../../Resources/Group_2.png");
+            tlpMain.BackgroundImageLayout = ImageLayout.Stretch;
         }
     }
 }

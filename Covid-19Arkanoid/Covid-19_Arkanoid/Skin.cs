@@ -18,11 +18,11 @@ namespace Covid_19_Arkanoid
             this.id = id;
             InitializeComponent();
             skin = new Image[5];
-            skin[0] = Properties.Resources.Pink_Kirby;
-            skin[1] = Properties.Resources.Bear;
-            skin[2] = Properties.Resources.Soccer;
-            skin[3] = Properties.Resources.Owl;
-            skin[4] = Properties.Resources.Kirby_Celeste;
+            skin[0] = Image.FromFile("../../Resources/Pink_Kirby.png");
+            skin[1] = Image.FromFile("../../Resources/Bear.png");
+            skin[2] = Image.FromFile("../../Resources/Soccer.png");
+            skin[3] = Image.FromFile("../../Resources/Owl.png");
+            skin[4] = Image.FromFile("../../Resources/Kirby_Celeste.png");
         }
         
         private void ButtonRight_Click(object sender, EventArgs e)
@@ -44,6 +44,15 @@ namespace Covid_19_Arkanoid
             game.Dock = DockStyle.Fill;
             Parent.Controls.Add(game);
             Parent.Controls.Remove(this);
+        }
+
+        private void Skin_Load(object sender, EventArgs e)
+        {
+            BackgroundImage = Image.FromFile("../../Resources/Skin.png");
+            BackgroundImageLayout = ImageLayout.Stretch;
+            
+            picSkin.Image = Image.FromFile("../../Resources/Pink_Kirby.png");
+            
         }
     }
 }

@@ -14,6 +14,7 @@ namespace Covid_19_Arkanoid
         private int remainingBlocks;
         private PictureBox[] pic;
         private int id;
+        private Label sc;
         public Game(Image skin, String name, int id)
         {
             this.id = id;
@@ -21,6 +22,8 @@ namespace Covid_19_Arkanoid
             player = new Player(name, skin, id);
             onGame = false;
             remainingBlocks = 0;
+            sc = new Label();
+            sc.Text = player.Score.ToString();
         }
 
 
@@ -55,7 +58,7 @@ namespace Covid_19_Arkanoid
                 {
                     pic[i] = new PictureBox();
                     pic[i].BackColor = Color.Transparent;
-                    pic[i].BackgroundImage = Resources.Life;
+                    pic[i].BackgroundImage = Image.FromFile("../../Resources/Life.png");
                     pic[i].BackgroundImageLayout = ImageLayout.Stretch;
                     pic[i].Size = new Size(70,70);
                     pic[i].Location = new Point(20 + (i * 70), 5);
@@ -67,7 +70,8 @@ namespace Covid_19_Arkanoid
                 {
                     for (int j = 0; j < 8; j++)
                     {
-                        blocks[i,j] = new Block(1, width, heigth, Resources.Bloque_menta);
+                        blocks[i,j] = new Block(1, width, heigth, Image.FromFile
+                            ("../../Resources/Bloque_menta.png"));
                         blocks[i,j].Location = new Point( (i + 2)* width, (j + 3) * heigth);
                         Controls.Add(blocks[i,j]);
                     }
@@ -82,7 +86,12 @@ namespace Covid_19_Arkanoid
             player.Paddle.Location = new Point(Parent.ClientSize.Width/2 - player.Paddle.Width/2,
                 Parent.ClientSize.Height - 50);
             
-            
+            sc.Location = new Point(900, 20);
+            sc.Size = new Size(300, 50);
+            sc.Font = new Font("Volleyball", 21F);
+            sc.BackColor = Color.Transparent;
+            sc.ForeColor = Color.White;
+            Controls.Add(sc);
         }
 
         private void timerArkanoid_Tick(object sender, EventArgs e)
@@ -99,8 +108,11 @@ namespace Covid_19_Arkanoid
                 if (player.Ball.Bounds.IntersectsWith(block.Bounds) && block.Visible)
                 {
                     player.Score += 10;
+                    sc.Text = player.Score.ToString();
+
                     --remainingBlocks;
                     block.Dispose();
+                    
                     //Se crean nuevos rectángulos para verificar si pega en los laterales del bloque
                     if (player.Ball.Bounds.IntersectsWith(
                             new Rectangle(block.Location,new Size(3,block.Height))) || 
@@ -151,12 +163,13 @@ namespace Covid_19_Arkanoid
                     FinishGame();
                 }
                 onGame = false;
-                MouseMove -= new System.Windows.Forms.MouseEventHandler(this.Game_MouseMove);
+                MouseMove -= Game_MouseMove;
                 PlaceControls();
             }
         }
         private void FinishGame()
         {
+            Controls.Remove(pic[0]);
             PlayerDAO.InsertScore(player.Score, id);
             player.HistoricalScore = PlayerDAO.BestScore(id);
             string top = "No";
@@ -171,7 +184,6 @@ namespace Covid_19_Arkanoid
             });
 
             String result = "Score: " + player.Score + "\nBest score: " + player.HistoricalScore + "\nTop 10: " + top;
-            PlayerDAO.InsertScore(player.Score, id);
             if (MessageBox.Show(result,"ARKANOID",MessageBoxButtons.OK,MessageBoxIcon.Information) == DialogResult.OK)
             {
                 Parent.Hide();

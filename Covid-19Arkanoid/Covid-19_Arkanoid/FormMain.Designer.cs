@@ -80,8 +80,6 @@
             // 
             this.tlpMain.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.tlpMain.BackColor = System.Drawing.Color.White;
-            this.tlpMain.BackgroundImage = global::Covid_19_Arkanoid.Properties.Resources.Group_2;
-            this.tlpMain.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.tlpMain.ColumnCount = 5;
             this.tlpMain.ColumnStyles.Add(
                 new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.01403F));
@@ -139,8 +137,6 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::Covid_19_Arkanoid.Properties.Resources.Group_2;
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1148, 709);
             this.Controls.Add(this.tlpMain);
             this.DoubleBuffered = true;
