@@ -15,6 +15,9 @@ namespace Covid_19_Arkanoid
             WindowState = FormWindowState.Maximized;
             Height = Screen.PrimaryScreen.Bounds.Height;
             Width = Screen.PrimaryScreen.Bounds.Width;
+
+            nameUser1.Dock = DockStyle.Fill;
+            Controls.Add(nameUser1);
         }
         
     }

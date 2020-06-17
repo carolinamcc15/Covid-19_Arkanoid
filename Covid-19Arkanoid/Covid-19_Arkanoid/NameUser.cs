@@ -20,10 +20,13 @@ namespace Covid_19_Arkanoid
                 players = PlayerDAO.GetPlayers();
                 
                 Player current = new Player();
+                
+                //Variable auxiliar
                 byte a = 0;
                 
                 foreach(var pl in players)
                 {
+                    //Si el usuario ya está registrado, usar los registros existentes en la base de datos.
                     if (string.Equals(pl.Name, txtUsername.Text, StringComparison.OrdinalIgnoreCase))
                     {
                         a = 1;
@@ -33,12 +36,14 @@ namespace Covid_19_Arkanoid
                     }
                 }
 
+                //Si el usuario no se encuentra en la base de datos, se inserta en un nuevo registro.
                 if (a == 0)
                 {
                     PlayerDAO.InsertPlayer(txtUsername.Text);
                     MessageBox.Show("User registered successfully!", "ARKANOID", MessageBoxButtons.OK,
                         MessageBoxIcon.Information);
                     
+                    //Se actualiza la lista para guardar los datos del nuevo jugador en sus respectivas propiedades
                     players = PlayerDAO.GetPlayers();
                     
                     foreach(var pl in players)
@@ -61,10 +66,6 @@ namespace Covid_19_Arkanoid
             {
                 MessageBox.Show("Write a name.","ARKANOID",MessageBoxButtons.OK,MessageBoxIcon.Warning);
             }
-
-
-            
-            
         }
 
         private void NameUser_Load(object sender, EventArgs e)

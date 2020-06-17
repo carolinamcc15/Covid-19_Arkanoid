@@ -6,7 +6,7 @@ namespace Covid_19_Arkanoid
 {
     public class Ball : PictureBox
     {
-        private Image skin;
+        private Image _skin;
         public int VerticalMovement { get; set; }
         public int HorizontalMovement { get; set; }
 
@@ -19,7 +19,5 @@ namespace Covid_19_Arkanoid
             this.VerticalMovement = VerticalMovement;
             this.HorizontalMovement = HorizontalMovement;
         }
-        
     }
-    
 }

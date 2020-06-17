@@ -17,9 +17,6 @@
       <e p="Game.cs" t="Include" />
       <e p="Game.Designer.cs" t="Include" />
       <e p="Game.resx" t="Include" />
-      <e p="GameOver.cs" t="Include" />
-      <e p="GameOver.Designer.cs" t="Include" />
-      <e p="GameOver.resx" t="Include" />
       <e p="NameUser.cs" t="Include" />
       <e p="NameUser.Designer.cs" t="Include" />
       <e p="NameUser.resx" t="Include" />

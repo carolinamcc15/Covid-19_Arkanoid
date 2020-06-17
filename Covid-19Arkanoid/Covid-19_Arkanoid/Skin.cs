@@ -42,6 +42,7 @@ namespace Covid_19_Arkanoid
         {
             Game game = new Game(picSkin.Image,username,id);
             game.Dock = DockStyle.Fill;
+            
             Parent.Controls.Add(game);
             Parent.Controls.Remove(this);
         }

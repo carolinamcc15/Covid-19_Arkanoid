@@ -5,10 +5,10 @@ namespace Covid_19_Arkanoid
 {
     public class Block : PictureBox
     {
-        private int hardness;
+        private int _hardness;
         public Block(int hardness, int width, int height, Image backImage)
         {
-            this.hardness = hardness;
+            this._hardness = hardness;
             Size = new Size(width, height);
             BackgroundImage = backImage;
             BackColor = Color.Transparent;
@@ -17,7 +17,7 @@ namespace Covid_19_Arkanoid
 
         public int ReduceHardness()
         {
-            return --hardness;
+            return --_hardness;
         }
         
     }

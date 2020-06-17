@@ -13,6 +13,7 @@ namespace Covid_19_Arkanoid
 
         private static String sConnection = $"Host={host};Port = 5432; User Id = {userID}; Password={password};" +
                                             $"Database={database};"+ "sslmode=Require;Trust Server Certificate=true";
+        
         public static DataTable ExecuteQuery(string query)
         {
             NpgsqlConnection connection = new NpgsqlConnection(sConnection);

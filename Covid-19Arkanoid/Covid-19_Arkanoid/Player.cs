@@ -14,17 +14,18 @@ namespace Covid_19_Arkanoid
         public Ball Ball { get; }
         public Paddle Paddle{ get; }
 
-        public Player(string name,Image skin, int id)
+        public Player(string name, Image skin, int id)
         {
             Name = name;
             Score = 0;
             HistoricalScore = 0;
             Lives = 3;
             Ball = new Ball(skin, 5,5 );
-            Paddle = new Paddle(200,20,Resources.Paleta);
+            Paddle = new Paddle(200,20, Image.FromFile("../../Resources/Paleta.png"));
             id = 0;
         }
-        public Player() { }
+        
+        public Player() {}
 
         public void Die()
         {

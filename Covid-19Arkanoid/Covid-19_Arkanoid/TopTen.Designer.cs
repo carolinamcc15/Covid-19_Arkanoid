@@ -54,7 +54,7 @@ namespace Covid_19_Arkanoid
             this.tlpTop10.Font = new System.Drawing.Font("Volleyball", 18F, System.Drawing.FontStyle.Regular,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.tlpTop10.Location = new System.Drawing.Point(0, 0);
-            this.tlpTop10.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tlpTop10.Margin = new System.Windows.Forms.Padding(4);
             this.tlpTop10.Name = "tlpTop10";
             this.tlpTop10.RowCount = 3;
             this.tlpTop10.RowStyles.Add(
@@ -82,7 +82,7 @@ namespace Covid_19_Arkanoid
             this.dgvTop10.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvTop10.Enabled = false;
             this.dgvTop10.Location = new System.Drawing.Point(269, 147);
-            this.dgvTop10.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvTop10.Margin = new System.Windows.Forms.Padding(4);
             this.dgvTop10.Name = "dgvTop10";
             this.dgvTop10.ReadOnly = true;
             this.dgvTop10.RowHeadersVisible = false;

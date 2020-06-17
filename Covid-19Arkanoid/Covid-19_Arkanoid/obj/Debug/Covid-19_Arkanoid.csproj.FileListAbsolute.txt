@@ -5,7 +5,6 @@ C:\Users\user\Desktop\Covid-19_Arkanoid\Covid-19_Arkanoid\Covid-19Arkanoid\Covid
 C:\Users\user\Desktop\Covid-19_Arkanoid\Covid-19_Arkanoid\Covid-19Arkanoid\Covid-19_Arkanoid\obj\Debug\Covid-19_Arkanoid.csproj.GenerateResource.cache
 C:\Users\user\Desktop\Covid-19_Arkanoid\Covid-19_Arkanoid\Covid-19Arkanoid\Covid-19_Arkanoid\obj\Debug\Covid_19_Arkanoid.exe
 C:\Users\user\Desktop\Covid-19_Arkanoid\Covid-19_Arkanoid\Covid-19Arkanoid\Covid-19_Arkanoid\obj\Debug\Covid_19_Arkanoid.pdb
-C:\Users\user\Desktop\Covid-19_Arkanoid\Covid-19_Arkanoid\Covid-19Arkanoid\Covid-19_Arkanoid\obj\Debug\Covid_19_Arkanoid.Form1.resources
 C:\Users\user\Desktop\Covid-19_Arkanoid\Covid-19_Arkanoid\Covid-19Arkanoid\Covid-19_Arkanoid\obj\Debug\Covid_19_Arkanoid.Username.resources
 C:\Users\ulma_\Desktop\Arkanoid_RAES\Covid-19Arkanoid\Covid-19_Arkanoid\obj\Debug\Covid-19_Arkanoid.csprojAssemblyReference.cache
 C:\Users\ulma_\Desktop\Arkanoid_RAES\Covid-19Arkanoid\Covid-19_Arkanoid\obj\Debug\Covid_19_Arkanoid.Form1.resources
@@ -46,7 +45,6 @@ C:\Users\user\Desktop\Covid-19_Arkanoid\Covid-19_Arkanoid\Covid-19Arkanoid\Covid
 C:\Users\user\Desktop\Covid-19_Arkanoid\Covid-19_Arkanoid\Covid-19Arkanoid\Covid-19_Arkanoid\bin\Debug\System.ValueTuple.xml
 C:\Users\user\Desktop\Covid-19_Arkanoid\Covid-19_Arkanoid\Covid-19Arkanoid\Covid-19_Arkanoid\obj\Debug\Covid_19_Arkanoid.exe.config
 C:\Users\user\Desktop\Covid-19_Arkanoid\Covid-19_Arkanoid\Covid-19Arkanoid\Covid-19_Arkanoid\obj\Debug\Covid_19_Arkanoid.TopTen.resources
-C:\Users\user\Desktop\Covid-19_Arkanoid\Covid-19_Arkanoid\Covid-19Arkanoid\Covid-19_Arkanoid\obj\Debug\Covid_19_Arkanoid.GameOver.resources
 C:\Users\Nesto\RiderProjects\Covid-19_Arkanoid\Covid-19Arkanoid\Covid-19_Arkanoid\bin\Debug\Covid_19_Arkanoid.exe.config
 C:\Users\Nesto\RiderProjects\Covid-19_Arkanoid\Covid-19Arkanoid\Covid-19_Arkanoid\bin\Debug\Covid_19_Arkanoid.pdb
 C:\Users\Nesto\RiderProjects\Covid-19_Arkanoid\Covid-19Arkanoid\Covid-19_Arkanoid\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
@@ -122,3 +120,4 @@ C:\Users\Joaquin\Desktop\Covid-19_Arkanoid\Covid-19Arkanoid\Covid-19_Arkanoid\ob
 C:\Users\Joaquin\Desktop\Covid-19_Arkanoid\Covid-19Arkanoid\Covid-19_Arkanoid\obj\Debug\Covid-19_Arkanoid.csproj.CopyComplete
 C:\Users\Joaquin\Desktop\Covid-19_Arkanoid\Covid-19Arkanoid\Covid-19_Arkanoid\obj\Debug\Covid_19_Arkanoid.exe
 C:\Users\Joaquin\Desktop\Covid-19_Arkanoid\Covid-19Arkanoid\Covid-19_Arkanoid\obj\Debug\Covid_19_Arkanoid.pdb
+C:\Users\user\Desktop\Covid-19_Arkanoid\Covid-19_Arkanoid\Covid-19Arkanoid\Covid-19_Arkanoid\obj\Debug\Covid_19_Arkanoid.FormMain.resources
