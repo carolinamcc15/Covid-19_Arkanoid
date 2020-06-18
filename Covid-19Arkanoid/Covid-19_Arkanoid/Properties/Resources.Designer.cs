@@ -73,26 +73,6 @@ namespace Covid_19_Arkanoid.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Bloque_aqua {
-            get {
-                object obj = ResourceManager.GetObject("Bloque_aqua", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Bloque_azul {
-            get {
-                object obj = ResourceManager.GetObject("Bloque_azul", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap Bloque_azul_negro {
             get {
                 object obj = ResourceManager.GetObject("Bloque_azul_negro", resourceCulture);
@@ -103,39 +83,9 @@ namespace Covid_19_Arkanoid.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Bloque_menta {
-            get {
-                object obj = ResourceManager.GetObject("Bloque_menta", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Bloque_morado {
-            get {
-                object obj = ResourceManager.GetObject("Bloque_morado", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap Bloque_naranja {
             get {
                 object obj = ResourceManager.GetObject("Bloque_naranja", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Bloque_rosado {
-            get {
-                object obj = ResourceManager.GetObject("Bloque_rosado", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -1,4 +1,7 @@
-﻿namespace Covid_19_Arkanoid
+﻿using System.Drawing;
+using System.Windows.Forms;
+
+namespace Covid_19_Arkanoid
 {
     partial class FormMain
     {
@@ -135,8 +138,9 @@
             // 
             // FormMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1148, 709);
             this.Controls.Add(this.tlpMain);
             this.DoubleBuffered = true;

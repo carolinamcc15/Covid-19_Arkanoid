@@ -91,7 +91,6 @@
         <Reference Include="System.Xml" />
     </ItemGroup>
     <ItemGroup>
-        <Compile Include="Ball.cs" />
         <Compile Include="Block.cs" />
         <Compile Include="ConnectionDB.cs" />
         <Compile Include="FormMain.cs">
@@ -106,13 +105,13 @@
         <Compile Include="Game.Designer.cs">
           <DependentUpon>Game.cs</DependentUpon>
         </Compile>
+        <Compile Include="GameController.cs" />
         <Compile Include="NameUser.cs">
           <SubType>UserControl</SubType>
         </Compile>
         <Compile Include="NameUser.Designer.cs">
           <DependentUpon>NameUser.cs</DependentUpon>
         </Compile>
-        <Compile Include="Paddle.cs" />
         <Compile Include="Player.cs" />
         <Compile Include="PlayerDAO.cs" />
         <Compile Include="Program.cs" />
@@ -182,7 +181,7 @@
       <Content Include="Resources\Bloque_azul.png" />
       <Content Include="Resources\Bloque_azul_negro.png" />
       <Content Include="Resources\Bloque_menta.png" />
-      <Content Include="Resources\Bloque_morado.png" />
+      <Content Include="Resources\0.png" />
       <Content Include="Resources\Bloque_naranja.png" />
       <Content Include="Resources\Bloque_rosado.png" />
       <Content Include="Resources\Bloque_verde.png" />

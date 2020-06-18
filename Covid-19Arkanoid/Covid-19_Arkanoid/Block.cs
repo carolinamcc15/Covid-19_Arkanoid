@@ -1,4 +1,4 @@
-﻿using System.Drawing;
+﻿﻿using System.Drawing;
 using System.Windows.Forms;
 
 namespace Covid_19_Arkanoid
@@ -8,16 +8,23 @@ namespace Covid_19_Arkanoid
         private int _hardness;
         public Block(int hardness, int width, int height, Image backImage)
         {
-            this._hardness = hardness;
+            _hardness = hardness;
             Size = new Size(width, height);
             BackgroundImage = backImage;
             BackColor = Color.Transparent;
             BackgroundImageLayout = ImageLayout.Stretch;
         }
 
-        public int ReduceHardness()
+        public int Hit()
         {
-            return --_hardness;
+            --_hardness;
+            if (_hardness == 0)
+            {
+               Dispose();
+               return -1;
+            }
+            BackgroundImage = Image.FromFile("../../Resources/Bloque_naranja.png");
+            return 0;
         }
         
     }

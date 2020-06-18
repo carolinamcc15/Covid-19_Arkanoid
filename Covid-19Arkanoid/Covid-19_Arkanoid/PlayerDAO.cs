@@ -19,10 +19,10 @@ namespace Covid_19_Arkanoid
             var listPlayers = new List<Player>();
             foreach (DataRow row in dataT.Rows)
             {
-                Player pl = new Player();
-                pl.PlayerId = Convert.ToInt32(row[0].ToString());
-                pl.Name = row[1].ToString();
-                listPlayers.Add(pl);
+                Player player = new Player();
+                player.PlayerId = Convert.ToInt32(row[0].ToString());
+                player.Name = row[1].ToString();
+                listPlayers.Add(player);
             }
 
             return listPlayers;

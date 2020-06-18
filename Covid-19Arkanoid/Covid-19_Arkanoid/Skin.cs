@@ -17,12 +17,23 @@ namespace Covid_19_Arkanoid
             this.username = username;
             this.id = id;
             InitializeComponent();
-            skin = new Image[5];
-            skin[0] = Image.FromFile("../../Resources/Pink_Kirby.png");
-            skin[1] = Image.FromFile("../../Resources/Bear.png");
-            skin[2] = Image.FromFile("../../Resources/Soccer.png");
-            skin[3] = Image.FromFile("../../Resources/Owl.png");
-            skin[4] = Image.FromFile("../../Resources/Kirby_Celeste.png");
+            skin = new []
+            {
+                Image.FromFile("../../Resources/Pink_Kirby.png"),
+                Image.FromFile("../../Resources/Bear.png"),
+                Image.FromFile("../../Resources/Soccer.png"),
+                Image.FromFile("../../Resources/Owl.png"),
+                Image.FromFile("../../Resources/Kirby_Celeste.png")
+            };
+        }
+        protected override CreateParams CreateParams
+        {
+            get
+            {
+                CreateParams handleParam = base.CreateParams;
+                handleParam.ExStyle |= 0x02000000;   // WS_EX_COMPOSITED       
+                return handleParam;
+            }
         }
         
         private void ButtonRight_Click(object sender, EventArgs e)
@@ -34,7 +45,8 @@ namespace Covid_19_Arkanoid
 
         private void BtnLeft_Click(object sender, EventArgs e)
         {
-            aux = Convert.ToByte((4 + aux) % 5);
+            aux += 4;
+            aux %= 5;
             picSkin.Image = skin[aux];
         }
 

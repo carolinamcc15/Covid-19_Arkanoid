@@ -22,22 +22,22 @@ namespace Covid_19_Arkanoid
                 Player current = new Player();
                 
                 //Variable auxiliar
-                byte a = 0;
+                bool userFinded= false;
                 
-                foreach(var pl in players)
+                foreach(var player in players)
                 {
                     //Si el usuario ya está registrado, usar los registros existentes en la base de datos.
-                    if (string.Equals(pl.Name, txtUsername.Text, StringComparison.OrdinalIgnoreCase))
+                    if (string.Equals(player.Name, txtUsername.Text, StringComparison.OrdinalIgnoreCase))
                     {
-                        a = 1;
+                        userFinded = true;
                         MessageBox.Show("Welcome back!", "ARKANOID", MessageBoxButtons.OK,
                             MessageBoxIcon.Information);
-                        current = pl;
+                        current = player;
                     }
                 }
 
                 //Si el usuario no se encuentra en la base de datos, se inserta en un nuevo registro.
-                if (a == 0)
+                if (!userFinded)
                 {
                     PlayerDAO.InsertPlayer(txtUsername.Text);
                     MessageBox.Show("User registered successfully!", "ARKANOID", MessageBoxButtons.OK,

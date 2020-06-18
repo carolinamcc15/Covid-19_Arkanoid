@@ -5,8 +5,10 @@ namespace Covid_19_Arkanoid
 {
     public partial class Username : Form
     {
-        public Username()
+        private readonly FormMain _parent;
+        public Username(FormMain formMain)
         {
+            _parent = formMain;
             InitializeComponent();
         }
 
@@ -19,6 +21,10 @@ namespace Covid_19_Arkanoid
             nameUser1.Dock = DockStyle.Fill;
             Controls.Add(nameUser1);
         }
-        
+
+        private void Username_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            _parent.Show();
+        }
     }
 }

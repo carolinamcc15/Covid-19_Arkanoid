@@ -48,7 +48,7 @@ namespace Covid_19_Arkanoid
             // 
             // Username
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1132, 693);
             this.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -63,6 +63,7 @@ namespace Covid_19_Arkanoid
             this.Name = "Username";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ARKANOID";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Username_FormClosing);
             this.Load += new System.EventHandler(this.Username_Load);
             this.ResumeLayout(false);
         }

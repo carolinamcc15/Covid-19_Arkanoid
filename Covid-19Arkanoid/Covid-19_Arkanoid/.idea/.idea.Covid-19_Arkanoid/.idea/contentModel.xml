@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\user\.Rider2019.3\system\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\user\.Rider2019.3\system\resharper-host\local\Transient\ReSharperHost\v193\SolutionCaches\_Covid-19_Arkanoid.240709125.00" t="ExcludeRecursive" />
-    <e p="C:\Users\user\Desktop\Covid-19_Arkanoid\Covid-19_Arkanoid\Covid-19Arkanoid\Covid-19_Arkanoid" t="IncludeRecursive">
+    <e p="C:\Users\Nesto\.Rider2019.3\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\Nesto\.Rider2019.3\system\resharper-host\local\Transient\ReSharperHost\v193\SolutionCaches\_Covid-19_Arkanoid.1441747779.00" t="ExcludeRecursive" />
+    <e p="C:\Users\Nesto\RiderProjects\Covid-19_Arkanoid\Covid-19Arkanoid\Covid-19_Arkanoid" t="IncludeRecursive">
       <e p="App.config" t="Include" />
-      <e p="Ball.cs" t="Include" />
       <e p="bin" t="ExcludeRecursive" />
       <e p="Block.cs" t="Include" />
       <e p="ConnectionDB.cs" t="Include" />
@@ -17,13 +16,13 @@
       <e p="Game.cs" t="Include" />
       <e p="Game.Designer.cs" t="Include" />
       <e p="Game.resx" t="Include" />
+      <e p="GameController.cs" t="Include" />
       <e p="NameUser.cs" t="Include" />
       <e p="NameUser.Designer.cs" t="Include" />
       <e p="NameUser.resx" t="Include" />
       <e p="obj" t="ExcludeRecursive" />
       <e p="packages" t="ExcludeRecursive" />
       <e p="packages.config" t="Include" />
-      <e p="Paddle.cs" t="Include" />
       <e p="Player.cs" t="Include" />
       <e p="PlayerDAO.cs" t="Include" />
       <e p="Program.cs" t="Include" />
@@ -35,12 +34,12 @@
         <e p="Settings.settings" t="Include" />
       </e>
       <e p="Resources" t="Include">
+        <e p="0.png" t="Include" />
         <e p="Bear1.png" t="Include" />
         <e p="Bloque_aqua.png" t="Include" />
         <e p="Bloque_azul.png" t="Include" />
         <e p="Bloque_azul_negro.png" t="Include" />
         <e p="Bloque_menta.png" t="Include" />
-        <e p="Bloque_morado.png" t="Include" />
         <e p="Bloque_naranja.png" t="Include" />
         <e p="Bloque_rosado.png" t="Include" />
         <e p="Bloque_verde.png" t="Include" />
