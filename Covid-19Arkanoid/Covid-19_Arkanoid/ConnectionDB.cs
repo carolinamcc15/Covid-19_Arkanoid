@@ -6,10 +6,10 @@ namespace Covid_19_Arkanoid
 {
     public static class ConnectionDB
     {
-        private static String host = "ec2-52-70-15-120.compute-1.amazonaws.com",
-            database = "d4gavmo6r44oo2",
-            userID = "npddexdjtdebkd",
-            password = "1c002a94d0d65d4525f82522e4945a523cb386a354726f8c3c90027cffceef89";
+        private static String host = "ec2-18-211-48-247.compute-1.amazonaws.com",
+            database = "dfvsa0ocr7doc4",
+            userID = "sqerjfkehrlrza",
+            password = "88c27136382afdfa8f6c143c5bcb4d7a84ea5ffbe03c04e17bf07cad12dd3831";
 
         private static String sConnection = $"Host={host};Port = 5432; User Id = {userID}; Password={password};" +
                                             $"Database={database};"+ "sslmode=Require;Trust Server Certificate=true";

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Windows.Forms;
 
 namespace Covid_19_Arkanoid
 {
@@ -67,6 +68,44 @@ namespace Covid_19_Arkanoid
             }
             return listTop10Players;
         }
+        public static Player CurrentPlayer(String nick)
+        {
+            Player current = new Player();
+
+            String validate = String.Format("SELECT * FROM PLAYER WHERE UPPER(nickname) = UPPER('{0}');", nick);
+            String insert = String.Format("INSERT INTO PLAYER(nickname) VALUES('{0}');", nick);
+
+            DataTable dt = ConnectionDB.ExecuteQuery(validate);
+
+            if (dt.Rows.Count == 1)
+            {
+                DataRow row = dt.Rows[0];
+                current.PlayerId = Convert.ToInt32(row[0]);
+                current.Name = row[1].ToString();
+                
+                MessageBox.Show("Welcome back!", "ARKANOID", MessageBoxButtons.OK,
+                    MessageBoxIcon.Information);
+                
+                return current;
+            }
+            else
+            {
+                ConnectionDB.ExecuteNonQuery(insert);
+                MessageBox.Show("User registered successfully!", "ARKANOID", MessageBoxButtons.OK,
+                    MessageBoxIcon.Information);
+                
+                List<Player> players = PlayerDAO.GetPlayers();
+                foreach(var pl in players)
+                {
+                    if (pl.Name.Equals(nick))
+                    {
+                        current = pl;
+                    }
+                }
+                return current;
+            }
+        }
+        
         
     }
 }
