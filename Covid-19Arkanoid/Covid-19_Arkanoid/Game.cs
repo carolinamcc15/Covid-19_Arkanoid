@@ -225,7 +225,8 @@ namespace Covid_19_Arkanoid
             }
             else
             {
-                MessageBox.Show($"You've lost. \nScore: {player.Score}", "ARKANOID", MessageBoxButtons.OK, 
+                MessageBox.Show($"You've lost. Thank you for playing! \nScore: {player.Score}", "ARKANOID", 
+                    MessageBoxButtons.OK, 
                     MessageBoxIcon.Information);
                 Close();
             }

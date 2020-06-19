@@ -29,7 +29,7 @@ namespace Covid_19_Arkanoid
             }
             else
             {
-                MessageBox.Show("Write a name.","ARKANOID",MessageBoxButtons.OK,MessageBoxIcon.Warning);
+                MessageBox.Show("Write a name.", "ARKANOID", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 

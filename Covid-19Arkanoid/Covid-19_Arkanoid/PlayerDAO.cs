@@ -24,7 +24,7 @@ namespace Covid_19_Arkanoid
             return listPlayers;
         }
 
-        public static Player CurrentPlayer(String nick)
+        public static Player CurrentPlayer(string nick)
         {
             Player current = new Player();
 
@@ -106,6 +106,5 @@ namespace Covid_19_Arkanoid
             }
             return listTop10Players;
         }
-        
     }
 }
