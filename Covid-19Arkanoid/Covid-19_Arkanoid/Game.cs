@@ -14,6 +14,7 @@ namespace Covid_19_Arkanoid
         private int _remainingBlocks;
         private PictureBox[] _picHearts;
         private Label sc;
+        
         public Game(Image skin, String name, int id)
         {
             InitializeComponent();
@@ -91,7 +92,8 @@ namespace Covid_19_Arkanoid
                     for (int j = 0; j < 8; j++)
                     {
                         Image image = Image.FromFile("../../Resources/" + (j%2==0?j:j-1) +".png");
-                        _blocks[i, j] = new Block((new Random().Next(1,9))>5 ?2:1, width, heigth, image);
+                        _blocks[i, j] = new Block(new Random().Next(1,9)>5 ?2:1, 25-(j%2==0?j:j-1)/2*5, 
+                            width, heigth, image);
                         _blocks[i,j].Location = new Point( (i + 2)* width + width/4, (j + 3) * heigth);
                         Controls.Add(_blocks[i,j]);
                     }
@@ -124,7 +126,7 @@ namespace Covid_19_Arkanoid
             if (_remainingBlocks == 0)
             {
                 timerArkanoid.Stop();
-                FinishGame();
+                FinishGame(true);
             }
             
             _ball.Top += GameController.VerticalMovement;
@@ -134,14 +136,14 @@ namespace Covid_19_Arkanoid
             {
                 timerArkanoid.Stop();
                 GameController.Lives--;
+                PlaceControls();
                 if (GameController.Lives == 0)
                 {
-                    FinishGame();
+                    FinishGame(false);
                     return;
                 }
                 GameController.OnGame = false;
                 MouseMove -= Game_MouseMove;
-                PlaceControls();
             }
             if (_ball.Bounds.IntersectsWith(_paddle.Bounds))
             {
@@ -175,9 +177,10 @@ namespace Covid_19_Arkanoid
             {
                 if (_ball.Bounds.IntersectsWith(block.Bounds) && block.Visible)
                 {
-                    player.Score += 10;
+                    player.Score += block.Score;
+                    _remainingBlocks += block.Hit();
                     sc.Text = player.Score.ToString();
-                    _remainingBlocks+= block.Hit();
+
                     //Se crean nuevos rectángulos para verificar si pega en los laterales del bloque.
                     if (_ball.Bounds.IntersectsWith(
                             new Rectangle(block.Location,new Size(0,block.Height))) || 
@@ -193,36 +196,47 @@ namespace Covid_19_Arkanoid
             }
         }
 
-        private void FinishGame()
+        private void FinishGame(bool win)
         {
-            //Se elimina la imagen de la última vida del jugador.
-            Controls.Remove(_picHearts[0]);
-
-            PlayerDAO.InsertScore(player.Score, player.PlayerId);
-            int HistoricalScore = PlayerDAO.BestScore(player.PlayerId);
-
-            //La variable top almacena si el jugador se encuentra posicionado en el Top 10 o no.
-            string top = "No";
-            List<Player> top10 = PlayerDAO.GetTop10Players();
-
-            top10.ForEach(s =>
+            if (win)
             {
-                if (string.Equals(s.Name, player.Name, StringComparison.OrdinalIgnoreCase))
+                PlayerDAO.InsertScore(player.Score, player.PlayerId);
+                int HistoricalScore = PlayerDAO.BestScore(player.PlayerId);
+
+                //La variable top almacena si el jugador se encuentra posicionado en el Top 10 o no.
+                bool top = false;
+                List<Player> top10 = PlayerDAO.GetTop10Players();
+
+                top10.ForEach(s =>
                 {
-                    top = "Yes";
+                    if (string.Equals(s.Name, player.Name, StringComparison.OrdinalIgnoreCase))
+                    {
+                        top = true;
+                    }
+                });
+
+                String result =
+                    $"Score: {player.Score} \nBest score: {HistoricalScore} \nTop 10: {(top ? "Yes" : "No")}";
+                if (MessageBox.Show(result, "ARKANOID", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                    == DialogResult.OK)
+                {
+                    Close();
                 }
-            });
-
-            String result = "Score: " + player.Score + "\nBest score: " + HistoricalScore + "\nTop 10: " + top;
-
-            if (MessageBox.Show(result, "ARKANOID", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                == DialogResult.OK)
+            }
+            else
             {
-                Parent.Hide();
-                ((Form) Parent).Close();
+                MessageBox.Show($"You've lost. \nScore: {player.Score}", "ARKANOID", MessageBoxButtons.OK, 
+                    MessageBoxIcon.Information);
+                Close();
             }
         }
 
+        private void Close()
+        {
+            Parent.Hide();
+            ((Form) Parent).Close();
+        }
+        
         protected override CreateParams CreateParams
         {
             get

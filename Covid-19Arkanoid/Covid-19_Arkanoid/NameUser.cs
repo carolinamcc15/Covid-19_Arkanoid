@@ -14,47 +14,12 @@ namespace Covid_19_Arkanoid
 
         private void BtnDoneU_Click(object sender, EventArgs e)
         {
-            if (!txtUsername.Text.Equals(""))
+            Player current;
+
+            if (!txtUsername.Text.Equals("") || txtUsername.Text.Trim().Length > 0)
             {
-                List<Player> players = new List<Player>();
-                players = PlayerDAO.GetPlayers();
+                current = PlayerDAO.CurrentPlayer(txtUsername.Text);
                 
-                Player current = new Player();
-                
-                //Variable auxiliar
-                bool userFinded= false;
-                
-                foreach(var player in players)
-                {
-                    //Si el usuario ya está registrado, usar los registros existentes en la base de datos.
-                    if (string.Equals(player.Name, txtUsername.Text, StringComparison.OrdinalIgnoreCase))
-                    {
-                        userFinded = true;
-                        MessageBox.Show("Welcome back!", "ARKANOID", MessageBoxButtons.OK,
-                            MessageBoxIcon.Information);
-                        current = player;
-                    }
-                }
-
-                //Si el usuario no se encuentra en la base de datos, se inserta en un nuevo registro.
-                if (!userFinded)
-                {
-                    PlayerDAO.InsertPlayer(txtUsername.Text);
-                    MessageBox.Show("User registered successfully!", "ARKANOID", MessageBoxButtons.OK,
-                        MessageBoxIcon.Information);
-                    
-                    //Se actualiza la lista para guardar los datos del nuevo jugador en sus respectivas propiedades
-                    players = PlayerDAO.GetPlayers();
-                    
-                    foreach(var pl in players)
-                    {
-                        if (pl.Name.Equals(txtUsername.Text))
-                        {
-                            current = pl;
-                        }
-                    }
-                }
-
                 Hide();
                 
                 Skin s = new Skin(txtUsername.Text, current.PlayerId);

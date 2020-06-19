@@ -6,9 +6,12 @@ namespace Covid_19_Arkanoid
     public class Block : PictureBox
     {
         private int _hardness;
-        public Block(int hardness, int width, int height, Image backImage)
+        public int Score { get;}
+
+        public Block(int hardness, int score, int width, int height, Image backImage)
         {
             _hardness = hardness;
+            Score = score;
             Size = new Size(width, height);
             BackgroundImage = backImage;
             BackColor = Color.Transparent;
@@ -26,6 +29,5 @@ namespace Covid_19_Arkanoid
             BackgroundImage = Image.FromFile("../../Resources/Bloque_naranja.png");
             return 0;
         }
-        
     }
 }
