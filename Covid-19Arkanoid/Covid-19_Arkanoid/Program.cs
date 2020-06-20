@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Covid_19_Arkanoid.Vista;
 
 namespace Covid_19_Arkanoid
 {

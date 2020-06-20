@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 
-namespace Covid_19_Arkanoid
+namespace Covid_19_Arkanoid.Vista
 {
     public partial class Username : Form
     {
@@ -14,6 +14,7 @@ namespace Covid_19_Arkanoid
 
         private void Username_Load(object sender, EventArgs e)
         {
+            //Se maximiza la ventana y se agrega el userControl que solicita nombre de usuario
             WindowState = FormWindowState.Maximized;
             Height = Screen.PrimaryScreen.Bounds.Height;
             Width = Screen.PrimaryScreen.Bounds.Width;

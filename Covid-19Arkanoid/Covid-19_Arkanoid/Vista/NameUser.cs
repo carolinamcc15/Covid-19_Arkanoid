@@ -1,9 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
+using Covid_19_Arkanoid.Controlador;
+using Covid_19_Arkanoid.Modelo;
 
-namespace Covid_19_Arkanoid
+namespace Covid_19_Arkanoid.Vista
 {
     public partial class NameUser : UserControl
     { 
@@ -11,38 +12,10 @@ namespace Covid_19_Arkanoid
         {
             InitializeComponent();
         }
-
-        private void BtnDoneU_Click(object sender, EventArgs e)
-        {
-            Player current;
-
-            try
-            {
-                if (!txtUsername.Text.Equals("") || txtUsername.Text.Trim().Length > 0)
-                {
-                    current = PlayerDAO.CurrentPlayer(txtUsername.Text);
-                
-                    Hide();
-                
-                    Skin s = new Skin(txtUsername.Text, current.PlayerId);
-                    s.Dock = DockStyle.Fill;
-                    Parent.Controls.Add(s);
-                    Parent.Controls.Remove(this);
-                }
-                else
-                {
-                    throw new EmptyNameExcept("Escriba un nombre.");
-                }
-            }
-            catch (EmptyNameExcept exception)
-            {
-                MessageBox.Show(exception.Message, "ARKANOID", MessageBoxButtons.OK, 
-                    MessageBoxIcon.Warning);
-            }
-        }
-
+        
         private void NameUser_Load(object sender, EventArgs e)
         {
+            //Se asigna la imagen de fondo
             tlpChoose.BackgroundImage = Image.FromFile("../../Resources/User.png");;
             tlpChoose.BackgroundImageLayout = ImageLayout.Stretch;
         }
@@ -51,16 +24,52 @@ namespace Covid_19_Arkanoid
         {
             try
             {
-                switch (e.KeyCode)
+                if (e.KeyCode == Keys.Enter)
                 {
-                    case Keys.Enter:
-                        throw new EnterKeyPressException("Presione el boton DONE");
-                    break;
+                    throw new EnterKeyPressException("Presione el boton DONE");
                 }
             }
             catch (EnterKeyPressException exception)
             {
                 MessageBox.Show(exception.Message);
+            }
+        }
+
+        private void BtnDone_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                //Si el nombre ingresado no está vacío
+                if (!txtUsername.Text.Trim().Equals(""))
+                {
+                    Player currentPlayer = PlayerDAO.CurrentPlayer(txtUsername.Text.ToUpper().Trim());
+                    if (currentPlayer.PlayerId == 0)
+                    {
+                        MessageBox.Show("User registered successfully!", "ARKANOID", MessageBoxButtons.OK,
+                            MessageBoxIcon.Information);
+                        currentPlayer.PlayerId = PlayerDAO.GetID(currentPlayer.Name);
+                    }
+                    else 
+                        MessageBox.Show("Welcome back!", "ARKANOID", MessageBoxButtons.OK,
+                            MessageBoxIcon.Information);
+                    Hide();
+                
+                    Skin skin = new Skin(currentPlayer);
+                    skin.Dock = DockStyle.Fill;
+                    Parent.Controls.Add(skin);
+                    
+                    Parent.Controls.Remove(this);
+                }
+                else
+                {
+                    txtUsername.Clear(); // Limpia el textBox para quitar los espacios.
+                    throw new EmptyNameException("Escriba un nombre.");
+                }
+            }
+            catch (EmptyNameException exception)
+            {
+                MessageBox.Show(exception.Message, "ARKANOID", MessageBoxButtons.OK, 
+                    MessageBoxIcon.Warning);
             }
         }
     }

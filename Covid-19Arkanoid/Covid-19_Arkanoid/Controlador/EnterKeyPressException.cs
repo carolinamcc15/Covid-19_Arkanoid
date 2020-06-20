@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Covid_19_Arkanoid
+namespace Covid_19_Arkanoid.Controlador
 {
     public class EnterKeyPressException : Exception
     {

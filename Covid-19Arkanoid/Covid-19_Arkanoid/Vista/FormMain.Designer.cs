@@ -1,7 +1,4 @@
-﻿using System.Drawing;
-using System.Windows.Forms;
-
-namespace Covid_19_Arkanoid
+﻿namespace Covid_19_Arkanoid.Vista
 {
     partial class FormMain
     {

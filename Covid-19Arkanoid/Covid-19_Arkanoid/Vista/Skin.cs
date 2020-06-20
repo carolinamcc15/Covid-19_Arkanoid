@@ -1,21 +1,18 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
-using System.Windows.Forms.VisualStyles;
+using Covid_19_Arkanoid.Modelo;
 
-namespace Covid_19_Arkanoid
+namespace Covid_19_Arkanoid.Vista
 {
     public partial class Skin : UserControl
     {
-        private byte aux = 0;
+        private byte _aux = 0;
         private Image[] skin;
-        private String username;
-        private int id;
-        public Skin(String username, int id)
+        private Player _player;
+        public Skin(Player player)
         {
-            this.username = username;
-            this.id = id;
+            _player = player;
             InitializeComponent();
             skin = new []
             {
@@ -38,29 +35,32 @@ namespace Covid_19_Arkanoid
         
         private void ButtonRight_Click(object sender, EventArgs e)
         {
-            ++aux;
-            aux %= 5;
-            picSkin.Image = skin[aux];
+            //Cálculos matemáticos para mostrar la skin siguiente
+            ++_aux;
+            _aux %= 5;
+            picSkin.Image = skin[_aux];
         }
 
         private void BtnLeft_Click(object sender, EventArgs e)
         {
-            aux += 4;
-            aux %= 5;
-            picSkin.Image = skin[aux];
+            //Cálculos matemáticos para mostrar la skin anterior
+            _aux += 4;
+            _aux %= 5;
+            picSkin.Image = skin[_aux];
         }
 
         private void BtnDoneS_Click(object sender, EventArgs e)
         {
-            Game game = new Game(picSkin.Image,username,id);
+            Game game = new Game(picSkin.Image, _player);
             game.Dock = DockStyle.Fill;
-            
             Parent.Controls.Add(game);
+            
             Parent.Controls.Remove(this);
         }
 
         private void Skin_Load(object sender, EventArgs e)
         {
+            //Se asigna el fondo y la imagen de skin predeterminada
             BackgroundImage = Image.FromFile("../../Resources/Skin.png");
             BackgroundImageLayout = ImageLayout.Stretch;
             

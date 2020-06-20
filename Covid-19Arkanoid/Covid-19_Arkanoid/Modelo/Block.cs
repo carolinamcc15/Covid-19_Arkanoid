@@ -1,7 +1,7 @@
-﻿﻿using System.Drawing;
+﻿using System.Drawing;
 using System.Windows.Forms;
 
-namespace Covid_19_Arkanoid
+namespace Covid_19_Arkanoid.Modelo
 {
     public class Block : PictureBox
     {
@@ -21,11 +21,12 @@ namespace Covid_19_Arkanoid
         public int Hit()
         {
             --_hardness;
-            if (_hardness == 0)
+            if (_hardness == 0) // Si el bloque ya no tiene niveles de dureza 
             {
                Dispose();
                return -1;
             }
+            //Si aún tiene niveles de dureza, cambia el color del bloque
             BackgroundImage = Image.FromFile("../../Resources/Bloque_naranja.png");
             return 0;
         }

@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel;
 using System.Windows.Forms;
 
-namespace Covid_19_Arkanoid
+namespace Covid_19_Arkanoid.Vista
 {
     partial class NameUser
     {
@@ -34,7 +34,7 @@ namespace Covid_19_Arkanoid
         {
             this.tlpChoose = new System.Windows.Forms.TableLayoutPanel();
             this.txtUsername = new System.Windows.Forms.TextBox();
-            this.btnDoneU = new System.Windows.Forms.Button();
+            this.btnDone = new System.Windows.Forms.Button();
             this.tlpChoose.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -54,7 +54,7 @@ namespace Covid_19_Arkanoid
             this.tlpChoose.ColumnStyles.Add(
                 new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.10399F));
             this.tlpChoose.Controls.Add(this.txtUsername, 1, 1);
-            this.tlpChoose.Controls.Add(this.btnDoneU, 2, 2);
+            this.tlpChoose.Controls.Add(this.btnDone, 2, 2);
             this.tlpChoose.Cursor = System.Windows.Forms.Cursors.Default;
             this.tlpChoose.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tlpChoose.Location = new System.Drawing.Point(0, 0);
@@ -88,22 +88,22 @@ namespace Covid_19_Arkanoid
             this.txtUsername.Size = new System.Drawing.Size(549, 37);
             this.txtUsername.TabIndex = 3;
             this.txtUsername.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtUsername.KeyDown += new KeyEventHandler(this.txtUsername_KeyDown);
+            this.txtUsername.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtUsername_KeyDown);
             // 
-            // btnDoneU
+            // btnDone
             // 
-            this.btnDoneU.BackColor = System.Drawing.Color.White;
-            this.btnDoneU.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnDoneU.Font = new System.Drawing.Font("Volleyball", 18F, System.Drawing.FontStyle.Regular,
+            this.btnDone.BackColor = System.Drawing.Color.White;
+            this.btnDone.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnDone.Font = new System.Drawing.Font("Volleyball", 18F, System.Drawing.FontStyle.Regular,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.btnDoneU.Location = new System.Drawing.Point(382, 229);
-            this.btnDoneU.Margin = new System.Windows.Forms.Padding(1);
-            this.btnDoneU.Name = "btnDoneU";
-            this.btnDoneU.Size = new System.Drawing.Size(169, 44);
-            this.btnDoneU.TabIndex = 6;
-            this.btnDoneU.Text = "DONE";
-            this.btnDoneU.UseVisualStyleBackColor = false;
-            this.btnDoneU.Click += new System.EventHandler(this.BtnDoneU_Click);
+            this.btnDone.Location = new System.Drawing.Point(382, 229);
+            this.btnDone.Margin = new System.Windows.Forms.Padding(1);
+            this.btnDone.Name = "btnDone";
+            this.btnDone.Size = new System.Drawing.Size(169, 44);
+            this.btnDone.TabIndex = 6;
+            this.btnDone.Text = "DONE";
+            this.btnDone.UseVisualStyleBackColor = false;
+            this.btnDone.Click += new System.EventHandler(this.BtnDone_Click);
             // 
             // NameUser
             // 
@@ -124,6 +124,6 @@ namespace Covid_19_Arkanoid
 
         private System.Windows.Forms.TextBox txtUsername;
         private System.Windows.Forms.TableLayoutPanel tlpChoose;
-        private System.Windows.Forms.Button btnDoneU;
+        private System.Windows.Forms.Button btnDone;
     }
 }

@@ -1,5 +1,6 @@
 ﻿using System;
-namespace Covid_19_Arkanoid
+
+namespace Covid_19_Arkanoid.Modelo
 {
     public class Player
     {

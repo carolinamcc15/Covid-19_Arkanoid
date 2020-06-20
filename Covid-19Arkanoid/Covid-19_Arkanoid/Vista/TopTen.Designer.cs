@@ -2,7 +2,7 @@
 using System.ComponentModel;
 using System.Windows.Forms;
 
-namespace Covid_19_Arkanoid
+namespace Covid_19_Arkanoid.Vista
 {
     partial class TopTen
     {
@@ -70,7 +70,7 @@ namespace Covid_19_Arkanoid
                 new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 4.372355F));
             this.tlpTop10.Size = new System.Drawing.Size(957, 592);
             this.tlpTop10.TabIndex = 0;
-            this.tlpTop10.Click += new EventHandler(this.tlpTop10_Click);
+            this.tlpTop10.Click += new System.EventHandler(this.tlpTop10_Click);
             // 
             // dgvTop10
             // 
@@ -117,7 +117,6 @@ namespace Covid_19_Arkanoid
             this.dgvTop10.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.dgvTop10.Size = new System.Drawing.Size(515, 440);
             this.dgvTop10.TabIndex = 0;
-          
             // 
             // TopTen
             // 
@@ -138,10 +137,10 @@ namespace Covid_19_Arkanoid
             this.Text = "ARKANOID";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.TopTen_FormClosing);
             this.Load += new System.EventHandler(this.TopTen_Load);
+            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TopTen_KeyPress);
             this.tlpTop10.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize) (this.dgvTop10)).EndInit();
             this.ResumeLayout(false);
-            this.KeyPress += new KeyPressEventHandler(this.TopTen_KeyPress);
         }
 
         #endregion

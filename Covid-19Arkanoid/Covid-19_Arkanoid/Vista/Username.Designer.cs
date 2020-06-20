@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel;
 
-namespace Covid_19_Arkanoid
+namespace Covid_19_Arkanoid.Vista
 {
       partial class Username
     {
@@ -33,7 +33,7 @@ namespace Covid_19_Arkanoid
         {
             System.ComponentModel.ComponentResourceManager resources =
                 new System.ComponentModel.ComponentResourceManager(typeof(Username));
-            this.nameUser1 = new Covid_19_Arkanoid.NameUser();
+            this.nameUser1 = new Covid_19_Arkanoid.Vista.NameUser();
             this.SuspendLayout();
             // 
             // nameUser1
@@ -70,6 +70,6 @@ namespace Covid_19_Arkanoid
 
         #endregion
 
-        private Covid_19_Arkanoid.NameUser nameUser1;
+        private Covid_19_Arkanoid.Vista.NameUser nameUser1;
     }
 }

@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Drawing;
 using System.Windows.Forms;
+using Covid_19_Arkanoid.Controlador;
+using Covid_19_Arkanoid.Modelo;
 
-namespace Covid_19_Arkanoid
+namespace Covid_19_Arkanoid.Vista
 {
     public partial class TopTen : Form
     {
@@ -17,13 +19,15 @@ namespace Covid_19_Arkanoid
 
         private void TopTen_Load(object sender, EventArgs e)
         {
+            //Se asigna el fondo , se maximiza la ventana y se obtiene el top 10 de la base de datos
             BackgroundImage = Image.FromFile("../../Resources/Top101.png");
             BackgroundImageLayout = ImageLayout.Stretch;
             
             WindowState = FormWindowState.Maximized;
             Height = Screen.PrimaryScreen.Bounds.Height;
             Width = Screen.PrimaryScreen.Bounds.Width;
-            dgvTop10.DataSource = PlayerDAO.GetTop10();
+            
+            dgvTop10.DataSource = PlayerDAO.GetTop10PlayersTable();
             
         }
         protected override CreateParams CreateParams
@@ -41,37 +45,13 @@ namespace Covid_19_Arkanoid
             _parent.Show();
         }
 
-        /*private void dgvTop10_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            try
-            {
-                throw new ClickLBoardException("Cierre la ventana para volver al menu.");
-            }
-            catch (ClickLBoardException exception)
-            {
-                MessageBox.Show(exception.Message);
-            }
-        }
-
-        private void dgvTop10_CellContentKeyPress(object sender, KeyPressEventArgs e)
-        {
-            try
-            {
-                throw new ClickLBoardException("Cierre la ventana para volver al menu.");
-            }
-            catch (ClickLBoardException exception)
-            {
-                MessageBox.Show(exception.Message);
-            }
-        }*/
-        
         private void TopTen_KeyPress(object sender, KeyPressEventArgs e)
         {
             try
             {
-                throw new ClickLBoardException("Cierre la ventana para volver al menu.");
+                throw new ClickLeftBoardException("Cierre la ventana para volver al menu.");
             }
-            catch (ClickLBoardException exception)
+            catch (ClickLeftBoardException exception)
             {
                 MessageBox.Show(exception.Message);
             }
@@ -82,9 +62,9 @@ namespace Covid_19_Arkanoid
         {
             try
             {
-                throw new ClickLBoardException("Cierre la ventana para volver al menu.");
+                throw new ClickLeftBoardException("Cierre la ventana para volver al menu.");
             }
-            catch (ClickLBoardException exception)
+            catch (ClickLeftBoardException exception)
             {
                 MessageBox.Show(exception.Message);
             }

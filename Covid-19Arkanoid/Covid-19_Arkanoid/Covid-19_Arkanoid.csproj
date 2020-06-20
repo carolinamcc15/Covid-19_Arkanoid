@@ -91,9 +91,9 @@
         <Reference Include="System.Xml" />
     </ItemGroup>
     <ItemGroup>
-        <Compile Include="Controlador\ClickLBoardException.cs" />
+        <Compile Include="Controlador\ClickLeftBoardException.cs" />
         <Compile Include="Controlador\ConnectionDB.cs" />
-        <Compile Include="Controlador\EmptyNameExcept.cs" />
+        <Compile Include="Controlador\EmptyNameException.cs" />
         <Compile Include="Controlador\EnterKeyPressException.cs" />
         <Compile Include="Controlador\GameController.cs" />
         <Compile Include="Controlador\KeyPressStartException.cs" />
@@ -101,7 +101,7 @@
         <Compile Include="Modelo\Block.cs" />
         <Compile Include="Modelo\Player.cs" />
         <Compile Include="Modelo\PlayerDAO.cs" />
-        <Compile Include="Modelo\Program.cs" />
+        <Compile Include="Program.cs" />
         <Compile Include="Properties\AssemblyInfo.cs" />
         <Compile Include="Vista\FormMain.cs">
           <SubType>Form</SubType>
