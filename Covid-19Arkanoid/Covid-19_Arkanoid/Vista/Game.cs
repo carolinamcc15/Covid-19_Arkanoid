@@ -52,16 +52,31 @@ namespace Covid_19_Arkanoid
         {
            _paddle.Left = e.X - (_paddle.Width/2);
         }
-
+        
+        
         private void Game_Click(object sender, EventArgs e)
         {
             if (!GameController.OnGame)
             {
-                MouseMove += Game_MouseMove;
-                timerArkanoid.Start();
-                GameController.OnGame = true;
+                    MouseMove += Game_MouseMove;
+                    timerArkanoid.Start();
+                    GameController.OnGame = true;
             }
         }
+        
+        private void Game_KeyPress(object sender, EventArgs e)
+        {
+            try
+            {
+                throw new KeyPressStartException("De click en la pantalla para iniciar el juego y " +
+                                                 "utiliza el mouse para moverte.");
+            }
+            catch (KeyPressStartException exception)
+            {
+                MessageBox.Show(exception.Message);
+            }
+        }
+        
         
         private void PlaceControls()
         {
@@ -198,7 +213,7 @@ namespace Covid_19_Arkanoid
 
         private void FinishGame(bool win)
         {
-            if (win)
+            /*if (win)
             {
                 PlayerDAO.InsertScore(player.Score, player.PlayerId);
                 int HistoricalScore = PlayerDAO.BestScore(player.PlayerId);
@@ -229,6 +244,46 @@ namespace Covid_19_Arkanoid
                     MessageBoxButtons.OK, 
                     MessageBoxIcon.Information);
                 Close();
+            }
+            */
+            try
+            {
+                if (win)
+                {
+                    PlayerDAO.InsertScore(player.Score, player.PlayerId);
+                    int HistoricalScore = PlayerDAO.BestScore(player.PlayerId);
+
+                    //La variable top almacena si el jugador se encuentra posicionado en el Top 10 o no.
+                    bool top = false;
+                    List<Player> top10 = PlayerDAO.GetTop10Players();
+
+                    top10.ForEach(s =>
+                    {
+                        if (string.Equals(s.Name, player.Name, StringComparison.OrdinalIgnoreCase))
+                        {
+                            top = true;
+                        }
+                    });
+
+                    String result =
+                        $"Score: {player.Score} \nBest score: {HistoricalScore} \nTop 10: {(top ? "Yes" : "No")}";
+                    if (MessageBox.Show(result, "ARKANOID", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                        == DialogResult.OK)
+                    {
+                        Close();
+                    }
+                }
+                else
+                {
+                    throw new NoLivesException($"You've lost. Thank you for playing! \nScore: {player.Score}");
+                } 
+            }
+            catch (NoLivesException ex)
+            {
+                MessageBox.Show(ex.Message,"ARKANOID", 
+                    MessageBoxButtons.OK, 
+                    MessageBoxIcon.Information);
+                    Close();
             }
         }
 

@@ -91,58 +91,54 @@
         <Reference Include="System.Xml" />
     </ItemGroup>
     <ItemGroup>
-        <Compile Include="Block.cs" />
-        <Compile Include="ConnectionDB.cs" />
-        <Compile Include="FormMain.cs">
-            <SubType>Form</SubType>
+        <Compile Include="Controlador\ClickLBoardException.cs" />
+        <Compile Include="Controlador\ConnectionDB.cs" />
+        <Compile Include="Controlador\EmptyNameExcept.cs" />
+        <Compile Include="Controlador\EnterKeyPressException.cs" />
+        <Compile Include="Controlador\GameController.cs" />
+        <Compile Include="Controlador\KeyPressStartException.cs" />
+        <Compile Include="Controlador\NoLivesException.cs" />
+        <Compile Include="Modelo\Block.cs" />
+        <Compile Include="Modelo\Player.cs" />
+        <Compile Include="Modelo\PlayerDAO.cs" />
+        <Compile Include="Modelo\Program.cs" />
+        <Compile Include="Properties\AssemblyInfo.cs" />
+        <Compile Include="Vista\FormMain.cs">
+          <SubType>Form</SubType>
         </Compile>
-        <Compile Include="FormMain.Designer.cs">
-            <DependentUpon>FormMain.cs</DependentUpon>
+        <Compile Include="Vista\FormMain.Designer.cs">
+          <DependentUpon>FormMain.cs</DependentUpon>
         </Compile>
-        <Compile Include="Game.cs">
+        <Compile Include="Vista\Game.cs">
           <SubType>UserControl</SubType>
         </Compile>
-        <Compile Include="Game.Designer.cs">
+        <Compile Include="Vista\Game.Designer.cs">
           <DependentUpon>Game.cs</DependentUpon>
         </Compile>
-        <Compile Include="GameController.cs" />
-        <Compile Include="NameUser.cs">
+        <Compile Include="Vista\NameUser.cs">
           <SubType>UserControl</SubType>
         </Compile>
-        <Compile Include="NameUser.Designer.cs">
+        <Compile Include="Vista\NameUser.Designer.cs">
           <DependentUpon>NameUser.cs</DependentUpon>
         </Compile>
-        <Compile Include="Player.cs" />
-        <Compile Include="PlayerDAO.cs" />
-        <Compile Include="Program.cs" />
-        <Compile Include="Properties\AssemblyInfo.cs" />
-        <Compile Include="Skin.cs">
+        <Compile Include="Vista\Skin.cs">
           <SubType>UserControl</SubType>
         </Compile>
-        <Compile Include="Skin.Designer.cs">
+        <Compile Include="Vista\Skin.Designer.cs">
           <DependentUpon>Skin.cs</DependentUpon>
         </Compile>
-        <Compile Include="TopTen.cs">
+        <Compile Include="Vista\TopTen.cs">
           <SubType>Form</SubType>
         </Compile>
-        <Compile Include="TopTen.Designer.cs">
+        <Compile Include="Vista\TopTen.Designer.cs">
           <DependentUpon>TopTen.cs</DependentUpon>
         </Compile>
-        <Compile Include="Username.cs">
+        <Compile Include="Vista\Username.cs">
           <SubType>Form</SubType>
         </Compile>
-        <Compile Include="Username.Designer.cs">
+        <Compile Include="Vista\Username.Designer.cs">
           <DependentUpon>Username.cs</DependentUpon>
         </Compile>
-        <EmbeddedResource Include="FormMain.resx">
-          <DependentUpon>FormMain.cs</DependentUpon>
-        </EmbeddedResource>
-        <EmbeddedResource Include="Game.resx">
-          <DependentUpon>Game.cs</DependentUpon>
-        </EmbeddedResource>
-        <EmbeddedResource Include="NameUser.resx">
-          <DependentUpon>NameUser.cs</DependentUpon>
-        </EmbeddedResource>
         <EmbeddedResource Include="Properties\Resources.resx">
             <Generator>ResXFileCodeGenerator</Generator>
             <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -152,13 +148,22 @@
             <AutoGen>True</AutoGen>
             <DependentUpon>Resources.resx</DependentUpon>
         </Compile>
-        <EmbeddedResource Include="Skin.resx">
+        <EmbeddedResource Include="Vista\FormMain.resx">
+          <DependentUpon>FormMain.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="Vista\Game.resx">
+          <DependentUpon>Game.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="Vista\NameUser.resx">
+          <DependentUpon>NameUser.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="Vista\Skin.resx">
           <DependentUpon>Skin.cs</DependentUpon>
         </EmbeddedResource>
-        <EmbeddedResource Include="TopTen.resx">
+        <EmbeddedResource Include="Vista\TopTen.resx">
           <DependentUpon>TopTen.cs</DependentUpon>
         </EmbeddedResource>
-        <EmbeddedResource Include="Username.resx">
+        <EmbeddedResource Include="Vista\Username.resx">
           <DependentUpon>Username.cs</DependentUpon>
         </EmbeddedResource>
         <None Include="packages.config" />

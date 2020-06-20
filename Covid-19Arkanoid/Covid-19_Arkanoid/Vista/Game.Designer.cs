@@ -1,5 +1,6 @@
 ﻿using System;
 using System.ComponentModel;
+using System.Windows.Forms;
 
 namespace Covid_19_Arkanoid
 {
@@ -54,6 +55,7 @@ namespace Covid_19_Arkanoid
             this.Size = new System.Drawing.Size(922, 599);
             this.Load += new System.EventHandler(this.Game_Load);
             this.Click += new System.EventHandler(this.Game_Click);
+            this.KeyPress += new KeyPressEventHandler(this.Game_KeyPress);
             this.ResumeLayout(false);
         }
 
