@@ -39,7 +39,7 @@ namespace Covid_19_Arkanoid.Vista
             // timerArkanoid
             // 
             this.timerArkanoid.Interval = 10;
-            this.timerArkanoid.Tick += new System.EventHandler(this.timerArkanoid_Tick);
+            this.timerArkanoid.Tick += new System.EventHandler(this.TimerArkanoid_Tick);
             // 
             // Game
             // 

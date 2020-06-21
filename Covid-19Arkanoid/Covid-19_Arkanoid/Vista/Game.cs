@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.Media;
 using System.Windows.Forms;
 using Covid_19_Arkanoid.Controlador;
 using Covid_19_Arkanoid.Modelo;
@@ -14,6 +15,7 @@ namespace Covid_19_Arkanoid.Vista
         private readonly PictureBox _ball;
         private readonly Player _player;
         private readonly Label _scoreLabel;
+        private SoundPlayer _musicPlayer;
         private Block[,] _blocks;
         private PictureBox[] _picHearts;
         private int _remainingBlocks;
@@ -21,6 +23,8 @@ namespace Covid_19_Arkanoid.Vista
         public Game(Image skin, Player player)
         {
             InitializeComponent();
+            
+            _musicPlayer = new SoundPlayer("../../Resources/GameMusic.wav");
             
             _player = player;
             
@@ -44,6 +48,7 @@ namespace Covid_19_Arkanoid.Vista
             GameController.OnGame = false;
             _remainingBlocks = 0;
         }
+        
         protected override CreateParams CreateParams
         {
             get
@@ -66,13 +71,16 @@ namespace Covid_19_Arkanoid.Vista
         #region Events
         private void Game_MouseMove(object sender, MouseEventArgs e)
         {
+            //Provoca que el centro de la plataforma se coloque sobre el eje X del puntero del mouse
             _paddle.Left = e.X - (_paddle.Width/2);
         }
         private void Game_Click(object sender, EventArgs e)
         {
+            //Si se da click y el juego no ha iniciado, se permite el movimiento de la plataforma
             if (!GameController.OnGame)
             {
                 MouseMove += Game_MouseMove;
+                _musicPlayer.Play();
                 timerArkanoid.Start();
                 GameController.OnGame = true;
             }
@@ -81,47 +89,53 @@ namespace Covid_19_Arkanoid.Vista
         {
             try
             {
-                throw new KeyPressStartException("De click en la pantalla para iniciar el juego y " +
-                                                 "utiliza el mouse para moverte.");
+                throw new KeyPressStartException("Click on the screen to start the game.\n" +
+                                                 "Use your mouse to move.");
             }
             catch (KeyPressStartException exception)
             {
                 MessageBox.Show(exception.Message);
             }
         }
-        private void timerArkanoid_Tick(object sender, EventArgs e)
+        private void TimerArkanoid_Tick(object sender, EventArgs e)
         {
+            //Si ya no quedan bloques, ha ganado el juego
             if (_remainingBlocks == 0)
             {
                 timerArkanoid.Stop();
                 FinishGame(true);
             }
             
+            //En cada tick, la bola se mueve
             _ball.Top += GameController.VerticalMovement;
             _ball.Left += GameController.HorizontalMovement;
             
+            //Bola sale del límite inferior de la pantalla.
             if (_ball.Bottom > Height)
             {
                 timerArkanoid.Stop();
                 GameController.Lives--;
                 PlaceControls();
+                //Si ya no tiene vidas pierde el juego.
                 if (GameController.Lives == 0)
                 {
                     FinishGame(false);
                     return;
                 }
                 GameController.OnGame = false;
+                //Impide el movimiento de la plataforma.
                 MouseMove -= Game_MouseMove;
             }
+            //Bola choca con el jugador. 
             if (_ball.Bounds.IntersectsWith(_paddle.Bounds))
             {
+                //Si choca en la parte izquierda de la plataforma
                 if (_ball.Location.X >= _paddle.Location.X && 
                     _ball.Location.X <(_paddle.Location.X + _paddle.Width/2))
                 {
                     if (GameController.HorizontalMovement>0)
                     {
                         GameController.HorizontalMovement = new Random().Next(-7,-5);
-                        
                     }
                 }
                 else if (GameController.HorizontalMovement<0)
@@ -261,10 +275,15 @@ namespace Covid_19_Arkanoid.Vista
             }
             catch (NoLivesException ex)
             {
-                MessageBox.Show(ex.Message,"ARKANOID", 
+                _musicPlayer = new SoundPlayer("../../Resources/GameOverMusic.wav");
+                _musicPlayer.Play();
+                if (MessageBox.Show(ex.Message,"ARKANOID", 
                     MessageBoxButtons.OK, 
-                    MessageBoxIcon.Information);
-                ((Form) Parent).Close();
+                    MessageBoxIcon.Information) == DialogResult.OK)
+                {
+                    ((Form) Parent).Close();    
+                    _musicPlayer.Stop();
+                }
             }
         }
     }

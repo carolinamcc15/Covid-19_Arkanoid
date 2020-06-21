@@ -2,7 +2,6 @@
 using System.Drawing;
 using System.Windows.Forms;
 using Covid_19_Arkanoid.Controlador;
-using Covid_19_Arkanoid.Modelo;
 
 namespace Covid_19_Arkanoid.Vista
 {
@@ -15,8 +14,7 @@ namespace Covid_19_Arkanoid.Vista
             InitializeComponent();
             dgvTop10.DataSource = null;
         }
-
-
+        
         private void TopTen_Load(object sender, EventArgs e)
         {
             //Se asigna el fondo , se maximiza la ventana y se obtiene el top 10 de la base de datos
@@ -28,8 +26,8 @@ namespace Covid_19_Arkanoid.Vista
             Width = Screen.PrimaryScreen.Bounds.Width;
             
             dgvTop10.DataSource = PlayerDAO.GetTop10PlayersTable();
-            
         }
+        
         protected override CreateParams CreateParams
         {
             get
@@ -39,7 +37,7 @@ namespace Covid_19_Arkanoid.Vista
                 return handleParam;
             }
         }
-
+        
         private void TopTen_FormClosing(object sender, FormClosingEventArgs e)
         {
             _parent.Show();
@@ -49,20 +47,19 @@ namespace Covid_19_Arkanoid.Vista
         {
             try
             {
-                throw new ClickLeftBoardException("Cierre la ventana para volver al menu.");
+                throw new ClickLeftBoardException("Close the top 10 window to return to the menu.");
             }
             catch (ClickLeftBoardException exception)
             {
                 MessageBox.Show(exception.Message);
             }
         }
-        
 
-        private void tlpTop10_Click(object sender, EventArgs e)
+        private void TlpTop10_Click(object sender, EventArgs e)
         {
             try
             {
-                throw new ClickLeftBoardException("Cierre la ventana para volver al menu.");
+                throw new ClickLeftBoardException("Close the top 10 window to return to the menu.");
             }
             catch (ClickLeftBoardException exception)
             {
@@ -70,5 +67,4 @@ namespace Covid_19_Arkanoid.Vista
             }
         }
     }
-    
 }

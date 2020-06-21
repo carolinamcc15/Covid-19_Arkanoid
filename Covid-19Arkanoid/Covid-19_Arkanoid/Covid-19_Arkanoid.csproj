@@ -98,9 +98,10 @@
         <Compile Include="Controlador\GameController.cs" />
         <Compile Include="Controlador\KeyPressStartException.cs" />
         <Compile Include="Controlador\NoLivesException.cs" />
+        <Compile Include="Controlador\PlayerDAO.cs" />
+        <Compile Include="Controlador\UsernameLengthException.cs" />
         <Compile Include="Modelo\Block.cs" />
         <Compile Include="Modelo\Player.cs" />
-        <Compile Include="Modelo\PlayerDAO.cs" />
         <Compile Include="Program.cs" />
         <Compile Include="Properties\AssemblyInfo.cs" />
         <Compile Include="Vista\FormMain.cs">

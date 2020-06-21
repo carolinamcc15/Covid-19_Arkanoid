@@ -20,13 +20,13 @@ namespace Covid_19_Arkanoid.Vista
             tlpChoose.BackgroundImageLayout = ImageLayout.Stretch;
         }
 
-        private void txtUsername_KeyDown(object sender, KeyEventArgs e)
+        private void TxtUsername_KeyDown(object sender, KeyEventArgs e)
         {
             try
             {
                 if (e.KeyCode == Keys.Enter)
                 {
-                    throw new EnterKeyPressException("Presione el boton DONE");
+                    throw new EnterKeyPressException("Press DONE button.");
                 }
             }
             catch (EnterKeyPressException exception)
@@ -40,7 +40,7 @@ namespace Covid_19_Arkanoid.Vista
             try
             {
                 //Si el nombre ingresado no está vacío
-                if (!txtUsername.Text.Trim().Equals(""))
+                if (!txtUsername.Text.Trim().Equals("") && !(txtUsername.Text.Length > 20))
                 {
                     Player currentPlayer = PlayerDAO.CurrentPlayer(txtUsername.Text.ToUpper().Trim());
                     if (currentPlayer.PlayerId == 0)
@@ -49,27 +49,38 @@ namespace Covid_19_Arkanoid.Vista
                             MessageBoxIcon.Information);
                         currentPlayer.PlayerId = PlayerDAO.GetID(currentPlayer.Name);
                     }
-                    else 
+                    else
                         MessageBox.Show("Welcome back!", "ARKANOID", MessageBoxButtons.OK,
                             MessageBoxIcon.Information);
+
                     Hide();
-                
+
                     Skin skin = new Skin(currentPlayer);
                     skin.Dock = DockStyle.Fill;
                     Parent.Controls.Add(skin);
-                    
                     Parent.Controls.Remove(this);
                 }
                 else
                 {
-                    txtUsername.Clear(); // Limpia el textBox para quitar los espacios.
-                    throw new EmptyNameException("Escriba un nombre.");
+                    if (txtUsername.Text.Trim().Length != 0)
+                        throw new UsernameLengthException("Nickname too long.\nMax length: 20 digits.");
+                    throw new EmptyNameException("Write a nickname.");
                 }
             }
-            catch (EmptyNameException exception)
+            catch (EmptyNameException ex)
             {
-                MessageBox.Show(exception.Message, "ARKANOID", MessageBoxButtons.OK, 
+                MessageBox.Show(ex.Message, "ARKANOID", MessageBoxButtons.OK,
                     MessageBoxIcon.Warning);
+            }
+            catch (UsernameLengthException ex)
+            {
+                MessageBox.Show(ex.Message, "ARKANOID", MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning);
+            }
+            finally
+            {
+                // Limpia el textBox para quitar los espacios.
+                txtUsername.Clear();
             }
         }
     }

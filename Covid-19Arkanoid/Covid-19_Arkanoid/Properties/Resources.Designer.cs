@@ -73,29 +73,9 @@ namespace Covid_19_Arkanoid.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Bloque_azul_negro {
-            get {
-                object obj = ResourceManager.GetObject("Bloque_azul_negro", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap Bloque_naranja {
             get {
                 object obj = ResourceManager.GetObject("Bloque_naranja", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Bloque_verde {
-            get {
-                object obj = ResourceManager.GetObject("Bloque_verde", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

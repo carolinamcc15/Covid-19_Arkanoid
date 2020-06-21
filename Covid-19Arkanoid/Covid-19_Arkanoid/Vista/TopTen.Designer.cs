@@ -70,7 +70,7 @@ namespace Covid_19_Arkanoid.Vista
                 new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 4.372355F));
             this.tlpTop10.Size = new System.Drawing.Size(957, 592);
             this.tlpTop10.TabIndex = 0;
-            this.tlpTop10.Click += new System.EventHandler(this.tlpTop10_Click);
+            this.tlpTop10.Click += new System.EventHandler(this.TlpTop10_Click);
             // 
             // dgvTop10
             // 

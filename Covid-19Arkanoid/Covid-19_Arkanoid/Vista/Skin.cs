@@ -10,6 +10,7 @@ namespace Covid_19_Arkanoid.Vista
         private byte _aux = 0;
         private Image[] skin;
         private Player _player;
+        
         public Skin(Player player)
         {
             _player = player;
@@ -23,6 +24,7 @@ namespace Covid_19_Arkanoid.Vista
                 Image.FromFile("../../Resources/Kirby_Celeste.png")
             };
         }
+        
         protected override CreateParams CreateParams
         {
             get
@@ -65,7 +67,6 @@ namespace Covid_19_Arkanoid.Vista
             BackgroundImageLayout = ImageLayout.Stretch;
             
             picSkin.Image = Image.FromFile("../../Resources/Pink_Kirby.png");
-            
         }
     }
 }

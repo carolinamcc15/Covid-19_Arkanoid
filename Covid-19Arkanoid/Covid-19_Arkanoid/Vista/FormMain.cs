@@ -12,6 +12,7 @@ namespace Covid_19_Arkanoid.Vista
         {
             InitializeComponent();
         }
+        
         protected override CreateParams CreateParams
         {
             get
@@ -21,6 +22,7 @@ namespace Covid_19_Arkanoid.Vista
                 return handleParam;
             }
         }
+        
         private void FormMain_Load(object sender, EventArgs e)
         {
             //Se maximiza el tamaño de la ventana, se asigna fondo y color transparente.
@@ -50,6 +52,5 @@ namespace Covid_19_Arkanoid.Vista
         {
             Close();
         }
-        
     }
 }

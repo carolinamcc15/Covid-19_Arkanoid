@@ -83,12 +83,12 @@ namespace Covid_19_Arkanoid.Vista
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.txtUsername.Location = new System.Drawing.Point(185, 159);
             this.txtUsername.Margin = new System.Windows.Forms.Padding(1);
-            this.txtUsername.MaxLength = 20;
+            this.txtUsername.MaxLength = 100;
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(549, 37);
             this.txtUsername.TabIndex = 3;
             this.txtUsername.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtUsername.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtUsername_KeyDown);
+            this.txtUsername.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtUsername_KeyDown);
             // 
             // btnDone
             // 

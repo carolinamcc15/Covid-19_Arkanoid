@@ -14,13 +14,14 @@
         <e p="GameController.cs" t="Include" />
         <e p="KeyPressStartException.cs" t="Include" />
         <e p="NoLivesException.cs" t="Include" />
+        <e p="PlayerDAO.cs" t="Include" />
+        <e p="UsernameLengthException.cs" t="Include" />
       </e>
       <e p="Covid-19_Arkanoid.csproj" t="IncludeRecursive" />
       <e p="Covid-19_Arkanoid.sln" t="IncludeFlat" />
       <e p="Modelo" t="Include">
         <e p="Block.cs" t="Include" />
         <e p="Player.cs" t="Include" />
-        <e p="PlayerDAO.cs" t="Include" />
       </e>
       <e p="obj" t="ExcludeRecursive" />
       <e p="packages" t="ExcludeRecursive" />

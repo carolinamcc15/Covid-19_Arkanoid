@@ -6,6 +6,7 @@ namespace Covid_19_Arkanoid.Vista
     public partial class Username : Form
     {
         private readonly FormMain _parent;
+     
         public Username(FormMain formMain)
         {
             _parent = formMain;
