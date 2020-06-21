@@ -8,7 +8,6 @@ namespace Covid_19_Arkanoid.Modelo
         public String Name{ get; set; }
         public int Score{ get; set; }
         
-
         public Player(string name, int id)
         {
             PlayerId = id;

@@ -8,12 +8,11 @@ namespace Covid_19_Arkanoid.Controlador
     //Clase utilizada para obtener datos de los jugadores desde la base de datos.
     public static class PlayerDAO
     {
-        
         public static Player CurrentPlayer(string nick)
         {
             //Declaración de variable auxiliar utilizada para las distintas consultas.
             //Consulta para verificar existencia de nickname ingresado.
-            String UserQuerys = String.Format("SELECT * FROM PLAYER WHERE nickname = '{0}';", nick);
+            String UserQuerys = $"SELECT * FROM PLAYER WHERE nickname = '{nick}';";
             DataTable dt = ConnectionDB.ExecuteQuery(UserQuerys);
 
             if (dt.Rows.Count == 1)
@@ -28,7 +27,7 @@ namespace Covid_19_Arkanoid.Controlador
             //Si no se encontró el usuario ingresado
             
             //Consulta para insertar nuevo usuario con su respectivo nickname
-            UserQuerys = String.Format("INSERT INTO PLAYER(nickname) VALUES('{0}');", nick);
+            UserQuerys = $"INSERT INTO PLAYER(nickname) VALUES('{nick}');";
             ConnectionDB.ExecuteNonQuery(UserQuerys);
             
             return new Player(nick,0); 
@@ -36,28 +35,29 @@ namespace Covid_19_Arkanoid.Controlador
 
         public static int GetID(String name)
         {
-            String query = String.Format("SELECT PlayerID from PLAYER WHERE nickname = '{0}'",name);
+            String query = $"SELECT PlayerID from PLAYER WHERE nickname = '{name}';";
             var user = ConnectionDB.ExecuteQuery(query);
             
             return Convert.ToInt32(user.Rows[0][0]);
         }
+        
         public static void InsertPlayerScore(int score, int id)
         {
-            String query = String.Format("INSERT INTO SCORE(score, playerID) VALUES({0}, {1});", score, id);
+            String query = $"INSERT INTO SCORE(score, playerID) VALUES({score}, {id});";
             ConnectionDB.ExecuteNonQuery(query);
         }
         
         public static DataTable GetTop10PlayersTable()
         {
-            String query = String.Format("SELECT pl.nickname, sc.score FROM PLAYER pl, SCORE sc " +
-                                       "WHERE pl.playerID = sc.playerID ORDER BY score DESC LIMIT 10;");
+            String query = $"SELECT pl.nickname, sc.score FROM PLAYER pl, SCORE sc " +
+                                       "WHERE pl.playerID = sc.playerID ORDER BY score DESC LIMIT 10;";
             DataTable dt = ConnectionDB.ExecuteQuery(query);
             return dt;
         }
         
         public static int BestScore(int id)
         {
-            String query = String.Format("SELECT MAX(score) FROM score WHERE playerid = {0};", id);
+            String query = $"SELECT MAX(score) FROM score WHERE playerid = {id};";
             DataTable dt = ConnectionDB.ExecuteQuery(query);
             
             DataRow row = dt.Rows[0];
@@ -70,7 +70,7 @@ namespace Covid_19_Arkanoid.Controlador
         
         public static List<Player> GetTop10PlayersList()
         {
-            String query = "SELECT nickname FROM PLAYER pl, SCORE sc WHERE pl.playerID = sc.playerID " +
+            String query = $"SELECT nickname FROM PLAYER pl, SCORE sc WHERE pl.playerID = sc.playerID " +
                            "ORDER BY score DESC LIMIT 10;";
             
             DataTable dataT = ConnectionDB.ExecuteQuery(query);

@@ -50,16 +50,17 @@ namespace Covid_19_Arkanoid.Vista
             this.tlpTop10.BackColor = System.Drawing.Color.Transparent;
             this.tlpTop10.ColumnCount = 3;
             this.tlpTop10.ColumnStyles.Add(
-                new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 23.08362F));
+                new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15.94077F));
             this.tlpTop10.ColumnStyles.Add(
-                new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 54.44251F));
+                new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 69.42509F));
             this.tlpTop10.ColumnStyles.Add(
-                new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 22.38676F));
+                new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.72125F));
             this.tlpTop10.Controls.Add(this.dgvTop10, 1, 1);
             this.tlpTop10.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tlpTop10.Font = new System.Drawing.Font("Volleyball", 18F, System.Drawing.FontStyle.Regular,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.tlpTop10.Location = new System.Drawing.Point(0, 0);
+            this.tlpTop10.Margin = new System.Windows.Forms.Padding(4);
             this.tlpTop10.Name = "tlpTop10";
             this.tlpTop10.RowCount = 3;
             this.tlpTop10.RowStyles.Add(
@@ -68,7 +69,7 @@ namespace Covid_19_Arkanoid.Vista
                 new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 75.31734F));
             this.tlpTop10.RowStyles.Add(
                 new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 4.372355F));
-            this.tlpTop10.Size = new System.Drawing.Size(957, 592);
+            this.tlpTop10.Size = new System.Drawing.Size(1148, 710);
             this.tlpTop10.TabIndex = 0;
             this.tlpTop10.Click += new System.EventHandler(this.TlpTop10_Click);
             // 
@@ -96,7 +97,8 @@ namespace Covid_19_Arkanoid.Vista
                 System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvTop10.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvTop10.Enabled = false;
-            this.dgvTop10.Location = new System.Drawing.Point(224, 122);
+            this.dgvTop10.Location = new System.Drawing.Point(186, 147);
+            this.dgvTop10.Margin = new System.Windows.Forms.Padding(4);
             this.dgvTop10.Name = "dgvTop10";
             this.dgvTop10.ReadOnly = true;
             this.dgvTop10.RowHeadersVisible = false;
@@ -115,22 +117,22 @@ namespace Covid_19_Arkanoid.Vista
                     ((int) (((byte) (55)))));
             this.dgvTop10.RowTemplate.Height = 100;
             this.dgvTop10.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.dgvTop10.Size = new System.Drawing.Size(515, 440);
+            this.dgvTop10.Size = new System.Drawing.Size(788, 527);
             this.dgvTop10.TabIndex = 0;
             // 
             // TopTen
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(144F, 144F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackgroundImage = global::Covid_19_Arkanoid.Properties.Resources.Top101;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(957, 592);
+            this.ClientSize = new System.Drawing.Size(1148, 710);
             this.Controls.Add(this.tlpTop10);
             this.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon) (resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.MaximizeBox = false;
             this.Name = "TopTen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

@@ -44,7 +44,8 @@ namespace Covid_19_Arkanoid.Vista
             _scoreLabel.Font = new Font("Volleyball", 21F);
             _scoreLabel.BackColor = Color.Transparent;
             _scoreLabel.ForeColor = Color.White;
-            
+            _scoreLabel.Text = "SCORE  ";
+
             GameController.OnGame = false;
             _remainingBlocks = 0;
         }
@@ -61,6 +62,8 @@ namespace Covid_19_Arkanoid.Vista
         
         private void Game_Load(object sender, EventArgs e)
         {
+            BackgroundImage = Image.FromFile("../../Resources/Game_background.png");
+            BackgroundImageLayout = ImageLayout.Stretch;
             //Se asigna el tamaño del userControl Game al tamaño de la ventana y se colocan los controles 
             Width = Parent.ClientSize.Width;
             Height = Parent.ClientSize.Height;
@@ -74,6 +77,7 @@ namespace Covid_19_Arkanoid.Vista
             //Provoca que el centro de la plataforma se coloque sobre el eje X del puntero del mouse
             _paddle.Left = e.X - (_paddle.Width/2);
         }
+        
         private void Game_Click(object sender, EventArgs e)
         {
             //Si se da click y el juego no ha iniciado, se permite el movimiento de la plataforma
@@ -85,6 +89,7 @@ namespace Covid_19_Arkanoid.Vista
                 GameController.OnGame = true;
             }
         }
+        
         private void Game_KeyPress(object sender, EventArgs e)
         {
             try
@@ -97,6 +102,7 @@ namespace Covid_19_Arkanoid.Vista
                 MessageBox.Show(exception.Message);
             }
         }
+        
         private void TimerArkanoid_Tick(object sender, EventArgs e)
         {
             //Si ya no quedan bloques, ha ganado el juego
@@ -161,7 +167,7 @@ namespace Covid_19_Arkanoid.Vista
                 {
                     _player.Score += block.Score;
                     _remainingBlocks += block.Hit();
-                    _scoreLabel.Text = _player.Score.ToString();
+                    _scoreLabel.Text = "SCORE  " + _player.Score.ToString();
 
                     //Se crean nuevos rectángulos para verificar si pega en los laterales del bloque.
                     if (_ball.Bounds.IntersectsWith(
@@ -193,7 +199,6 @@ namespace Covid_19_Arkanoid.Vista
                 Controls.Clear();
                 GameController.InitializeGame();
                 
-                
                 _picHearts  = new PictureBox[GameController.Lives + 1];
                 for (int i = 0; i < GameController.Lives; i++)
                 {
@@ -222,9 +227,8 @@ namespace Covid_19_Arkanoid.Vista
                         Controls.Add(_blocks[i,j]);
                     }
                 }
-                _scoreLabel.Location = new Point(Width-285, 20);
-                _scoreLabel.Size = new Size(300, 50);
-                
+                _scoreLabel.Location = new Point(Width-430, 25);
+                _scoreLabel.Size = new Size(500, 50);
 
                 Controls.Add(_ball);
                 Controls.Add(_paddle);
@@ -281,8 +285,7 @@ namespace Covid_19_Arkanoid.Vista
                     MessageBoxButtons.OK, 
                     MessageBoxIcon.Information) == DialogResult.OK)
                 {
-                    ((Form) Parent).Close();    
-                    _musicPlayer.Stop();
+                    ((Form) Parent).Close();
                 }
             }
         }

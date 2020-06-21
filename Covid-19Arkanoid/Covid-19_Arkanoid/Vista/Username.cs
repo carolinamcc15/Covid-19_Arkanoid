@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Media;
 using System.Windows.Forms;
 
 namespace Covid_19_Arkanoid.Vista
@@ -6,7 +7,7 @@ namespace Covid_19_Arkanoid.Vista
     public partial class Username : Form
     {
         private readonly FormMain _parent;
-     
+
         public Username(FormMain formMain)
         {
             _parent = formMain;
@@ -26,6 +27,8 @@ namespace Covid_19_Arkanoid.Vista
 
         private void Username_FormClosing(object sender, FormClosingEventArgs e)
         {
+            //Se detiene la música cuando se cierra la ventana
+            new SoundPlayer().Stop();
             _parent.Show();
         }
     }

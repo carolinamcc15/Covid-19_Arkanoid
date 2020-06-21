@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Drawing;
 using System.Windows.Forms;
-using Covid_19_Arkanoid.Controlador;
 
 namespace Covid_19_Arkanoid.Vista
 {

@@ -7,6 +7,13 @@ namespace Covid_19_Arkanoid.Controlador
     //Clase utilizada para la conexión con PostgreSQL
     public static class ConnectionDB
     {
+        /*
+        private static String host = "localhost", database = "", userID = "", password = "";
+
+        private static String connectionString = $"Host={host};Port = 5432; User Id = {userID}; Password={password};" +
+                                                 $"Database={database};";
+                                                 */
+        
         private static String host = "ec2-18-211-48-247.compute-1.amazonaws.com",
             database = "dfvsa0ocr7doc4",
             userID = "sqerjfkehrlrza",
@@ -14,6 +21,7 @@ namespace Covid_19_Arkanoid.Controlador
 
         private static String connectionString = $"Host={host};Port = 5432; User Id = {userID}; Password={password};" +
                                             $"Database={database};"+ "sslmode=Require;Trust Server Certificate=true";
+                                            
 
         public static DataTable ExecuteQuery(string query)
         {

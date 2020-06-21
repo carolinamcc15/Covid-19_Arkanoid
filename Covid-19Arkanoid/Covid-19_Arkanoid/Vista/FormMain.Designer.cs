@@ -72,7 +72,7 @@
             this.btnScores.Name = "btnScores";
             this.btnScores.Size = new System.Drawing.Size(263, 79);
             this.btnScores.TabIndex = 1;
-            this.btnScores.Text = "SCORES";
+            this.btnScores.Text = "TOP 10";
             this.btnScores.UseVisualStyleBackColor = false;
             this.btnScores.Click += new System.EventHandler(this.BtnScores_Click);
             // 
@@ -135,7 +135,7 @@
             // 
             // FormMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1148, 709);
