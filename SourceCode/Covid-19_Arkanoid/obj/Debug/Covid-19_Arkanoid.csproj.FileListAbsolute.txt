@@ -257,7 +257,6 @@ C:\Users\Nesto\RiderProjects\Covid-19_Arkanoid\SourceCode\Covid-19_Arkanoid\obj\
 C:\Users\Nesto\RiderProjects\Covid-19_Arkanoid\SourceCode\Covid-19_Arkanoid\obj\Debug\Covid_19_Arkanoid.Properties.Resources.resources
 C:\Users\Nesto\RiderProjects\Covid-19_Arkanoid\SourceCode\Covid-19_Arkanoid\obj\Debug\Covid_19_Arkanoid.Vista.FormMain.resources
 C:\Users\Nesto\RiderProjects\Covid-19_Arkanoid\SourceCode\Covid-19_Arkanoid\obj\Debug\Covid_19_Arkanoid.Vista.Game.resources
-C:\Users\Nesto\RiderProjects\Covid-19_Arkanoid\SourceCode\Covid-19_Arkanoid\obj\Debug\Covid_19_Arkanoid.Vista.NameUser.resources
 C:\Users\Nesto\RiderProjects\Covid-19_Arkanoid\SourceCode\Covid-19_Arkanoid\obj\Debug\Covid_19_Arkanoid.Vista.Skin.resources
 C:\Users\Nesto\RiderProjects\Covid-19_Arkanoid\SourceCode\Covid-19_Arkanoid\obj\Debug\Covid_19_Arkanoid.Vista.TopTen.resources
 C:\Users\Nesto\RiderProjects\Covid-19_Arkanoid\SourceCode\Covid-19_Arkanoid\obj\Debug\Covid_19_Arkanoid.Vista.Username.resources
@@ -265,3 +264,4 @@ C:\Users\Nesto\RiderProjects\Covid-19_Arkanoid\SourceCode\Covid-19_Arkanoid\obj\
 C:\Users\Nesto\RiderProjects\Covid-19_Arkanoid\SourceCode\Covid-19_Arkanoid\obj\Debug\Covid-19_Arkanoid.csproj.CopyComplete
 C:\Users\Nesto\RiderProjects\Covid-19_Arkanoid\SourceCode\Covid-19_Arkanoid\obj\Debug\Covid_19_Arkanoid.exe
 C:\Users\Nesto\RiderProjects\Covid-19_Arkanoid\SourceCode\Covid-19_Arkanoid\obj\Debug\Covid_19_Arkanoid.pdb
+C:\Users\Nesto\RiderProjects\Covid-19_Arkanoid\SourceCode\Covid-19_Arkanoid\obj\Debug\Covid_19_Arkanoid.Vista.StartGame.resources

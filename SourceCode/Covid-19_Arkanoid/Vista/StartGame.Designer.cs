@@ -2,7 +2,7 @@
 
 namespace Covid_19_Arkanoid.Vista
 {
-      partial class Username
+      partial class StartGame
     {
         /// <summary>
         /// Required designer variable.
@@ -32,8 +32,8 @@ namespace Covid_19_Arkanoid.Vista
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources =
-                new System.ComponentModel.ComponentResourceManager(typeof(Username));
-            this.nameUser1 = new Covid_19_Arkanoid.Vista.NameUser();
+                new System.ComponentModel.ComponentResourceManager(typeof(StartGame));
+            this.nameUser1 = new Covid_19_Arkanoid.Vista.Username();
             this.SuspendLayout();
             // 
             // nameUser1
@@ -60,7 +60,7 @@ namespace Covid_19_Arkanoid.Vista
             this.Icon = ((System.Drawing.Icon) (resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MaximizeBox = false;
-            this.Name = "Username";
+            this.Name = "StartGame";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ARKANOID";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Username_FormClosing);
@@ -70,6 +70,6 @@ namespace Covid_19_Arkanoid.Vista
 
         #endregion
 
-        private Covid_19_Arkanoid.Vista.NameUser nameUser1;
+        private Covid_19_Arkanoid.Vista.Username nameUser1;
     }
 }

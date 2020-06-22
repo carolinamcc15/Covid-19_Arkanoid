@@ -35,7 +35,7 @@ namespace Covid_19_Arkanoid.Vista
 
         private void BtnPlay_Click(object sender, EventArgs e)
         {
-            Username user = new Username(this);
+            StartGame user = new StartGame(this);
             user.Show();
             Hide();
         }

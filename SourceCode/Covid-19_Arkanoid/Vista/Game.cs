@@ -231,7 +231,7 @@ namespace Covid_19_Arkanoid.Vista
                         /*Asignación de nivel de dureza aleatorio. Se asigna el score y la imagen del bloque según su
                          fila. La función matemática utilizada en el score el resultado de nuestros cálculos.*/
                         Image image = Image.FromFile("../../Resources/" + (j%2==0?j:j-1) +".png");
-                        _blocks[i, j] = new Block(new Random().Next(1,9)>4 ?2:1, 25-(j%2==0?j:j-1)/2*5, 
+                        _blocks[i, j] = new Block(new Random().Next(1,10)>5 ?2:1, 25-(j%2==0?j:j-1)/2*5, 
                             blockWidth, blockHeight, image);
                         _blocks[i,j].Location = new Point((i + 2)*blockWidth+blockWidth/4,(j + 3) * blockHeight);
                         Controls.Add(_blocks[i,j]);

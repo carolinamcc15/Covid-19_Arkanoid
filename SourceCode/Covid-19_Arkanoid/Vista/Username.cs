@@ -6,9 +6,9 @@ using Covid_19_Arkanoid.Modelo;
 
 namespace Covid_19_Arkanoid.Vista
 {
-    public partial class NameUser : UserControl
+    public partial class Username : UserControl
     { 
-        public NameUser()
+        public Username()
         {
             InitializeComponent();
         }

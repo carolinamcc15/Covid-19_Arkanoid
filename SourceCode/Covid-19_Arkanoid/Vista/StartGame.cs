@@ -4,11 +4,11 @@ using System.Windows.Forms;
 
 namespace Covid_19_Arkanoid.Vista
 {
-    public partial class Username : Form
+    public partial class StartGame : Form
     {
         private readonly FormMain _parent;
 
-        public Username(FormMain formMain)
+        public StartGame(FormMain formMain)
         {
             _parent = formMain;
             InitializeComponent();
