@@ -43,14 +43,14 @@ namespace Covid_19_Arkanoid.Vista
             // 
             // Game
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.DoubleBuffered = true;
-            this.Margin = new System.Windows.Forms.Padding(2, 5, 2, 5);
+            this.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.Name = "Game";
-            this.Size = new System.Drawing.Size(1152, 749);
+            this.Size = new System.Drawing.Size(922, 599);
             this.Load += new System.EventHandler(this.Game_Load);
             this.Click += new System.EventHandler(this.Game_Click);
             this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Game_KeyPress);

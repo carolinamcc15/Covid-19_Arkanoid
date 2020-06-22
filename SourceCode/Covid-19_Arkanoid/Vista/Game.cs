@@ -116,51 +116,7 @@ namespace Covid_19_Arkanoid.Vista
             _ball.Top += GameController.VerticalMovement;
             _ball.Left += GameController.HorizontalMovement;
             
-            //Bola sale del límite inferior de la pantalla.
-            if (_ball.Bottom > Height)
-            {
-                timerArkanoid.Stop();
-                GameController.Lives--;
-                PlaceControls();
-                //Si ya no tiene vidas pierde el juego.
-                if (GameController.Lives == 0)
-                {
-                    FinishGame(false);
-                    return;
-                }
-                GameController.OnGame = false;
-                //Impide el movimiento de la plataforma.
-                MouseMove -= Game_MouseMove;
-            }
-            //Bola choca con el jugador. 
-            if (_ball.Bounds.IntersectsWith(_paddle.Bounds))
-            {
-                //Si choca en la parte izquierda de la plataforma
-                if (_ball.Location.X >= _paddle.Location.X && 
-                    _ball.Location.X <(_paddle.Location.X + _paddle.Width/2))
-                {
-                    if (GameController.HorizontalMovement>0)
-                    {
-                        GameController.HorizontalMovement = new Random().Next(-7,-5);
-                    }
-                }
-                else if (GameController.HorizontalMovement<0)
-                {
-                    GameController.HorizontalMovement = new Random().Next(5,7);
-                }
-                GameController.VerticalMovement *= -1;
-            }
-
-            if (_ball.Top < Height * 0.15)
-            {
-                GameController.VerticalMovement *= -1;
-            }
-
-            if (_ball.Right > Width || _ball.Left <0)
-            {
-                GameController.HorizontalMovement *= -1;
-            }
-
+            //Se verifica la colisión con los bloques
             foreach (var block in _blocks)
             {
                 if (_ball.Bounds.IntersectsWith(block.Bounds) && block.Visible)
@@ -182,15 +138,65 @@ namespace Covid_19_Arkanoid.Vista
                         GameController.VerticalMovement *= -1;
                 }
             }
+            
+            //Bola choca con el jugador. 
+            if (_ball.Bounds.IntersectsWith(_paddle.Bounds))
+            {
+                //Si choca en la parte izquierda de la plataforma
+                if (_ball.Location.X >= _paddle.Location.X && 
+                    _ball.Location.X <(_paddle.Location.X + _paddle.Width/2))
+                {
+                    if (GameController.HorizontalMovement>0)
+                    {
+                        GameController.HorizontalMovement = new Random().Next(-8,-6);
+                    }
+                }
+                //Si choca con la parte derecha de la plataforma y bola se dirige hacia la izquierda
+                else if (GameController.HorizontalMovement<0)
+                {
+                    GameController.HorizontalMovement = new Random().Next(6,8);
+                }
+                GameController.VerticalMovement *= -1;
+                return;
+            }
+            
+            //Bola choca con los laterales de la ventana
+            if (_ball.Right > Width || _ball.Left <0)
+            {
+                GameController.HorizontalMovement *= -1;
+                return;
+            }
+            
+            //Bola choca contra el límite superior de la ventana
+            if (_ball.Top < Height * 0.15)
+            {
+                GameController.VerticalMovement *= -1;
+                return;
+            }
+
+            //Bola sale del límite inferior de la pantalla.
+            if (_ball.Bottom > Height)
+            {
+                timerArkanoid.Stop();
+                GameController.Lives--;
+                PlaceControls();
+                //Si ya no tiene vidas pierde el juego.
+                if (GameController.Lives == 0)
+                {
+                    FinishGame(false);
+                    return;
+                }
+                GameController.OnGame = false;
+                //Impide el movimiento de la plataforma.
+                MouseMove -= Game_MouseMove;
+            }
         }
 
         #endregion
+        //Método utilizado para recolocar los elementos dentro del UserControl 
         private void PlaceControls()
         {
             GameController.VerticalMovement *= -1;
-            
-            int blockWidth = Convert.ToInt32((Parent.ClientSize.Width * 0.75)/8);
-            int blockHeight = Convert.ToInt32((Parent.ClientSize.Height * 0.3)/6);
             
             //Condición solo se cumple en la primera vida 
             if (_remainingBlocks == 0)
@@ -199,6 +205,7 @@ namespace Covid_19_Arkanoid.Vista
                 Controls.Clear();
                 GameController.InitializeGame();
                 
+                //PictureBox de corazones 
                 _picHearts  = new PictureBox[GameController.Lives + 1];
                 for (int i = 0; i < GameController.Lives; i++)
                 {
@@ -211,9 +218,11 @@ namespace Covid_19_Arkanoid.Vista
                     Controls.Add(_picHearts[i]);
                 }
                 
+                //Creación de bloques
                 _blocks = new Block[6,8];
                 _remainingBlocks = 6 * 8;
-                
+                int blockWidth = Convert.ToInt32((Parent.ClientSize.Width * 0.75)/8);
+                int blockHeight = Convert.ToInt32((Parent.ClientSize.Height * 0.3)/6);
                 for (int i = 0; i < 6; i++)
                 {
                     for (int j = 0; j < 8; j++)
@@ -229,14 +238,16 @@ namespace Covid_19_Arkanoid.Vista
                 }
                 _scoreLabel.Location = new Point(Width-430, 25);
                 _scoreLabel.Size = new Size(500, 50);
-
+                
+                //Se agregan elementos a la ventana 
                 Controls.Add(_ball);
                 Controls.Add(_paddle);
                 Controls.Add(_scoreLabel);
             }
             
             Controls.Remove(_picHearts[GameController.Lives]);
-
+            
+            //Se ubica la plataforma y la bola en el centro
             _ball.Location = new Point(Width/2 - _ball.Width/2, Height - 75);
             _paddle.Location = new Point(Width/2 - _paddle.Width/2, Height - 50);
         }
