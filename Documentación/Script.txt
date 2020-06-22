@@ -2,7 +2,7 @@ Creación de tablas
 --------------------------------------------------------------------------------------------
 CREATE TABLE PLAYER(
 	playerID SERIAL PRIMARY KEY NOT NULL,
-	nickname VARCHAR(20) UNIQUE NOT NULL,
+	nickname VARCHAR(20) UNIQUE NOT NULL
 );
 
 CREATE TABLE SCORE(

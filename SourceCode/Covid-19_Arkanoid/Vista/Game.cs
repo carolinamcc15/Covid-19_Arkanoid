@@ -136,6 +136,8 @@ namespace Covid_19_Arkanoid.Vista
                     }
                     else
                         GameController.VerticalMovement *= -1;
+
+                    return;
                 }
             }
             
@@ -164,7 +166,6 @@ namespace Covid_19_Arkanoid.Vista
             if (_ball.Right > Width || _ball.Left <0)
             {
                 GameController.HorizontalMovement *= -1;
-                return;
             }
             
             //Bola choca contra el límite superior de la ventana

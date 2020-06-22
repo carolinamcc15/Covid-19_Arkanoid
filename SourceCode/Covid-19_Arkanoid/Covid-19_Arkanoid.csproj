@@ -116,11 +116,11 @@
         <Compile Include="Vista\Game.Designer.cs">
           <DependentUpon>Game.cs</DependentUpon>
         </Compile>
-        <Compile Include="Vista\NameUser.cs">
+        <Compile Include="Vista\Username.cs">
           <SubType>UserControl</SubType>
         </Compile>
-        <Compile Include="Vista\NameUser.Designer.cs">
-          <DependentUpon>NameUser.cs</DependentUpon>
+        <Compile Include="Vista\Username.Designer.cs">
+          <DependentUpon>Username.cs</DependentUpon>
         </Compile>
         <Compile Include="Vista\Skin.cs">
           <SubType>UserControl</SubType>
@@ -134,11 +134,11 @@
         <Compile Include="Vista\TopTen.Designer.cs">
           <DependentUpon>TopTen.cs</DependentUpon>
         </Compile>
-        <Compile Include="Vista\Username.cs">
+        <Compile Include="Vista\StartGame.cs">
           <SubType>Form</SubType>
         </Compile>
-        <Compile Include="Vista\Username.Designer.cs">
-          <DependentUpon>Username.cs</DependentUpon>
+        <Compile Include="Vista\StartGame.Designer.cs">
+          <DependentUpon>StartGame.cs</DependentUpon>
         </Compile>
         <EmbeddedResource Include="Properties\Resources.resx">
             <Generator>ResXFileCodeGenerator</Generator>
@@ -155,8 +155,8 @@
         <EmbeddedResource Include="Vista\Game.resx">
           <DependentUpon>Game.cs</DependentUpon>
         </EmbeddedResource>
-        <EmbeddedResource Include="Vista\NameUser.resx">
-          <DependentUpon>NameUser.cs</DependentUpon>
+        <EmbeddedResource Include="Vista\Username.resx">
+          <DependentUpon>Username.cs</DependentUpon>
         </EmbeddedResource>
         <EmbeddedResource Include="Vista\Skin.resx">
           <DependentUpon>Skin.cs</DependentUpon>
@@ -164,8 +164,8 @@
         <EmbeddedResource Include="Vista\TopTen.resx">
           <DependentUpon>TopTen.cs</DependentUpon>
         </EmbeddedResource>
-        <EmbeddedResource Include="Vista\Username.resx">
-          <DependentUpon>Username.cs</DependentUpon>
+        <EmbeddedResource Include="Vista\StartGame.resx">
+          <DependentUpon>StartGame.cs</DependentUpon>
         </EmbeddedResource>
         <None Include="packages.config" />
         <None Include="Properties\Settings.settings">

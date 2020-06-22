@@ -69,12 +69,12 @@
         <e p="Game.cs" t="Include" />
         <e p="Game.Designer.cs" t="Include" />
         <e p="Game.resx" t="Include" />
-        <e p="NameUser.cs" t="Include" />
-        <e p="NameUser.Designer.cs" t="Include" />
-        <e p="NameUser.resx" t="Include" />
         <e p="Skin.cs" t="Include" />
         <e p="Skin.Designer.cs" t="Include" />
         <e p="Skin.resx" t="Include" />
+        <e p="StartGame.cs" t="Include" />
+        <e p="StartGame.Designer.cs" t="Include" />
+        <e p="StartGame.resx" t="Include" />
         <e p="TopTen.cs" t="Include" />
         <e p="TopTen.Designer.cs" t="Include" />
         <e p="TopTen.resx" t="Include" />

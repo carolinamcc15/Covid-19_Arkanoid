@@ -7,7 +7,8 @@ namespace Covid_19_Arkanoid.Controlador
     //Clase utilizada para la conexión con PostgreSQL
     public static class ConnectionDB
     {
-        private static String host = "localhost", database = "", userID = "", password = "";
+        private static String host = "localhost", database = "arkanoid", userID = "postgres",
+            password = "";
 
         private static String connectionString = $"Host={host};" +
                                                  $"Port = 5432;" +
