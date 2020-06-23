@@ -259,13 +259,13 @@ namespace Covid_19_Arkanoid.Vista
             {
                 if (win)
                 {
-                    PlayerDAO.InsertPlayerScore(_player.Score, _player.PlayerId);
-                    int historicalScore = PlayerDAO.BestScore(_player.PlayerId);
+                    PlayerDao.InsertPlayerScore(_player.Score, _player.PlayerId);
+                    int historicalScore = PlayerDao.BestScore(_player.PlayerId);
 
                     //La variable top almacena si el jugador se encuentra posicionado en el Top 10 o no.
                     bool top = false;
                    
-                    List<Player> top10 = PlayerDAO.GetTop10PlayersList();
+                    List<Player> top10 = PlayerDao.GetTop10PlayersList();
                     top10.ForEach(s =>
                     {
                         if (string.Equals(s.Name, _player.Name, StringComparison.OrdinalIgnoreCase))

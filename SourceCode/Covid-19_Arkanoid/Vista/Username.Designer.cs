@@ -105,7 +105,7 @@ namespace Covid_19_Arkanoid.Vista
             this.btnDone.UseVisualStyleBackColor = false;
             this.btnDone.Click += new System.EventHandler(this.BtnDone_Click);
             // 
-            // NameUser
+            // Username
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -114,7 +114,7 @@ namespace Covid_19_Arkanoid.Vista
             this.Margin = new System.Windows.Forms.Padding(1, 5, 1, 5);
             this.Name = "Username";
             this.Size = new System.Drawing.Size(1152, 749);
-            this.Load += new System.EventHandler(this.NameUser_Load);
+            this.Load += new System.EventHandler(this.Username_Load);
             this.tlpChoose.ResumeLayout(false);
             this.tlpChoose.PerformLayout();
             this.ResumeLayout(false);

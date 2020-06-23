@@ -8,14 +8,15 @@ namespace Covid_19_Arkanoid.Vista
     public partial class Skin : UserControl
     {
         private byte _aux = 0;
-        private Image[] skin;
+        private Image[] _skin;
         private Player _player;
         
         public Skin(Player player)
         {
             _player = player;
             InitializeComponent();
-            skin = new []
+            //Se llena el arreglo con las imágenes de skin
+            _skin = new []
             {
                 Image.FromFile("../../Resources/Pink_Kirby.png"),
                 Image.FromFile("../../Resources/Bear.png"),
@@ -38,9 +39,9 @@ namespace Covid_19_Arkanoid.Vista
         private void ButtonRight_Click(object sender, EventArgs e)
         {
             //Cálculos matemáticos para mostrar la skin siguiente
-            ++_aux;
-            _aux %= 5;
-            picSkin.Image = skin[_aux];
+                ++_aux;
+                _aux %= 5;
+                picSkin.Image = _skin[_aux];
         }
 
         private void BtnLeft_Click(object sender, EventArgs e)
@@ -48,7 +49,7 @@ namespace Covid_19_Arkanoid.Vista
             //Cálculos matemáticos para mostrar la skin anterior
             _aux += 4;
             _aux %= 5;
-            picSkin.Image = skin[_aux];
+            picSkin.Image = _skin[_aux];
         }
 
         private void BtnDoneS_Click(object sender, EventArgs e)

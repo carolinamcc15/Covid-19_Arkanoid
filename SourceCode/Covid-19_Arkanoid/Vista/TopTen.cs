@@ -25,7 +25,7 @@ namespace Covid_19_Arkanoid.Vista
             Height = Screen.PrimaryScreen.Bounds.Height;
             Width = Screen.PrimaryScreen.Bounds.Width;
             
-            dgvTop10.DataSource = PlayerDAO.GetTop10PlayersTable();
+            dgvTop10.DataSource = PlayerDao.GetTop10PlayersTable();
         }
         
         protected override CreateParams CreateParams

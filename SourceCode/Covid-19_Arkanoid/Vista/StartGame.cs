@@ -14,7 +14,7 @@ namespace Covid_19_Arkanoid.Vista
             InitializeComponent();
         }
 
-        private void Username_Load(object sender, EventArgs e)
+        private void StartGame_Load(object sender, EventArgs e)
         {
             //Se maximiza la ventana y se agrega el userControl que solicita nombre de usuario
             WindowState = FormWindowState.Maximized;
@@ -25,7 +25,7 @@ namespace Covid_19_Arkanoid.Vista
             Controls.Add(nameUser1);
         }
 
-        private void Username_FormClosing(object sender, FormClosingEventArgs e)
+        private void StartGame_FormClosing(object sender, FormClosingEventArgs e)
         {
             //Se detiene la música cuando se cierra la ventana
             new SoundPlayer().Stop();

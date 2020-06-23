@@ -13,7 +13,7 @@ namespace Covid_19_Arkanoid.Vista
             InitializeComponent();
         }
         
-        private void NameUser_Load(object sender, EventArgs e)
+        private void Username_Load(object sender, EventArgs e)
         {
             //Se asigna la imagen de fondo
             tlpChoose.BackgroundImage = Image.FromFile("../../Resources/User.png");;
@@ -39,15 +39,16 @@ namespace Covid_19_Arkanoid.Vista
         {
             try
             {
-                //Si el nombre ingresado no está vacío
+                //Si el nombre ingresado no está vacío ni sobrepasa una longitud mayor a 20 caracteres
                 if (!txtUsername.Text.Trim().Equals("") && !(txtUsername.Text.Length > 20))
                 {
-                    Player currentPlayer = PlayerDAO.CurrentPlayer(txtUsername.Text.ToUpper().Trim());
+                    Player currentPlayer = PlayerDao.CurrentPlayer(txtUsername.Text.ToUpper().Trim());
+                    //Si el nickname no fue encontrado en la base de datos, se registra
                     if (currentPlayer.PlayerId == 0)
                     {
                         MessageBox.Show("User registered successfully!", "ARKANOID", MessageBoxButtons.OK,
                             MessageBoxIcon.Information);
-                        currentPlayer.PlayerId = PlayerDAO.GetID(currentPlayer.Name);
+                        currentPlayer.PlayerId = PlayerDao.GetId(currentPlayer.Name);
                     }
                     else
                         MessageBox.Show("Welcome back!", "ARKANOID", MessageBoxButtons.OK,
@@ -63,7 +64,7 @@ namespace Covid_19_Arkanoid.Vista
                 else
                 {
                     if (txtUsername.Text.Trim().Length != 0)
-                        throw new UsernameLengthException("Nickname too long.\nMax length: 20 digits.");
+                        throw new UsernameLengthException("Nickname too long.\nMax length: 20 characters.");
                     throw new EmptyNameException("Write a nickname.");
                 }
             }

@@ -63,8 +63,8 @@ namespace Covid_19_Arkanoid.Vista
             this.Name = "StartGame";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ARKANOID";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Username_FormClosing);
-            this.Load += new System.EventHandler(this.Username_Load);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.StartGame_FormClosing);
+            this.Load += new System.EventHandler(this.StartGame_Load);
             this.ResumeLayout(false);
         }
 
