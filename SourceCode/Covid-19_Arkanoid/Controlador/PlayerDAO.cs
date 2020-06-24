@@ -6,7 +6,7 @@ using Covid_19_Arkanoid.Modelo;
 namespace Covid_19_Arkanoid.Controlador
 {
     //Clase utilizada para obtener datos de los jugadores desde la base de datos.
-    public static class PlayerDao
+    public static class PlayerDAO
     {
         public static Player CurrentPlayer(string nick)
         {
@@ -63,9 +63,7 @@ namespace Covid_19_Arkanoid.Controlador
             DataTable dt = ConnectionDb.ExecuteQuery(query);
             
             DataRow row = dt.Rows[0];
-            int score = 0;
-            
-            score = Convert.ToInt32(row[0].ToString());
+            int score = Convert.ToInt32(row[0].ToString());
 
             return score;
         }

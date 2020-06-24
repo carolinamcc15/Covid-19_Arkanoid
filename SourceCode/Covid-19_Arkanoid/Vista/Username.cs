@@ -42,13 +42,13 @@ namespace Covid_19_Arkanoid.Vista
                 //Si el nombre ingresado no está vacío ni sobrepasa una longitud mayor a 20 caracteres
                 if (!txtUsername.Text.Trim().Equals("") && !(txtUsername.Text.Length > 20))
                 {
-                    Player currentPlayer = PlayerDao.CurrentPlayer(txtUsername.Text.ToUpper().Trim());
+                    Player currentPlayer = PlayerDAO.CurrentPlayer(txtUsername.Text.ToUpper().Trim());
                     //Si el nickname no fue encontrado en la base de datos, se registra
                     if (currentPlayer.PlayerId == 0)
                     {
                         MessageBox.Show("User registered successfully!", "ARKANOID", MessageBoxButtons.OK,
                             MessageBoxIcon.Information);
-                        currentPlayer.PlayerId = PlayerDao.GetId(currentPlayer.Name);
+                        currentPlayer.PlayerId = PlayerDAO.GetId(currentPlayer.Name);
                     }
                     else
                         MessageBox.Show("Welcome back!", "ARKANOID", MessageBoxButtons.OK,

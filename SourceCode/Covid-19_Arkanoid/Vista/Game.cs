@@ -86,6 +86,7 @@ namespace Covid_19_Arkanoid.Vista
                 MouseMove += Game_MouseMove;
                 _musicPlayer.Play();
                 timerArkanoid.Start();
+                KeyPress -= Game_KeyPress;
                 GameController.OnGame = true;
             }
         }
@@ -126,9 +127,11 @@ namespace Covid_19_Arkanoid.Vista
                     _scoreLabel.Text = "SCORE  " + _player.Score.ToString();
 
                     //Se crean nuevos rectángulos para verificar si pega en los laterales del bloque.
+                    //Si la bola choca con el lateral izquierdo del bloque (rectángulo con ancho = 0)
                     if (_ball.Bounds.IntersectsWith(
                             new Rectangle(block.Location,new Size(0,block.Height))) || 
                         _ball.Bounds.IntersectsWith(
+                            //Si la bola choca con el lateral derecho del bloque (rectángulo con ancho = 0)
                             new Rectangle(block.Location.X + block.Width, block.Location.Y,
                                 0, block.Height))) 
                     {
@@ -166,10 +169,11 @@ namespace Covid_19_Arkanoid.Vista
             if (_ball.Right > Width || _ball.Left <0)
             {
                 GameController.HorizontalMovement *= -1;
+                return;
             }
             
             //Bola choca contra el límite superior de la ventana
-            if (_ball.Top < Height * 0.15)
+            if (_ball.Top < Height * 0.14)
             {
                 GameController.VerticalMovement *= -1;
                 return;
@@ -178,15 +182,19 @@ namespace Covid_19_Arkanoid.Vista
             //Bola sale del límite inferior de la pantalla.
             if (_ball.Bottom > Height)
             {
+                KeyPress += Game_KeyPress;
                 timerArkanoid.Stop();
                 GameController.Lives--;
+                
                 PlaceControls();
+                
                 //Si ya no tiene vidas pierde el juego.
                 if (GameController.Lives == 0)
                 {
                     FinishGame(false);
                     return;
                 }
+                
                 GameController.OnGame = false;
                 //Impide el movimiento de la plataforma.
                 MouseMove -= Game_MouseMove;
@@ -224,6 +232,7 @@ namespace Covid_19_Arkanoid.Vista
                 _remainingBlocks = 6 * 8;
                 int blockWidth = Convert.ToInt32((Parent.ClientSize.Width * 0.75)/8);
                 int blockHeight = Convert.ToInt32((Parent.ClientSize.Height * 0.3)/6);
+                
                 for (int i = 0; i < 6; i++)
                 {
                     for (int j = 0; j < 8; j++)
@@ -237,6 +246,7 @@ namespace Covid_19_Arkanoid.Vista
                         Controls.Add(_blocks[i,j]);
                     }
                 }
+                
                 _scoreLabel.Location = new Point(Width-430, 25);
                 _scoreLabel.Size = new Size(500, 50);
                 
@@ -259,16 +269,16 @@ namespace Covid_19_Arkanoid.Vista
             {
                 if (win)
                 {
-                    PlayerDao.InsertPlayerScore(_player.Score, _player.PlayerId);
-                    int historicalScore = PlayerDao.BestScore(_player.PlayerId);
+                    PlayerDAO.InsertPlayerScore(_player.Score, _player.PlayerId);
+                    int historicalScore = PlayerDAO.BestScore(_player.PlayerId);
 
                     //La variable top almacena si el jugador se encuentra posicionado en el Top 10 o no.
                     bool top = false;
                    
-                    List<Player> top10 = PlayerDao.GetTop10PlayersList();
-                    top10.ForEach(s =>
+                    List<Player> top10 = PlayerDAO.GetTop10PlayersList();
+                    top10.ForEach(player =>
                     {
-                        if (string.Equals(s.Name, _player.Name, StringComparison.OrdinalIgnoreCase))
+                        if (string.Equals(player.Name, _player.Name, StringComparison.OrdinalIgnoreCase))
                         {
                             top = true;
                         }
@@ -276,7 +286,7 @@ namespace Covid_19_Arkanoid.Vista
 
                     String result =
                         $"Score: {_player.Score} \nBest score: {historicalScore} " +
-                        $"\n{(top ? "You got into the top 10!" : "You are not in the top 10. :(")}";
+                        $"\n{(top ? "You are in the top 10!" : "You are not in the top 10. :(")}";
                     if (MessageBox.Show(result, "ARKANOID", MessageBoxButtons.OK, 
                             MessageBoxIcon.Information) == DialogResult.OK)
                     {

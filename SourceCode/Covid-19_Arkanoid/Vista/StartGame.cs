@@ -21,8 +21,9 @@ namespace Covid_19_Arkanoid.Vista
             Height = Screen.PrimaryScreen.Bounds.Height;
             Width = Screen.PrimaryScreen.Bounds.Width;
 
-            nameUser1.Dock = DockStyle.Fill;
-            Controls.Add(nameUser1);
+            Username user = new Username();
+            user.Dock = DockStyle.Fill;
+            Controls.Add(user);
         }
 
         private void StartGame_FormClosing(object sender, FormClosingEventArgs e)

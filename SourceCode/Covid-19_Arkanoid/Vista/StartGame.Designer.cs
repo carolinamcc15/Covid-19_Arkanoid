@@ -33,18 +33,6 @@ namespace Covid_19_Arkanoid.Vista
         {
             System.ComponentModel.ComponentResourceManager resources =
                 new System.ComponentModel.ComponentResourceManager(typeof(StartGame));
-            this.nameUser1 = new Covid_19_Arkanoid.Vista.Username();
-            this.SuspendLayout();
-            // 
-            // nameUser1
-            // 
-            this.nameUser1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.nameUser1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.nameUser1.Location = new System.Drawing.Point(0, 0);
-            this.nameUser1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.nameUser1.Name = "nameUser1";
-            this.nameUser1.Size = new System.Drawing.Size(1132, 693);
-            this.nameUser1.TabIndex = 0;
             // 
             // Username
             // 
@@ -69,7 +57,5 @@ namespace Covid_19_Arkanoid.Vista
         }
 
         #endregion
-
-        private Covid_19_Arkanoid.Vista.Username nameUser1;
     }
 }

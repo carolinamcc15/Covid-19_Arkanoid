@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\Nesto\.Rider2019.3\system\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\Nesto\.Rider2019.3\system\resharper-host\local\Transient\ReSharperHost\v193\SolutionCaches\_Covid-19_Arkanoid.281863000.00" t="ExcludeRecursive" />
-    <e p="C:\Users\Nesto\RiderProjects\Covid-19_Arkanoid\SourceCode\Covid-19_Arkanoid" t="IncludeRecursive">
+    <e p="C:\Users\user\.Rider2019.3\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\user\.Rider2019.3\system\resharper-host\local\Transient\ReSharperHost\v193\SolutionCaches\_Covid-19_Arkanoid.1680083923.00" t="ExcludeRecursive" />
+    <e p="C:\Users\user\Desktop\Arkanoid\Covid-19_Arkanoid\SourceCode\Covid-19_Arkanoid" t="IncludeRecursive">
       <e p="App.config" t="Include" />
       <e p="bin" t="ExcludeRecursive" />
       <e p="Controlador" t="Include">
