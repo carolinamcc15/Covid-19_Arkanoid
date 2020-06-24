@@ -117,6 +117,12 @@ namespace Covid_19_Arkanoid.Vista
             _ball.Top += GameController.VerticalMovement;
             _ball.Left += GameController.HorizontalMovement;
             
+            //Bola choca contra el límite superior de la ventana
+            if (_ball.Top < Height * 0.14)
+            {
+                GameController.VerticalMovement *= -1;
+            }
+            
             //Se verifica la colisión con los bloques
             foreach (var block in _blocks)
             {
@@ -124,7 +130,7 @@ namespace Covid_19_Arkanoid.Vista
                 {
                     _player.Score += block.Score;
                     _remainingBlocks += block.Hit();
-                    _scoreLabel.Text = "SCORE  " + _player.Score.ToString();
+                    _scoreLabel.Text = "SCORE  " + _player.Score;
 
                     //Se crean nuevos rectángulos para verificar si pega en los laterales del bloque.
                     //Si la bola choca con el lateral izquierdo del bloque (rectángulo con ancho = 0)
@@ -153,13 +159,13 @@ namespace Covid_19_Arkanoid.Vista
                 {
                     if (GameController.HorizontalMovement>0)
                     {
-                        GameController.HorizontalMovement = new Random().Next(-8,-6);
+                        GameController.HorizontalMovement = new Random().Next(-7,-5);
                     }
                 }
                 //Si choca con la parte derecha de la plataforma y bola se dirige hacia la izquierda
                 else if (GameController.HorizontalMovement<0)
                 {
-                    GameController.HorizontalMovement = new Random().Next(6,8);
+                    GameController.HorizontalMovement = new Random().Next(5,7);
                 }
                 GameController.VerticalMovement *= -1;
                 return;
@@ -169,13 +175,6 @@ namespace Covid_19_Arkanoid.Vista
             if (_ball.Right > Width || _ball.Left <0)
             {
                 GameController.HorizontalMovement *= -1;
-                return;
-            }
-            
-            //Bola choca contra el límite superior de la ventana
-            if (_ball.Top < Height * 0.14)
-            {
-                GameController.VerticalMovement *= -1;
                 return;
             }
 
